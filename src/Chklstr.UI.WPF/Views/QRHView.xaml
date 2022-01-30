@@ -73,14 +73,15 @@
         <Border Grid.Row="0" Grid.Column="0"
                 BorderBrush="{StaticResource BrushBorder}" BorderThickness="0 0 0 1"
                 Margin="10 0 10 0"
-                Height="35">
-            <TextBlock Text="{Binding AircraftName, Converter={StaticResource UppercaseConverter}}"
+                MinHeight="35">
+            <TextBlock TextWrapping="Wrap" Text="{Binding AircraftName, Converter={StaticResource UppercaseConverter}}"
                        Style="{StaticResource Header0}" />
         </Border>
 
         <ListBox Grid.Row="1"
                  VerticalAlignment="Stretch"
                  HorizontalContentAlignment="Stretch"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                  ScrollViewer.CanContentScroll="False"
                  SelectedItem="{Binding SelectedChecklist}"
                  ItemsSource="{Binding Checklists}"
@@ -96,7 +97,7 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="ListBoxItem">
                                 <Border Name="_Border"
-                                        Height="40"
+                                        MinHeight="40"
                                         Padding="10 1 10 0"
                                         BorderBrush="{DynamicResource BrushBorder}"
                                         BorderThickness="0 0 0 1"
@@ -124,7 +125,7 @@
                         <Style TargetType="TextBlock">
                             <Setter Property="FontFamily" Value="{DynamicResource MuliSemiBold}" />
                             <Setter Property="Foreground" Value="{DynamicResource BrushTextAlt2}" />
-                            <Setter Property="FontSize" Value="13"></Setter>
+                            <Setter Property="FontSize" Value="14"></Setter>
                             <Setter Property="VerticalAlignment" Value="Center"/>
                             <Style.Triggers>
                                 <DataTrigger 
@@ -132,6 +133,9 @@
                                     Value="True"
                                     >
                                     <Setter Property="Foreground" Value="{DynamicResource BrushSelection}"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IsEnabled}" Value="False">
+                                    <Setter Property="Opacity" Value="0.3"></Setter>
                                 </DataTrigger>
                             </Style.Triggers>
                         </Style>
@@ -144,7 +148,7 @@
                         </Grid.ColumnDefinitions>
                         <Rectangle Grid.ColumnSpan="3" Fill="Transparent"></Rectangle>
                         <TextBlock Text="{Binding ListNumber}" Margin="0 0 10 0"></TextBlock>
-                        <TextBlock Grid.Column="1" Text="{Binding Name, Converter={StaticResource UppercaseConverter}}" />
+                        <TextBlock TextWrapping="Wrap" Grid.Column="1" Text="{Binding Name, Converter={StaticResource UppercaseConverter}}" />
                         <StackPanel Grid.Column="2" Orientation="Horizontal">
                             <TextBlock Text="{Binding CheckedItemsCount}"></TextBlock>
                             <TextBlock>/</TextBlock>
