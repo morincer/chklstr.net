@@ -1,5 +1,6 @@
 ﻿using Chklstr.Core.Model;
 using MvvmCross.ViewModels;
+using Serilog;
 
 namespace Chklstr.UI.Core.ViewModels;
 
@@ -7,10 +8,10 @@ public class ChecklistItemViewModel : MvxViewModel<ChecklistItem>
 {
     public ChecklistItem Item { get; private set; }
 
-    public string ListNumber { get; set; }
-    public string Title { get; set; }
-    public string Text { get; set; }
-    public string DescriptionMarkdown { get; set; }
+    public string ListNumber { get; set; } = "";
+    public string Title { get; set; } = "";
+    public string Text { get; set; } = "";
+    public string? DescriptionMarkdown { get; set; }
 
     public bool IsSeparator { get; set; }
     public bool IsIndent { get; set; }
@@ -29,13 +30,20 @@ public class ChecklistItemViewModel : MvxViewModel<ChecklistItem>
             Update();
         }
     }
+    
+    public ChecklistViewModel Parent { get; init; }
 
-    private bool _IsEnabled;
+    private bool _isEnabled;
 
     public bool IsEnabled
     {
-        get => _IsEnabled;
-        set => SetProperty(ref _IsEnabled, value);
+        get => _isEnabled;
+        set => SetProperty(ref _isEnabled, value);
+    }
+
+    public ChecklistItemViewModel(ChecklistViewModel parent)
+    {
+        Parent = parent;
     }
 
     public override void Prepare(ChecklistItem checklistItem)
@@ -60,10 +68,12 @@ public class ChecklistItemViewModel : MvxViewModel<ChecklistItem>
             default:
                 throw new NotImplementedException($"Unknown item type: {checklistItem.GetType()}");
         }
+
+        Update();
     }
 
-    public void Update(params string[] contexts)
+    public void Update()
     {
-        IsEnabled = Item.IsAvailableInContext(contexts);
+        IsEnabled = Item.IsAvailableInContext(Parent.Contexts);
     }
 }

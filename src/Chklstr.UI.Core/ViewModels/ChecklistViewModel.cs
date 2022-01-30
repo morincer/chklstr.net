@@ -61,7 +61,6 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
 
     private List<MvxNamedNotifyPropertyChangedEventSubscription<bool>> _listeners = new();
     
-
     public override void Prepare(Checklist checklist)
     {
         Item = checklist;
@@ -77,7 +76,10 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
     {
         foreach(var item in checklist.Items)
         {
-            var viewModel = Mvx.IoCProvider.IoCConstruct<ChecklistItemViewModel>();
+            var viewModel = Mvx.IoCProvider.IoCConstruct<ChecklistItemViewModel>(new Dictionary<string, object>()
+            {
+                ["parent"] = this
+            });
             viewModel.Prepare(item);
             await viewModel.Initialize();
 
@@ -108,10 +110,13 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
 
     public void UpdateCounters()
     {
+        foreach (var item in Children)
+        {
+            item.Update();
+        }
+        
         CheckableItemsCount = Item.GetCountCheckable(Contexts);
         CheckedItemsCount = Item.GetCountChecked(Contexts);
-        
-        Log.Logger.Debug($"Update counters for {Item.Name}. Checkable: {CheckableItemsCount}, Checked: {CheckedItemsCount}");
     }
 
     public override void ViewDestroy(bool viewFinishing = true)

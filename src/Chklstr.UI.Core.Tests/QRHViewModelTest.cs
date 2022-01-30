@@ -68,4 +68,21 @@ public class QRHViewModelTest : MvxIoCSupportingTest
         checklistViewModel.Children[1].IsChecked = true;
         Assert.That(checklistViewModel.CheckedItemsCount, Is.EqualTo(1));
     }
+
+    [Test]
+    public void ShouldUpdateCountersWhenContextsChange()
+    {
+        var cheklistViewModel = _viewModel.Checklists[1];
+        Assert.True(cheklistViewModel.IsEnabled);
+        
+        var checkable = cheklistViewModel.CheckableItemsCount;
+        Assert.That(checkable, Is.GreaterThan(10));
+
+        foreach (var ctx in _viewModel.Contexts)
+        {
+            ctx.Selected = false;
+        }
+        
+        Assert.That(cheklistViewModel.CheckableItemsCount, Is.Not.EqualTo(checkable));
+    }
 }

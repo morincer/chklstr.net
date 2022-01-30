@@ -4,6 +4,7 @@ using Chklstr.Core.Model;
 using Chklstr.UI.Core.ViewModels;
 using MvvmCross.Tests;
 using NUnit.Framework;
+using Serilog;
 
 namespace Chklstr.UI.Core.Tests;
 
@@ -31,7 +32,7 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
         Assert.That(_checklist.CheckedItemsCount, Is.EqualTo(0));
         Assert.That(_checklist.IsEnabled, Is.True);
     }
-
+    
     [Test]
     public void ShouldUpdateCountersWithRespectToContexts()
     {
@@ -52,7 +53,23 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
     {
         Assert.That(_checklist.Children, Is.Not.Empty);
         Assert.That(_checklist.Children[0].ListNumber, Is.EqualTo("1"));
+    }
 
+    [Test]
+    public void ShouldEnableItemsBasingOnContext()
+    {
+        foreach (var item in _checklist.Children)
+        {
+            Assert.That(item.IsEnabled, Is.EqualTo(item.Item.IsAvailableInContext(_checklist.Contexts)));
+        }
+
+        _checklist.Contexts = new string[] {"ctx"};
+        
+        foreach (var item in _checklist.Children)
+        {
+            Assert.That(item.IsEnabled, Is.EqualTo(item.Item.IsAvailableInContext(_checklist.Contexts)));
+        }
+        
     }
     
 }

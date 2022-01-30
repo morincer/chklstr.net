@@ -11,7 +11,7 @@
     <views:MvxWpfView.Resources>
         <local:ChecklistItemTemplateSelector x:Key="ChecklistItemTemplateSelector"/>
         <DataTemplate x:Key="TemplateSingleCheckItem" DataType="viewModels:ChecklistItemViewModel">
-            <Grid HorizontalAlignment="Stretch">
+            <Grid HorizontalAlignment="Stretch" IsEnabled="{Binding IsEnabled}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -27,7 +27,7 @@
         </DataTemplate>
         
         <DataTemplate x:Key="TemplateChecklist" DataType="viewModels:ChecklistItemViewModel">
-            <Grid>
+            <Grid IsEnabled="{Binding IsEnabled}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -155,6 +155,11 @@
                                  ItemTemplateSelector="{StaticResource ChecklistItemTemplateSelector}"
                                  ItemsSource="{Binding Children}"
                                  >
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="IsEnabled" Value="{Binding IsEnabled}"/>
+                                </Style>
+                            </ListBox.ItemContainerStyle>
                             
                         </ListBox>
                     </Grid>
