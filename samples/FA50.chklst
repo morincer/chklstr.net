@@ -1,0 +1,665 @@
+> Flysimware Falcon 50      @<APU Start>
+
+=== Before Engine Start (Power Off) 	@<Real>
+
+--- Exterior Inspection
+[ ]	Normal Static Ports Cover/Condition		......	REMOVED/CLEAR
+[ ] Stall Warning Sensor Cover/Condition	......	REMOVED/CHECKED
+[ ] Emergency Static Port Cover/Condition	......	REMOVED/CLEAR
+-------
+[ ] Pilot Pitot Probe Cover/Condition		......	REMOVED/CHECKED
+[ ] Temperature Probe Cover/Condition		......	REMOVED/CHECKED
+[ ] Cockpit Windows							......	CHECKED/CLEAR
+[ ] Windshield Wipers						......	CHECKED/STOWED
+```If wiper blades will not stow, limit speed to 205 KIAS.
+```
+[ ] Nose Landing Gear						......	CHECKED
+[ ] Taxi Light								......	CHECKED
+[ ] Eight Nose Cone Latches					......	CHECKED/LATCHED
+[ ] Copilot Pitot Probe Cover/Condition		......	REMOVED/CHECKED
+[ ] Emergency Static Port Cover/Condition	......	REMOVED/CLEAR
+[ ] Stall Warning Sensor Cover/Condition	......	REMOVED/CHECKED
+[ ] Normal Static Ports Cover/Condition		......	REMOVED/CLEAR
+[ ] Waste Water Drain Access Door			......	CHECKED/CLOSED
+[ ] Angle-of-Attack Transmitter Cover/Condition .... REMOVED/CHECKED
+```If installed, remove cover and check transmitter tor freedom of movement.
+```
+[ ] Belly Anticollision Light				......	CHECKED
+```Check for proper attachment and overall condition.
+```
+[ ] Fuel Sump Drains (8)					......	CHECKED	FOR LEAKS
+[ ] Parking Brake Accumulator				......	CHECKED
+```Precharge pressure is 950 psi.
+```
+[ ] Right Wing Fuel Vent Valve				......	CLEAR/NO LEAKS
+[ ] Antennas								......	CHECKED
+```Check tor installation and integrity.
+```
+[ ] RH Landing Light						......	CHECKED
+[ ] RH Emergency Exit						......	CHECKED
+[ ] Center Engine Air Intake Cover/Condition ......	REMOVED/CHECKED
+[ ] Right Engine Air Intake Cover/Condition	......	REMOVED/CHECKED
+[ ] Leading Edge Condition					......	CHECKED
+[ ] Emergency Exit Light in Leading Edge Condition	......	CHECKED
+[ ] Life Line Pip Pin Attachment			......	CHECKED
+[ ] Gravity Fueling Plug					......	CHECKED
+[ ] Wing Check for Fuel Leaks				......	CHECKED
+[ ] Navigation/Strobe Lights				......	CHECKED
+[ ] Static Dischargers						......	CHECKED
+[ ] Right Aileron							......	CHECKED
+[ ] Flaps									......	CHECKED
+[ ] Airbrakes								......	CHECKED
+[ ] Right Main Landing Gear					......	CHECKED
+[ ] Right Engine Nacelle and Pylon			......	CHECKED
+[ ] Single-Point Refueling Panel			......	CHECKED
+[ ] External Power Connector Access Door	......	CLOSED/LATCHED (2)
+[ ] Hydraulic 2 Ground Connection Panel		......	CLOSED/LATCHED (2)
+[ ] Crew/Cabin ECU Intakes/Exits			......	CHECKED
+```**NOTE**
+
+The top unit is the crew ECU and the bottom is the Cabin ECU. The ditching door is associated with the Cabin ECU air intake.
+```
+[ ] APU Air Intake and Exhaust				......	CHECKED
+[ ] Aft Navigation Light					......	CHECKED
+[ ] Center Engine Nacelle and Exhaust		......	CHECKED
+[ ] Horizontal Stabilizer					......	CHECKED
+[ ] Vertical Stabilizer						......	CHECKED
+[ ] APU No. 2 Engine Vent Ports				......	CHECKED
+```**NOTE**
+
+No. 2 engine generator intake ports on side of fuselage is for ground cooling when airflow through S-duct is minimal at low power settings. A spring-loaded flapper door is on inside left of S-duct. which opens when air¬flow increases in the duct.
+```
+
+[ ] Rear Compartment						......	CHECKED
+[ ] Fire Extinguisher Frangible Discs		......	CHECKED
+[ ] Baggage Compartment						......	CHECKED
+[ ] Feeder Tank Vent Valve					......	CLEAR/NO LEAKS
+[ ] Left Engine Nacelle and Pylon			......	CHECKED
+[ ] Left Main Landing Gear					......	CHECKED
+[ ] Airbrakes								......	CHECKED
+[ ] Flaps									......	CHECKED
+[ ] Left Aileron							......	CHECKED
+[ ] Static Dischargers						......	CHECKED
+[ ] Navigation/Strobe Lights				......	CHECKED
+[ ] Wing Check for Fuel Leaks				......	CHECKED 
+
+--- Interior Inspection
+
+[ ] First Aid Kit (1)						......	CHECKED 
+[ ] Fire Extinguishers (2)					......	CHECKED 
+```One CO2 and one waler extinguisher must be on board.
+```
+[ ] Crash Axe (1)							......	CHECKED 
+[ ] Documents								......	CHECKED 
+[ ] L7G Free Fall Extension Controls(3)		......	CHECKED 
+[ ] Ditching Door Control					......	CHECKED 
+[ ] Fuel Transter Shutoff Valve Controls	......	CHECKED 
+[ ] Survival Equipment Stowed				......	CHECKED 
+[ ] Goggles (2)								......	CHECKED 
+[ ] Flashlights								......	AS REQUIRED
+
+=== Prestart
+
+[ ] DC Power Selection	...... NORMAL
+[ ] Batteries 			...... ON
+[ ] Battery Lights 		...... OFF
+[ ] Voltage				...... CHECKED
+```
+**NOTE** 
+
+If external power is to be used for checklist accomplishment and engine starting, run the external power checklist first and then proceed to accomplish the folowing checklists.
+
+If external power wiil not be used, run this checklist first and start APU or No. 2 engine when so indicated below using the appropriate APU Start or Start No. 2 Engine as APU checklists. 
+```
+[ ] Emergency Battery Voltage 	......  CHECK 
+[ ] Parking Brake Light			......  NOT FLASHING 
+```
+**NOTE** 
+
+If this light is blinking (less than 1,200 psi), recharge the accumulator by placing the standby pump on. Once the light is on steady, place the standby pump off
+```
+
+[ ] Park Brake 					...... SET/LIGHT ON STEADY 
+[ ] Fuel Quantity				...... CHECKED/SET REAR 
+[ ] Fuel Counters 				...... ZEROED/SET 
+[ ] Gross Weight Counter		...... SET 
+[ ] Takeoff Computations 		...... BUGS SET 
+[ ] Generator Switches			...... ON
+[ ] Batteries 					...... OFF
+
+--- Initial State Check         @<Full Prestart>
+
+[ ] Radios 						...... OFF
+[ ] Circuit Breakers 			...... IN
+[ ] Engine Computer Switches	...... ON
+[ ] Start Selector Switches		...... GROUND START
+[ ] Transfer Pumps				...... OFF
+[ ] L and R Intercom			...... CLOSED
+[ ] Boost Pumps					...... OFF
+```
+**NOTE**
+
+If the APU is running, the No. 2 boost pump should be on.
+```
+
+[ ] L and R Crossfeed			...... CLOSED
+[ ] Pitot Heat Switches			...... OFF
+[ ] Windshield Heat Switches	...... OFF
+[ ] Inverters					...... OFF
+[ ] HP Bleed Switches			...... AUTO
+[ ] PRV Switch					...... AUTO
+[ ] Isolation Valve				...... OPEN
+[ ] Cabin and Crew Bleed Air Switches	...... AUTO
+[ ] Bag Air						...... ON	@<Real>
+[ ] Anti-ice Switches			...... OFF
+[ ] Windshield Wipers			...... OFF
+[ ] Aircraft Lighting			...... OFF
+[ ] Floor Heat					...... BOTH OFF
+[ ] Static Selector				...... NORMAL
+[ ] Compass Switches			...... BOTH	SLAVED
+[ ] Brake Selector				...... NO. 1 ON
+[ ] Standby Pump				...... OFF
+[ ] Temperature Controller		...... AUTO/12 O’CLOCK
+[ ] Emergency Stow Switch		...... GUARDED
+[ ] Fire Pull Handles			...... IN
+[ ] Extinguisher Switches		...... ZERO/SAFETIED
+[ ] Normal Gear Handle			...... DOWN/GUARDED
+[ ] Emergency Gear Handle		...... IN
+[ ] Emergency Fuel Transfer Switch (If Equipped)...... OFF/GUARDED
+[ ] Altitude Controller			...... SET
+[ ] Pressurization Selector		...... AUTO/GUARDED
+[ ] Manual Pressurization Knob	...... GREEN INDEX
+[ ] Pitot Static Selector		...... NORMAL			@<Real>
+[ ] Oxygen Mask/System			...... TESTED/RESET		@<Real>
+[ ] Windshield Demist (If Equipped)...... OFF			@<Real>
+[ ] Nose Lever					...... OPEN				@<Real>
+[ ] ELT/Flap Override (If Equipped)...... GUARDED		@<Real>
+[ ] Emergency Slat Switch		...... GUARDED
+[ ] Slat/Flap Handle			...... CLEAN
+[ ] Mach Trim					...... OFF
+[ ] Yaw Damper					...... OFF
+[ ] Auto Pilot					...... OFF
+[ ] Airbrake					...... IN
+
+--- APU Start @<APU Start>
+
+[ ] Sliding Window				...... AS REQUIRED
+[ ] Batteries					...... CHECKED/ON
+[ ] Bus Tie						...... TIED
+[ ] Bus C and D Switches		...... ON
+[ ] No. 2 Boost Pump			...... ON
+[ ] No. 2 Engine and Airframe Anti-ice Switches	...... OFF
+[ ] Anticollision Lights		...... AS REQUIRED
+[ ] Fire Warning				...... TESTED
+[ ] APU Master					...... ON/GREEN
+[ ] APU Generator Switch		...... ON
+[ ] APU Start Switch			...... DEPRESS/START CHECKED
+[ ] Ensure Batteries No. 1 and No. 2	...... CHARGING
+[ ] APU Bleed					...... AS REQUIRED
+[ ] Inverters					...... CHECKED/ON
+```
+**NOTE**
+
+Indicated voltage should be 115 ±5 volts.
+```
+
+[ ] INS/IRS						...... STANDBY/ALIGN	@<Real>
+[ ] Navigation					...... PROGRAMMED
+```Enter all waypoint information to be used for the flight into the FMS.
+```
+--- External Power  @<External Power>
+
+[ ] Batteries					...... CHECKED/ON
+[ ] Battery Lights				...... OFF
+[ ] Bus Tie						...... TIED
+[ ] External Power				...... CONNECTED 
+```
+**NOTE**
+
+The GPU must be set to provide 1,000 to 1,100 amps maximum for engine starting.
+```
+
+[ ] DC Selector					...... EXT POWER/ВАТ LIGHTS ON
+[ ] Voltage						...... CHECKED
+[ ] Battery Lights				...... ON
+[ ] Bus C and D Switch			...... ON
+[ ] Inverters					...... CHECKED/ON
+```
+* a.	Place the stanby inverter to AC 1. Check the AC bus 1 voltage, and check that the AC 1 light on the master fault panel is out.
+* b.	Place AC 1 inverter on. The standby inverter maintains bus priority.
+* c.	Place the standby inverter to AC 2. Check AC bus 1 and AC bus 2 voltage, and check that the AC 1 and AC 2 lights on the master fault panel are out. AC 1 inverter powers AC bus 1 while the standby inverter powers AC bus 2.
+* d.	Place AC 2 inverter on. The standby inverter maintains bus priority.
+* e.	Place standby inverter off. AC 2 inverter powers AC bus 2. Check voltage on AC bus 2, and check that the AC 2 light on the master fault panel is out.
+
+**NOTE**
+
+Indicated voltage should be 115 ±5 volts.
+```
+[ ] Fire Warning				...... TESTED
+[ ] INS/IRS						...... STANDBY/ALIGN @<Real>
+```
+Place the mode selector to ST-BY (standby). The INS/IRS is now ready to receive present position. The system is not affected by airplane movement in standby. Place the mode selector to ALIGN. The airplane must not be moved while in ALIGN.
+```
+
+[ ] Navigation					...... PROGRAMMED 
+```Enter all waypoint information to be used for the flight into the FMS.
+```
+
+
+
+
+
+--- Start No. 2 Engine as APU 	@<Eng.2 as APU>
+[ ] Power Lever					...... CUT-OFF
+[ ] Start Selector				...... MOTOR-START	STOP
+[ ] Start Button (If Dry Motor Is Required)	...... DEPRESS 15 SECONDS
+[ ] Sliding Window				...... AS REQUIRED
+[ ] Batteries					...... CHECKED/ON
+[ ] Bus Tie						...... TIED
+[ ] Bus C and D Switches		...... ON
+[ ] Anticollision Lights		...... AS REQUIRED
+[ ] Fire Warning				...... TESTED
+[ ] TO CONFIG/ENG 2 FAIL Lights	...... TEST
+[ ] No. 2 Boost Pump			...... ON
+[ ] No. 2 Engine				...... START/CHECKED
+```
+**NOTE**
+
+The crew must check for ITT rise ten seconds after the throttle is moved to IDLE, oil pressure ten seconds after light-off, and indication by 20% Ng. Terminate the start if any of the above are not achieved. Starting times will vary with the starting mode selected, but in all cases after 50 seconds discontinue start.
+```
+[ ] Inverters	...... CHECKED/ON
+```
+a.	Place the stanby inverter to AC 1. Check the AC bus 1 voltage, and check, that the AC 1 light on the master fault panel is out.
+b.	Place AC 1 inverter on. The standby inverter maintains bus priority.
+c.	Place the standby inverter to AC 2. Check AC bus 1 and AC bus 2 voltage, and check that the AC 1 and AC 2 lights on the master fault panel are out. AC 1 inverter powers AC bus 1 while the standby inverter powers AC bus 2.
+d.	Place AC 2 inverter on. The standby inverter maintains bus priority.
+e.	Place standby inverter off. AC 2 inverter powers AC bus 2. Check voltage on AC bus 2. and check that the AC 2 light on the master fault panel is out.
+
+*NOTE*
+
+Indicated voltage should be 115 +5 volts.
+```
+[ ] INS/IRS	...... STANDBY/ALIGN
+[ ] Navigation	...... PROGRAMMED
+```
+Enter all way point information to be used for the flight into the FMS.
+```
+---//---
+
+
+
+[ ] Master Failure Warning Panel	...... TESTED
+[ ] Landing Gear Panel			...... TESTED
+[ ] Battery Temperature Monitor	...... TEST
+[ ] Emergency Stabilizer Trim	...... CHECK
+[ ] Stabilizer Trim 			...... CHECKED/SET FOR T.O.
+[ ] TO GONFIG/ENG 2 FAIL Lights	...... TESTED
+[ ] Voice/Flight Recorder		...... TESTED
+[ ] Crossover/Selector Switches	...... AS REQUIRED
+[ ] Standby Pump				...... ON/AUTO
+[ ] EFIS (If Installed)			...... ON
+[ ] Emergency Aileron Trim		...... CHECKED/LIGHT OUT
+[ ] Rudder Trim					...... CHECKED/SET FOR T.O.
+[ ] Aileron Trim				...... CHECKED/SET FOR T.O.
+[ ] Audible Warnings (CAB/VM0)	...... TESTED
+[ ] No. 2 Stall					...... TESTED
+[ ] Airbrake					...... CYCLED/IN LIGHT OUT
+[ ] Autopilot Disengagement		...... CHECKED/DISENGAGED
+[ ] Standby Pump				...... OFF
+```
+Select the OFF position to reduce unnecessary cycling of the pump.
+```
+
+[ ] INS/IRS						...... ALIGNED/NAV @<Real>
+[ ] WITHOUT NAVIGATION			...... ATT REF @<Real>
+```
+**NOTE**
+To move the airplane, place the selector to ATT REF. This provides only pitch, roll and platform heading outputs.
+```
+
+[ ] EFIS (If Installed)			...... OFF
+
+
+=== Start
+
+[ ] Cabin Door Light			...... OUT
+[ ] Entrance Curtain			...... OPEN
+[ ] Seat Belt/No Smoking		...... ON
+[ ] Exit Lights					...... ARMED
+
+[ ] Anti-Collision Lights		...... AS REQUIRED
+[ ] Fire Warning				...... TESTED
+[ ] Boost Pumps					...... ON
+[ ] DC Power Selector			...... AS REQUIRED
+```
+If a battery start and SAT greater than -15° C ... NORMAL
+	
+**CAUTION**
+
+It the batteries are warm, with their temperature above 120* F and the WARM indicator light illuminated, do not attempt to start the engines using the batteries. Start them using a ground power unit (GPU). It the tempera-ture reaches 15O'J F (illumination of the HOT BAT indi¬cator light), the battery must be isolated from the circuit, cooling observed, and then be removed from the air¬plane and bench tested.
+
+* It a battery start, no APU, and SAT less than -15°C ... LOW TEMP START
+* If an APU assisted start ... NORMAL
+* If an external power (GPU) start ...EXT POWER
+```
+[ ] No. 2 Engine	...... START/CHECKED
+```Recommended start sequence: 	2-3-1
+a.	With APU or GPU:			2-3-1
+b.	With batteries only:		2-3-1
+
+**CAUTION**
+
+Do not start No. 1 engine first under any circum¬stances as electrical eccentricities may occur. No. 2 engine should be started first.
+
+**NOTE 1**
+
+Confirm the No. 2 engine computer is on, place No. 2 boost pump on, and confirm their lights on the master fail¬ure warning panel are out. Push the start button (two sec¬onds maximum). When N2 is between 12 and 15% with Ni indicating, advance the throttle to IDLE, which acti¬vates the ignition (igniter light) and allows fuel to the fuel nozzles. Observe engine accelerates to between 52% and 67%, Al 50%, the ignition system automatically deac¬tivates, and the generator is placed on the line. Observe both igniter and No. 2 generator lights are out.
+
+**NOTE 2**
+
+The crew must check for ITT rise ten seconds after the throttle is moved to IDLE, oil pressure ten seconds after light-off, and Nj indication by 20% N2. Terminate the start if any of the above are not achieved. Starting times will vary with the starting mode selected, but in all cases idle must be achieved withing 50 seconds or the start must be discontinued.
+```
+[ ] No. 3 Engine				...... START/CHECKED
+[ ] No. 1 Engine				...... START/CHECKED
+[ ] DC Power Selector			...... NORMAL
+```
+**NOTE**
+
+If external power was used to start the engines, after all three engines have been started, place the DC power selector to NORMAL before directing disconnect of the external power unit. When switching to NORMAL, battery lights will go out and all three generator lights will remain on until the external power has been turned off.
+```
+
+[ ] External Power Cord			...... DISCONNECTED
+[ ] Engine	Parameters			...... CHECKED
+```
+a.	N,	ROTATING
+b.	N2	52%-65%
+c.	Oil Pressure	25-46	PSI
+d.	Oil Temperature	LESS	THAN 127° C
+e.	ITT	WITHIN	LIMITS
+
+**NOTE**
+
+Other instrument readings will vary greatly with altitude and temperature depending on the individual engine. During cold weather, Garrett recommends that idle engine rpm not be exceeded until oil temperature reaches +30’ C.
+```
+
+[ ] Bus Tie						...... NORMAL (LIGHT OUT)
+[ ] Batteries: Amps/Temps		...... CHECKED
+[ ] Generators: Volts/Amps		...... CHECKED
+[ ] Transfer Fuel Pumps			...... ALL	ON/LIGHTS OUT
+[ ] EFIS						...... ON
+[ ] Aircraft Lighting			...... AS REQUIRED
+[ ] Emergency Horizon			...... UNCAGED
+[ ] Emergency Batteries			...... ON
+[ ] Radios						...... ON/SET
+[ ] Transponder					...... STANDBY
+[ ] Marker Beacons				...... TESTED
+[ ] GPWS						...... TESTED
+[ ] Radar						...... STANDBY
+[ ] Interphone					...... CHECKED
+[ ] No. 1 Stall					...... TESTED
+[ ] Mach Trim					...... ON
+[ ] Compass Headings			...... BOTH CHECKED
+[ ] Circuit Breakers			...... IN
+[ ] Galley Power				...... SET
+[ ] Windshield Heat'Side		...... NORMAL/ON
+```
+**NOTE**
+
+Windshield heat will affect the accuracy of the standby compass.
+```
+[ ] APU Shutdown				...... PER MANUFACTURER
+[ ] Standby Pump				...... ON
+[ ] Engine Computers Manual Mode	...... CHECKED/ON
+[ ] Anti-ice					...... CYCLED/SET FOR T.O.
+[ ] Airframe Anti-Ice			...... NORMAL/STANDBY/OFF
+```
+**NOTE**
+
+This test should be accomplished in minimum time to preclude overheating the wings.
+
+**CAUTION**
+
+Airframe anti-ice is not to be used while on the ground. In flight, do not use airframe anti-ice when TAT is above +10° C. With visible moisture present and TAT C or below, airframe anti-ice should be placed on after gear retraction.
+
+**NOTE**
+
+Engine anti-ice is to be used anytime the TAT is below +5Э C and there is visible moisture, ground or flight.
+```
+
+[ ] Anti-Skid					...... TESTED
+```
+a.	Simulates an 85-knots wheel-speed signal ... LIGHTS REMAIN ON Release the button maintaining both pedals depressed:
+b.	Simulates a locked wheel-speed signal ... LIGHT GO OUT
+c.	50-knots wheel-speed signal ... LIGHTS COME ON
+d.	Wheel speed decreases signal ... LIGHTS	GO OUT
+e.	If brakes are held ... LIGHTS COME ON
+
+*NOTE*
+Antiskid test is complete after step d above. If brake pedals are held, the lights will come on again, simulat¬ing a speed less than 23 knots where the antiskid sys¬tem is deactivated. 
+```
+
+
+=== Taxi
+
+[ ] Park Brake					...... OFF
+[ ] Taxi Light					...... ON
+[ ] Passenger Briefing			...... COMPLETE
+[ ] No. 2 Brakes				...... CHECKED/AS REQUIRED
+[ ] Sliding Window				...... CLOSED
+[ ] Slats/Flaps					...... CYCLED/SET FOR T.O.
+```
+Cycle through all positions on first flight ot day. Select all detents and observe the slats and flaps operate properly. Select the proper takeoff setting. On subsequent flights, slats/flaps need be set only for takeoff.
+```
+[ ] Flight Controls				...... CHECKED
+```
+Actuate all three primary flight controls over their full range. These controls should be completely free and automatically return to the neutral position. Normally, the copilot checks the top (ailerons and elevators) while the captain checks the bottom (rudders).
+```
+[ ] Thrust Reverser				...... CHECKED/STOWED
+```
+**NOTE**
+
+The red master failure warning panel REV UNLOCK light will illuminate momentarily when a stowing signal is sent and the target doors have not reached their stowed position. The light should extinguish when the test cycle is complete.
+```
+[ ] Hydraulic: Pressure/Quantity	...... CHECKED
+[ ] Altimeters					...... SET/CROSS-CHECKED
+[ ] Radio Altimeters			...... SET
+[ ] Flight Directors			...... CHECKED/SET
+[ ] Autopilot					...... OFF (LIGHT OUT)
+[ ] Yaw Damper (it required)	...... ON
+[ ] Flight Instruments			...... TESTED/SET FOR T.O.
+[ ] APU Master (With Zero RPM)	...... PUSHED
+[ ] T.O. Briefing				...... COMPLETE
+```
+**NOTE**
+
+The pilot observing the problem will say “abort.”
+
+The airplane will be stopped by:
+(1)	Throttles	IDLE
+(2)	Airbrake	EXTENDED
+(3)	Antiskid braking	MAXIMUM
+(4)	T/R	AS	NECESSARY
+```
+
+=== Before Takeoff
+
+[ ] Brake Selector				...... #1 ON/LIGHTSOUT
+[ ] Pitot Heat					...... ON/LIGHTS OUT
+[ ] Warning Panel Lights		...... OUT
+[ ] Anticollision Lights		...... ALL
+```
+Place the anti collision light switch to ALL.
+```
+[ ] Landing Lights				...... ON
+```
+**NOTE**
+
+Do not use the landing lights on the ground for more than 15 minutes as damage may result. A 45-minute cooling period is necessary if these lights are on for 15 minutes on the ground.
+```
+[ ] Ignitors					...... AS	REQUIRED
+```
+**NOTE**
+
+It is advisable to use ignition for all takeoffs and land¬ings because it can immediately relight an engine if it should flame out.
+```
+[ ] Radar						...... AS REQUIRED
+[ ] Transponder					...... ON
+[ ] FATS (Flaps/Airbrakes/Trims/Speeds)	...... SET FOR TAKEOFF
+
+=== After Takeoff
+[ ] Landing Gear				...... UP (LIGHTS OUT)
+[ ] Anti-icing					...... AS REQUIRED
+[ ] Yaw Damper					...... ON
+[ ] Slats/Flaps					...... CLEAN
+[ ] Hydraulics					...... CHECKED
+[ ] Standby Pump				...... AUTO
+[ ] Ignitors					...... GROUND START
+[ ] Taxi Light					...... OFF
+[ ] No Smoking/Seat Belt Sign	...... AS REQUIRED
+[ ] Pressurization				...... CHECKED
+[ ] Temperature					...... CHECKED
+[ ] Climb Thrust				...... SET
+
+=== 10,000 Foot Check
+[ ] Landing Lights				...... OFF
+[ ] Seat Belt Sign				...... AS REQUIRED
+[ ] Entrance Curtain			...... AS	REQUIRED
+
+=== 18,000 Foot Check
+[ ] Altimeters					...... 29.92
+[ ] Oxygen						...... AS REQUIRED
+[ ] Station Check				...... COMPLETE
+
+=== Cruise
+
+--- Station Check
+[ ] Circuit Breakers			...... CHECKED
+[ ] Electrical Panel			...... CHECKED
+[ ] Engine Parameters			...... CHECKED
+[ ] Hydraulic Panel				...... CHECKED
+[ ] Fuel Panel					...... CHECKED
+[ ] Pressurization				...... CHECKED
+[ ] Temperature					..... CHECKED
+
+=== Descent Check
+
+[ ] Entrance Curtain			...... OPEN
+[ ] ATIS						...... ACQUIRED
+[ ] Cabin Altitude Controller	...... SET
+[ ] Anti-icing					...... AS REQUIRED
+```
+NOTE
+Never use airframe anti-ice above +10*' C TAT.
+```
+[ ] Fuel XFR Intercom and X-Feed	...... CLOSED
+[ ] Altimeters	...... SET/X-CHECKED
+[ ] Radio Altimeter	...... SET
+[ ] Landing Computations	...... LD/LFL/V ref
+[ ] Approach Speed	...... BUGS SET
+[ ] Approach Briefing	...... COMPLETE
+
+--- Below 10,000 FT
+[ ] Landing Lights	...... ON/AS REQUIRED 
+
+=== Approach
+[ ] Siats/Flaps	...... SET
+[ ] Seat Belt Sign	...... ON
+[ ] Anti-icing	AS	...... REQUIRED
+```
+**NOTE**
+
+Never use engine or airframe anti-ice above +10°C TAT. 
+```
+[ ] Radios	...... SET	FOR APPROACH
+[ ] Passenger Briefing	...... COMPLETED
+
+
+=== Landing
+[ ] Landing Gear	...... DOWN/THREE GREEN
+[ ] Brake Selector	...... #1 ON
+[ ] Antiskid	...... TESTED
+[ ] Hydraulics (Pressure/Quantity)	...... CHECKED
+[ ] TesVStall (Aircraft without SB166)	...... STALL 1/STALL 2 TESTED
+[ ] TesVStall (Aircraft with SB166)	...... AUTO SLAT LIGHT OUT
+[ ] Flaps	...... SET
+[ ] No Smoking	Sign	...... ON
+[ ] Taxi Light	...... ON
+[ ] Windshield Wipers	...... AS	REQUIRED
+[ ] Airbrakes	...... IN/LIGHT OUT
+[ ] Yaw Damper (As Required)	...... OFF/ON
+[ ] Autopilot	...... OFF	(LIGHT OUT)
+[ ] Igniters	...... AS REQUIRED
+NOTE
+It is advisable to use ignition for all takeoffs and landings.
+
+=== GO-AROUND (ALL ENGINES, FROM LANDING CONFIGURATION 4-48°)
+
+[ ] Maximum Thrust	...... SET
+[ ] Pitch Attitude	...... 14’
+[ ] Airbrake	...... IN
+[ ] Slats/Flaps	...... S + 20°
+[ ] Landing Gear	...... UP
+[ ] Airspeed	...... Vref - 5 KTS
+```At 400 Feet AGL (Minimum)
+```
+
+[ ] Airspeed	...... Vref + 15 KTS
+[ ] Slats/Flaps	...... CLEAN
+
+=== AFTER LANDING
+
+[ ] Thrust Reverser	...... STOWED
+[ ] Anti-ice	...... OFF
+[ ] Windshield Heat	...... OFF
+[ ] Windshield Wipers	...... OFF
+[ ] Pitot Heat	...... OFF
+[ ] Radar	...... STANDBY
+[ ] Transponder	...... STANDBY
+[ ] Bus Tie	...... TIED	(LIGHT ON)
+[ ] Igniters	...... OFF
+[ ] Anticollison Lights	...... AS	REQUIRED
+[ ] Landing Lights	...... OFF
+[ ] Slat/FIap Handle	...... CLEAN
+[ ] Airbrakes	...... RETRACTED	(LIGHT OUT) 
+[ ] Trims	...... SET FOR T.O.
+[ ] Radios	...... AS REQUIRED
+[ ] Floor Heat	...... BOTH OFF
+[ ] APU	...... AS REQUIRED
+```
+**NOTE**
+
+Battery lights will come on during APU starting.
+
+Batteries are removed from the bus bars to protect them with the engines running when APU is started.
+
+```
+=== PARKING
+[ ] Park Brake	...... SET/LIGHT	ON STEADY
+[ ] Dome Light	...... AS	REQUIRED
+[ ] Radar	...... OFF
+[ ] INS/FMS/IRS/LRN	...... OFF
+[ ] Standby Pump	...... OFF
+[ ] Transponder	...... OFF
+[ ] Inverters	...... OFF
+[ ] EFIS (If Required)	...... OFF
+[ ] Taxi Light	...... OFF
+[ ] Floor Switches	...... OFF
+[ ] Power Levers	...... CUT-OFF
+[ ] Transfer Pumps	...... OFF
+[ ] Boost Pumps	...... OFF
+[ ] Seat Belt Sign	...... OFF
+[ ] Exit Lights		...... OFF
+[ ] Anticollision Lights	...... OFF
+[ ] Navigation Lights	...... OFF
+[ ] Emergency Horizon	...... CAGED
+[ ] Radios	...... OFF
+[ ] Interior Lights	...... OFF
+[ ] Emergency Lighting	...... OFF
+[ ] APU	...... SHUTDOWN
+[ ] Bus Tie	...... FLIGHT	NORMAL
+[ ] Cabin Lights	...... OFF
+[ ] Cabin Switch	...... OFF
+[ ] APU Master Switch	...... OFF
+[ ] Batteries	...... BOTH	OFF
+[ ] Park Brake	...... AS	REQUIRED
+[ ] Entrance Switch	...... OFF

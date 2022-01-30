@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="ColorBackground">White</Color>
+    <Color x:Key="ColorBorder">#CCC5B9</Color>
+    <Color x:Key="ColorBackgroundAlt1">#f4f3ef</Color>
+    <Color x:Key="ColorBackgroundAlt2">#f4f4f4</Color>
+    
+    <SolidColorBrush x:Key="BrushBackground" Color="{DynamicResource ColorBackground}"/>
+    <SolidColorBrush x:Key="BrushBorder" Color="{DynamicResource ColorBorder}"/>
+    <SolidColorBrush x:Key="BrushAltBackground" Color="{DynamicResource ColorBackgroundAlt1}"/>
+    
+    <Style x:Key="TopPanel" TargetType="StackPanel">
+        <Setter Property="Background" Value="{DynamicResource BrushBackground}"></Setter>
+    </Style>
+    
+    <Style x:Key="DialogBackground" TargetType="Panel">
+        <Setter Property="Background" Value="{DynamicResource BrushAltBackground}"/>
+    </Style>
+    
+    <Style x:Key="InnerPanelBorder" TargetType="Border">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="5, 5, 5, 5"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BrushBorder}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource BrushBackground}"></Setter>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Padding" Value="10"></Setter>
+    </Style>
+    
+    <Style x:Key="InnerPanel" TargetType="Panel">
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Background" Value="{DynamicResource BrushBackground}"/>
+    </Style>
+</ResourceDictionary>

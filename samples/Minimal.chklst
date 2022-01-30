@@ -1,0 +1,19 @@
+> BOEING 737- 700/800       @<APU Start>
+
+=== Pre Flight     @<Preflight>
+    [ ] Wheather and forecast  .... CHECKED
+
+=== Prestart
+    [ ] Parking Brake   ........... SET
+    [ ] Battery         ........... GUARD CLOSED
+    ```
+**Note**: Always check your seatbelts before fastening
+    ```
+--- APU Start       @<APU Start>
+    [ ] APU             ........... START
+    [ ] APU Gen         ........... ON
+---//---
+
+    [ ] POS Lights      ........... STEADY
+-------------------
+    [ ] Taxi Lights     ........... ON

@@ -1,0 +1,207 @@
+> Cessna 172
+
+=== CABIN
+[ ]  Pitot Tube Cover 				.....	 REMOVE. Check for pitot blockage.
+[ ]  Pilot’s Operating Handbook 	.....	 AVAILABLE IN THE AIRPLANE
+[ ]  Airplane Weight and Balance 	.....	 CHECKED
+[ ]  Parking Brake 					.....	SET
+[ ]  Control Wheel Lock 			.....	 REMOVE
+[ ]  Ignition Switch 				.....	 OFF
+[ ]  Avionics Master Switch 		.....	 OFF
+```
+**WARNING:** When turning on the master switch, using an external power source, or pulling the propeller through by hand, treat the propeller as if the ignition switch were on. Do not stand, nor allow anyone else to stand, within the arc of the propeller, since a loose or broken wire or a component malfunction could cause the propeller to rotate.
+```
+[ ]  Master Switch 					.....	 ON
+[ ]  Fuel Quantity Indicators 		.....	 CHECK QUANTITY AND ENSURE LOW FUEL ANNUNCIATORS (L LOW FUEL R) ARE EXTINGUISHED
+[ ]  Avionics Master Switch 		.....	 ON
+[ ]  Avionics Cooling Fan 			.....	 CHECK AUDIBLY FOR OPERATION
+[ ]  Avionics Master Switch 		.....	 OFF
+[ ]  Static Pressure Alternate Source Valve 	.....	 OFF
+[ ]  Annunciator Panel Switch 		.....	 PLACE AND HOLD IN TST POSITION and ensure all annunciators illuminate
+```
+**NOTE:** When Master Switch is turned ON, some annunciators will flash for approximately 10 seconds before illuminating steadily. When panel TST switch is toggled up and held in position, all remaining lights will flash until the switch is released.
+```
+[ ]  Fuel Selector Valve 			.....	 BOTH
+[ ]  Fuel Shutoff Valve 			.....	 ON (Push Full In)
+[ ]  Flaps 							.....	 EXTEND
+[ ]  Pitot Heat 					.....	 ON 
+```(Carefully check that pitot tube is warm to the touch within 30 seconds)```
+[ ]  Pitot Heat 					.....	 OFF
+[ ]  Master Switch 					.....	 OFF
+[ ]  Elevator Trim 					.....	 SET for takeoff
+[ ]  Baggage Door 					.....	 CHECK, lock with key
+[ ]  Autopilot Static Source Opening (if installed) 	.....	 CHECK for blockage
+
+=== BEFORE STARTING ENGINE
+[ ]  Preflight Inspection 			.....	 COMPLETE
+[ ]  Passenger Briefing 			.....	 COMPLETE
+[ ]  Seats and Seat Belts 			.....	 ADJUST and LOCK Ensure inertia reel locking.
+[ ]  Brakes 						.....	 TEST and SET
+[ ]  Circuit Breakers 				.....	 CHECK IN
+[ ]  Electrical Equipment 			.....	 OFF
+```
+**NOTE:** the avionics master switch must be off during engine start to prevent possible damage to avionics.
+```
+[ ]  Avionics Master Switch 		.....	 OFF
+[ ]  Fuel Selector Valve 			.....	 BOTH
+[ ]  Fuel Shutoff Valve 			.....	 ON (push full in)
+[ ]  Avionics Circuit Breakers 		.....	 CHECK IN
+
+=== STARTING ENGINE (WITH BATTERY)
+[ ]  Throttle 						.....	 OPEN 1/4 INCH
+[ ]  Mixture 						.....	 IDLE CUTOFF
+[ ]  Propeller Area 				.....	 CLEAR
+[ ]  Master Switch 					.....	 ON
+[ ]  Flashing Beacon 				.....	 ON
+```
+**NOTE:** If engine is warm, omit priming procedure of steps 6, 7, and 8 below.
+```
+[ ]  Auxiliary Fuel Pump Switch 	.....	 ON
+[ ]  Mixture 						.....	 SET to FULL RICH (full forward) until stable fuel flow is indicated (usually 3 to 5 seconds), then set to IDLE CUTOFF (full aft) position.
+[ ]  Auxiliary Fuel Pump 			.....	 OFF
+[ ]  Ignition Switch 				.....	 START (release when engine starts)
+[ ]  Mixture 						.....	 ADVANCE smoothly to RICH when engine starts.
+```
+**NOTE:** If engine floods (engine has been primed too much), turn off auxiliary fuel pump, set mixture to idle cutoff, open throttle 1/2 to full, and motor (crank) engine. When engine starts, set mixture to full rich and close throttle promptly.
+```
+[ ]  Oil Pressure 					.....	 CHECK
+[ ]  Navigation Lights 				.....	 ON as required
+[ ]  Electrical System				.....	 CHECK FOR PROPER OPERATION:
+[ ]  Master Switch 					.....	 OFF
+[ ]  Taxi and Landing Light Switches .....	 ON
+```(provides an initial electrical load on the system).```
+[ ]  Engine RPM 					.....	 REDUCE to idle (Minimum alternator output occurs at idle)
+[ ]  Master Switch 					.....	 ON (taxi and landing lights on)
+```
+NOTE: (The ammeter should indicate in the negative direction, showing that the alternator output is below the load requirements, but the battery is supplying current to the system.)
+```
+[ ]  Engine RPM 					.....	 INCREASE 
+```to approximately 1500 RPM (as engine RPM increases, alternator output should increase to meet the system load requirements)```
+[ ]  Ammeter and Low Voltage Annunciator .....	 CHECK
+```(the ammeter should indicate in the positive direction, showing that the alternator is supplying current and the Low Voltage Annunciator (VOLTS) should not be lighted)
+**NOTE:** If the indications, as noted in Step “d” and Step “f”, are not observed, the electrical system is not functioning properly. Corrective maintenance must be performed to provide for proper electrical system operation before flight.
+```
+[ ]  Avionics Master Switch 		.....	 ON
+[ ]  Radios 						.....	 ON
+[ ]  Flaps 							.....	 RETRACT
+[ ]  Mixture 						.....	 LEAN for ground operations.
+
+=== BEFORE TAKEOFF
+[ ]  Parking Brake 					.....	 SET
+[ ]  Passenger Seat Backs 			.....	 MOST UPRIGHT POSITION
+[ ]  Seats and Seat Belts 			.....	 CHECK SECURE
+[ ]  Cabin Doors 					.....	 CLOSED and LOCKED
+[ ]  Flight Controls 				.....	 FREE and CORRECT
+[ ]  Flight Instruments 			.....	 CHECK and SET
+[ ]  Fuel Quantity 					.....	 CHECK
+[ ]  Mixture 						.....	 RICH
+[ ]  Fuel Selector Valve 			.....	 RECHECK BOTH
+[ ]  Throttle 						.....	 1800 RPM
+[ ]  Magnetos 						.....	 CHECK (RPM drop should not exceed 150 RPM on either magneto or 50 RPM differential between magnetos).
+[ ]  Vacuum Gage 					.....	 CHECK
+[ ]  Engine Instruments and Ammeter .....	 CHECK
+[ ]  Annunciator Panel 				.....	 Ensure no annunciators are illuminated
+[ ]  Throttle 						.....	 CHECK IDLE
+[ ]  Throttle 						.....	 1000 RPM or LESS
+[ ]  Throttle Friction Lock 		.....	 ADJUST
+[ ]  Strobe Lights 					.....	 AS DESIRED
+[ ]  Radios and Avionics 			.....	 SET
+[ ]  NAV/GPS Switch (if installed) 	.....	 SET
+[ ]  Autopilot (if installed) 		.....	 OFF
+[ ]  Elevator Trim 					.....	 SET for takeoff
+[ ]  Wing Flaps 					.....	 SET for takeoff (0°-10°)
+[ ]  Brakes 				.....	  RELEASE
+
+=== NORMAL TAKEOFF
+[ ]  Wing Flaps 					.....	 0°-10°
+[ ]  Throttle 						.....	 FULL OPEN
+[ ]  Mixture 						.....	 RICH (above 3000 feet, LEAN to obtain maximum RPM)
+[ ]  Elevator Control 				.....	 LIFT
+```
+NOSE WHEEL (at 55 kias)
+```
+[ ]  Climb Speed 					.....	 70-80 KIAS
+[ ]  Wing Flaps 					.....	 RETRACT
+
+=== SHORT FIELD TAKEOFF
+[ ]  Wing Flaps 					.....	 10°
+[ ]  Brakes 						.....	 APPLY
+[ ]  Throttle 						.....	 FULL OPEN
+[ ]  Mixture 						.....	 RICH (above 3000 feet, LEAN to obtain maximum RPM)
+[ ]  Brakes 						.....	 RELEASE
+[ ]  Elevator Control 				.....	 SLIGHTLY TAIL LOW
+[ ]  Climb Speed 					.....	 57 KIAS (until all obstacles are cleared)
+[ ]  Wing Flaps 					.....	 RETRACT slowly after reaching 60 kias
+
+=== ENROUTE CLIMB
+[ ]  Airspeed 						.....	 70-85 KIAS
+NOTE: If a maximum performance climb is necessary, use speeds shown in the Rate Of Climb chart later in this manual.
+[ ]  Throttle 						.....	 FULL OPEN
+[ ]  Mixture 						.....	 RICH (above 3000 feet, LEAN to obtain maximumRPM)
+
+=== CRUISE
+[ ]  Power 							.....	 2000-2400 RPM (No more than 80% is recommended)
+[ ]  Elevator Trim 					.....	 ADJUST
+[ ]  Mixture 						.....	 LEAN
+
+
+=== DESCENT
+[ ]  Power 				.....	 AS DESIRED
+[ ]  Mixture 			.....	 ADJUST
+```for smooth operation```
+[ ]  Altimeter 			.....	 SET
+[ ]  NAV/GPS Switch 	.....	 SET
+[ ]  Fuel Selector Valve	.....	 BOTH
+[ ]  Wing Flaps 		.....	 AS DESIRED
+```(0° - 10° below 110 kias, 10° - 30° below 85 kias)```
+
+=== BEFORE LANDING
+[ ]  Pilot and Passenger Seat Backs 	.....	 MOST UPRIGHT POSITION
+[ ]  Seats and Seat Belts 		.....	 SECURED AND LOCKED
+[ ]  Fuel Selector Valve 		.....	 BOTH
+[ ]  Mixture 					.....	 RICH
+[ ]  Landing/Taxi Lights 		.....	 ON
+[ ]  Autopilot (if installed) 	.....	 OFF
+
+=== NORMAL LANDING
+[ ]  Airspeed 			.....	 65-75 KIAS (flaps UP)
+[ ]  Wing Flaps 		.....	 AS DESIRED 
+```(0°-10° below 110 kias, 10°-30° below 85 kias)```
+[ ]  Airspeed 			.....	 60-70 KIAS (flaps DOWN)
+[ ]  Touchdown 			.....	 MAIN WHEELS FIRST
+[ ]  Landing Roll 		.....	 LOWER NOSE WHEEL GENTLY
+[ ]  Braking 			.....	 MINIMUM REQUIRED
+
+=== SHORT FIELD LANDING
+[ ]  Airspeed 			.....	 65-75 KIAS (flaps UP)
+[ ]  Wing Flaps 		.....	 FULL DOWN (30°)
+[ ]  Airspeed 			.....	 62 KIAS (until flare)
+[ ]  Power 				.....	 REDUCE
+``` to idle after clearing obstacle```
+[ ]  Touchdown 			.....	 MAIN WHEELS FIRST
+[ ]  Brakes 			.....	 APPLY HEAVILY
+[ ]  Wing Flaps 		.....	 RETRACT
+
+=== BALKED LANDING
+[ ]  Throttle 			.....	 FULL OPEN
+[ ]  Wing Flaps 		.....	 RETRACT TO 20°
+[ ]  Climb Speed 		.....	 55 KIAS
+[ ]  Wing Flaps 		.....	 10°
+``` 
+(until obstacles are cleared), RETRACT (after reaching a safe altitude and 60 kias)
+```
+
+=== AFTER LANDING
+[ ]  Wing Flaps 					.....	 UP
+
+=== SECURING AIRPLANE
+[ ]  Parking Brake 					.....	 SET
+[ ]  Electrical Equipment, Autopilot (if installed) .....	 OFF
+[ ]  Avionics Master Switch 		.....	 OFF
+[ ]  Mixture 						.....	 IDLE CUT OFF 
+```(pulled full out)```
+[ ]  Ignition Switch 				.....	 OFF
+[ ]  Master Switch 					.....	 OFF
+[ ]  Control Lock 					.....	 INSTALL
+[ ]  Fuel Selector Valve			.....	 LEFT or RIGHT
+``` to prevent cross feeding```

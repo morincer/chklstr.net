@@ -1,0 +1,14 @@
+﻿<views:MvxWpfView x:Class="Chklstr.UI.WPF.Views.QRHParsingView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  xmlns:local="clr-namespace:Chklstr.UI.WPF.Views"
+                  mc:Ignorable="d"
+                  xmlns:viewModels="clr-namespace:Chklstr.UI.Core.ViewModels;assembly=Chklstr.UI.Core"
+                  d:DataContext="{d:DesignInstance viewModels:QRHParsingViewModel}"
+                  xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf">
+    <Grid>
+        <Button Click="ButtonBase_OnClick">OK</Button>
+    </Grid>
+</views:MvxWpfView>

@@ -1,0 +1,331 @@
+> Beechcraft Turbine Duke
+
+=== BEFORE STARTING 
+
+	[ ] Cabin door, escape hatch and baggage  		......  Secured @<Full Start>
+	[ ] Weight and CG  								......  Checked @<Full Start>
+	[ ] Flight controls  							......  Freedom of movement and proper response @<Full Start>
+	[ ] Seat belts and harnesses  					......  Fastened @<Full Start>
+	[ ] Parking brake  								......  Set @<Full Start>
+	[ ] Circuit breakers  							......  In @<Full Start>
+	[ ] Alternate static source  					......  Normal @<Full Start>
+	[ ] Cabin Temp Mode  							......  Off @<Full Start>
+	[ ] Landing gear handle  						......  Down @<Full Start>
+	[ ] Condition levers  							......  Cut-off @<Full Start>
+	[ ] Propeller levers  							......  High RPM @<Full Start>
+	[ ] Power levers  								......  Idle @<Full Start>
+	[ ] Left subpanel switches  					......  Off @<Full Start>
+	[ ] Battery switch  							......  On
+	[ ] Annunciators  								......  Test
+	[ ] Fuel selectors (left and right)  			......  On @<Full Start>
+	[ ] ENG FUEL PRESS annunciators  				......  Check illuminated
+	[ ] Left and right fuel pump switches  			......  Pump 1 (check sound)
+	[ ] ENG FUEL PRESS annunciators  				......  Check off
+	[ ] Fuel pressure  								......  Check (green)
+	[ ] Voltmeter  									......  Check
+
+
+=== RIGHT ENGINE START
+
+	[ ] R Ign switch   								......  On
+	[ ] RIGHT IGN annununciator 					......  Check illuminated
+	[ ] R Starter/Gen switch  						......  Starter On
+	[ ] Stable NG > 12% 							......  Wait
+	[ ] R condition lever 							......  Low idle
+	[ ] ITT and NG  								......  Monitor (1090АC max, 10s)
+	[ ] R oil pressure  							......  Check
+	[ ] Idle Wait  									......  NG = 51%
+	[ ] R Ign switch  								......  AUTO
+	[ ] R Starter/Gen switch  						......  Gen On
+	[ ] R Generator load  							......  Check, 0.5 max
+	[ ] R Starter/Gen switch  						......  Off
+
+
+=== LEFT ENGINE START
+
+	[ ] L Ign switch  ......  On
+	[ ] LEFT IGN annununciator  ......  Check illuminated
+	[ ] L Starter/Gen switch  ......  Starter On
+	[ ] Stable NG > 12%  ......  Wait
+	[ ] L condition lever  ......  Low idle
+	[ ] ITT and NG  ......  Monitor (1090АC max, 10s)
+	[ ] L oil pressure  ......  Check
+	[ ] Idle wait  ......  NG = 51%
+	[ ] L Ign switch  ......  AUTO
+	[ ] L Starter/Gen switch  ......  Gen On
+	[ ] L Generator load  ......  Check, 0.5 max
+	[ ] R Starter/Gen switch  ......  Gen On
+
+
+=== AFTER START
+
+	[ ] Inverter switch  ......  MN INV
+	[ ] Avionics master  ......  On
+	[ ] Lights  ......  As required
+	[ ] Radios, Xpnder  ......  On
+	[ ] GPS  ......  As required
+	[ ] Cabin temp/mode  ......  As required (Check NG/ITT/load)
+	[ ] Annunciators  ......  Test, clear
+	[ ] Instruments  ......  Check
+	[ ] Brakes  ......  Check
+	[ ] Gyros  ......  Check
+
+
+=== BEFORE TAKEOFF
+
+	[ ] Parking Brake  ......  Set
+
+--- Fuel pumps test
+	[ ] L Pump switch  ......  Off (Check L ENG FUEL PRESS annun. off)
+	[ ] L Pump switch  ......  Pump 1
+	[ ] R Pump switch  ......  Off (Check L ENG FUEL PRESS annun. off)
+	[ ] R Pump switch  ......  Pump 1
+---//---
+	
+	[ ] Fuel selectors  ......  Crossfeed (For 10-15 seconds)
+	[ ] Fuel selectors  ......  Return both to ON
+	[ ] Instruments and Avionics  ......  Check
+	[ ] Pressurisation  ......  Check, set (cruise alt +500ft on inner scale)
+	[ ] Autopilot  ......  Check, then off
+	[ ] Electric trim  ......  Check (tab control, wheel switch)
+	[ ] Trim  ......  Set to takeoff range (+10%)
+	[ ] Flaps  ......  Check, set
+	[ ] Flight controls  ......  Full, free, correct
+
+--- Runup
+	[ ] Power  ......  1900 RPM
+	[ ] ITT/ TRQ  ......  Monitor
+	[ ] Propeller governors  ......  Exercise
+	[ ] Engine ice protection  ......  Check
+	[ ] Gyro pressure  ......  Check
+	[ ] Power  ......  Idle
+---//---
+	
+	[ ] Propeller  ......  Check feathering
+	[ ] Fuel, flight engine instruments  ......  Check (oil temp!)
+	[ ] Annunciators  ......  Off/considered
+	[ ] Transponder  ......  On
+	[ ] Prop synchroniser  ......  Off
+	[ ] Strobes  ......  On
+	[ ] Ice protection  ......  As required
+	[ ] Parking brake  ......  Release
+
+--- DURING TAKEOFF RUN
+
+	[ ] Ignition On annunciators  ......  Check extinguished
+	[ ] Engines  ......  Check ITT/Tq in limits
+	[ ] Rotation airspeed  ......  Above 90 KIAS
+
+
+
+=== AFTER TAKEOFF
+
+	[ ] Landing gear  ......  Up
+	[ ] Flaps  ......  Up
+
+
+=== CLIMB
+
+	[ ] Engines  ......  Climb power set, check limits
+	[ ] Props  ......  Set
+	[ ] Prop Synchroniser  ......  On
+```
+	* Cruise climb  ......  2000 fpm
+	
+	* Max climb  ......  4000 fpm
+```
+
+	[ ] Oil Doors  ......  Open during max climb
+	[ ] Engine instruments  ......  Monitor
+```
+	* If oil temperature is excessive, open oil doors and/or increase airspeed by reducing rate of climb.
+
+	* Reduce power as necessary to keep TRQ, ITT and NG within safe limits (green arcs).
+```
+
+	[ ] Cabin pressurisation  ......  Check
+
+
+=== DESCENT
+
+	[ ] Pressurisation  ......  Set (target altitude +500ft)
+	[ ] Altimeter  ......  Set
+	[ ] Windshield anti-ice  ......  As required
+	[ ] Power  ......  As required
+	[ ] Airspeed  ......  Monitor, keep within limits
+
+
+=== BEFORE LANDING
+
+	[ ] Pressurisation  ......  Zero differential pressure
+	[ ] Prop synchroniser  ......  Off
+	[ ] Flaps  ......  Approach (max. extension speed 174 KIAS)
+	[ ] Landing gear  ......  Down (max. extension speed 174 KIAS)
+	[ ] Lights  ......  As required
+
+
+
+=== LANDING
+
+	[ ] Initial approach airspeed  ......  120 KIAS
+	
+--- Short final:
+	[ ] Flaps  ......  Full down (max. extension speed 140 KIAS)
+	[ ] Props  ......  High RPM
+	[ ] Short final airspeed  ......  100 KIAS
+	[ ] Power  ......  Beta or reverse
+```Remove reverse at 40 kts```
+
+
+
+=== BALKED LANDING
+
+	[ ] Power  ......  Maximum
+	[ ] Props  ......  Full forward
+	[ ] Airspeed  ......  95 kts until clear of obstacles
+	[ ] Flaps  ......  Up
+	[ ] Gear  ......  Up
+
+
+=== AFTER LANDING
+
+	[ ] Landing and taxi lights  ......  As required
+	[ ] Ice protection  ......  Off
+	[ ] Flaps  ......  Up
+	[ ] Transponder  ......  Off
+	[ ] Strobes  ......  Off
+
+
+=== SHUTDOWN
+
+	[ ] Parking brake  ......  Set
+	[ ] GPS  ......  Off
+	[ ] Inverter switch  ......  Off
+	[ ] Avionics Master  ......  Off
+	[ ] Cabin Temp Mode  ......  Off
+	[ ] Battery  ......  Charged
+	[ ] ITT  ......  Below 650АC for 1 min
+	[ ] Ignition switches  ......  Off
+	[ ] Starter/Gen switches  ......  Off
+	[ ] Condition levers  ......  Cut-off
+	[ ] Props  ......  Feather
+	[ ] Wait  ......  NG< 10%
+	[ ] Fuel pumps  ......  Off
+	[ ] DC Volt/Load  ......  Check
+	[ ] Battery  ......  Off
+	[ ] Controls  ......  Locked
+
+
+
+
+
+
+
+
+
+
+EMERGENCY PROCEDURES
+• EMERGENCY ENGINE SHUTDOWN
+• ENGINE FAILURE DURING GROUND ROLL
+• ENGINE FAILURE AFTER LIFTOFF
+• SECOND ENGINE FLAME-OUT
+• EMERGENCY DESCENT
+• GLIDE
+• PRESSURISATION DIFFERENTIAL IN RED
+
+
+
+
+
+EMERGENCY ENGINE SHUTDOWN
+
+Condition lever  ......  Cut-off
+Prop lever  ......  Feather
+Clean up (inop. engine):
+Ignition  ......  Off
+Fuel pump  ......  Off
+Fuel Selector  ......  Off
+Starter/Generator switch  ......  Off
+Fuel Vent Heat  ......  Off
+Synchroniser  ......  Off
+Electrical load  ......  Monitor
+
+
+
+
+
+ENGINE FAILURE DURING GROUND ROLL
+
+Power levers  ......  Idle
+Brakes  ......  As required
+If insufficient runway for stopping:
+Condition levers  ......  Cut-off
+Master switch  ......  Off
+Fuel pumps  ......  Off
+
+
+
+
+
+ENGINE FAILURE AFTER LIFTOFF
+
+Power  ......  Max. allowable
+Prop RPM  ......  Full increase
+Airspeed  ......  Maintain (takeoff speed or above)
+Landing gear  ......  Up
+Power lever (inop. engine)  ......  Idle
+Propeller (inop. engine)  ......  Feather
+Airspeed  ......  120 KIAS (after obstacles cleared)
+Clean up (inop. engine):
+Ignition  ......  Off
+Starter/Generator switch  ......  Off
+Fuel pump  ......  Off
+Fuel Selector  ......  Off
+Fuel Vent Heat  ......  Off
+Synchroniser  ......  Off
+Electrical load  ......  Monitor
+
+
+
+
+
+SECOND ENGINE FLAME-OUT
+
+Power lever  ......  Idle
+Propeller  ......  Do not feather
+Condition lever  ......  Cut-off
+Conduct air start
+
+
+
+
+
+EMERGENCY DESCENT
+
+Power levers  ......  Idle
+Prop controls  ......  Full high RPM
+Wing flaps  ......  Approach
+Landing gear  ......  Down
+Airspeed  ......  174 KIAS
+
+
+
+
+
+GLIDE
+
+Landing gear  ......  Up
+Wing flaps  ......  Up
+Try restart before feathering both
+Propellers  ......  Feather
+Airspeed  ......  110 KIAS
+
+
+
+
+
+PRESSURISATION DIFFERENTIAL IN RED
+
+Cabin altitude selector  ......  Select higher setting
+If condition persists:
+Cabin pressure switch  ......  Dump
