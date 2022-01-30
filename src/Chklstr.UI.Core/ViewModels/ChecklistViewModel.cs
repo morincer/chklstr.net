@@ -13,7 +13,7 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
     public delegate void ChecklistChangedHandler(ChecklistViewModel sender, EventArgs args);
     public Checklist Item { get; private set; }
     
-    public string ListNumber { get; private set; }
+    public string ListNumber { get; set; }
     
     public string Name { get; set; }
     

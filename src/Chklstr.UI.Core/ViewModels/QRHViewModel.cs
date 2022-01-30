@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using Chklstr.Core.Model;
 using Chklstr.Core.Utils;
+using Chklstr.UI.Core.Utils;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
 using MvvmCross.Binding.Extensions;
@@ -42,7 +43,9 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook>
 
     public override async Task Initialize()
     {
-        AircraftName = Item.AircraftName; 
+        AircraftName = Item.AircraftName;
+
+        var level = new HierarchyLevel();
 
         foreach (var ctx in Item.GetAllAvailableContexts())
         {
@@ -61,6 +64,8 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook>
                 var viewModel = Mvx.IoCProvider.IoCConstruct<ChecklistViewModel>();
                 viewModel.Prepare(checklist);
                 await viewModel.Initialize();
+                viewModel.ListNumber = level.ToString();
+                level = level.Next();
                 Checklists.Add(viewModel);
                 _logger.LogDebug($"Adding checklist {viewModel.Name}");
             }

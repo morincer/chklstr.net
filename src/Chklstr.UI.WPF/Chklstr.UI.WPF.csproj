@@ -21,4 +21,25 @@
       <PackageReference Include="Serilog.Sinks.Trace" Version="3.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Fonts" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Fonts\Muli-Black.ttf" />
+      <Resource Include="Fonts\Muli-BlackItalic.ttf" />
+      <Resource Include="Fonts\Muli-Bold.ttf" />
+      <Resource Include="Fonts\Muli-BoldItalic.ttf" />
+      <Resource Include="Fonts\Muli-ExtraBold.ttf" />
+      <Resource Include="Fonts\Muli-ExtraBoldItalic.ttf" />
+      <Resource Include="Fonts\Muli-ExtraLight.ttf" />
+      <Resource Include="Fonts\Muli-ExtraLightItalic.ttf" />
+      <Resource Include="Fonts\Muli-Italic.ttf" />
+      <Resource Include="Fonts\Muli-Light.ttf" />
+      <Resource Include="Fonts\Muli-LightItalic.ttf" />
+      <Resource Include="Fonts\Muli-Regular.ttf" />
+      <Resource Include="Fonts\Muli-SemiBold.ttf" />
+      <Resource Include="Fonts\Muli-SemiBoldItalic.ttf" />
+    </ItemGroup>
+
 </Project>

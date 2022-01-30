@@ -85,4 +85,11 @@ public class QRHViewModelTest : MvxIoCSupportingTest
         
         Assert.That(cheklistViewModel.CheckableItemsCount, Is.Not.EqualTo(checkable));
     }
+
+    [Test]
+    public void ShouldAssignListNumber()
+    {
+        var cheklistViewModel = _viewModel.Checklists[1];
+        Assert.That(cheklistViewModel.ListNumber, Is.EqualTo("2"));
+    }
 }
