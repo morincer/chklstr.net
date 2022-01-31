@@ -30,7 +30,9 @@ public class ChecklistItemViewModel : MvxViewModel<ChecklistItem>
             Update();
         }
     }
-    
+
+    public ICollection<string> ApplicableContexts => Item.Contexts;
+
     public ChecklistViewModel Parent { get; init; }
 
     private bool _isEnabled;

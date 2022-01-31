@@ -8,49 +8,110 @@
                   d:DataContext="{d:DesignInstance viewModels:QRHViewModel}"
                   xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
                   xmlns:local="clr-namespace:Chklstr.UI.WPF.Views"
-                  xmlns:utils="clr-namespace:Chklstr.UI.WPF.Utils">
+                  xmlns:utils="clr-namespace:Chklstr.UI.WPF.Utils"
+                  xmlns:themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna">
 
     <views:MvxWpfView.Resources>
         <ResourceDictionary>
+            <utils:UppercaseConverter x:Key="UppercaseConverter" />
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <utils:InvertableBooleanToVisibilityConverter x:Key="InvertableBooleanToVisibilityConverter" />
+            <utils:ListToStringConverter x:Key="ListToStringConverter" />
+            <utils:HasItemsToVisibilityConverter x:Key="HasItemsToVisibilityConverter" />
+
             <local:ChecklistItemTemplateSelector x:Key="ChecklistItemTemplateSelector" />
+
             <DataTemplate x:Key="TemplateSingleCheckItem" DataType="viewModels:ChecklistItemViewModel">
-                <Grid HorizontalAlignment="Stretch" IsEnabled="{Binding IsEnabled}">
+                <DataTemplate.Resources>
+                    <Style TargetType="TextBlock">
+                        <Style.Triggers>
+                            <DataTrigger
+                                Binding="{Binding IsChecked}"
+                                Value="True">
+                                <Setter Property="Foreground" Value="{DynamicResource BrushChecked}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataTemplate.Resources>
+                <Grid HorizontalAlignment="Stretch" IsEnabled="{Binding IsEnabled}" VerticalAlignment="Center">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" MinWidth="20" />
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="{Binding ListNumber}" />
-                    <CheckBox Grid.Column="1" IsChecked="{Binding IsChecked}" />
-                    <TextBlock Grid.Column="2" Text="{Binding Title}" TextWrapping="Wrap" />
-                    <TextBlock Grid.Column="3" Text="{Binding Text}" TextAlignment="Right" />
+                    <TextBlock Text="{Binding ListNumber}" VerticalAlignment="Center" />
+                    <CheckBox Grid.Column="1" Style="{StaticResource RoundCheckbox}"
+                              Visibility="{Binding IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}"
+                              IsChecked="{Binding IsChecked}"
+                              VerticalAlignment="Center"
+                              Margin="20 0 0 0" />
+                    <TextBlock Grid.Column="2" VerticalAlignment="Center" Margin="20 0 0 0" Text="{Binding Title}"
+                               TextWrapping="Wrap" />
+                    <TextBlock Margin="0 0 20 0" Grid.Column="3"
+                               VerticalAlignment="Center"
+                               Visibility="{Binding ApplicableContexts, Converter={StaticResource HasItemsToVisibilityConverter}}">
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="/ {0} /">
+                                <Binding
+                                    Path="ApplicableContexts"
+                                    Converter="{StaticResource ListToStringConverter}"
+                                    ConverterParameter=" / " />
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                    <TextBlock Grid.Column="4" VerticalAlignment="Center" Text="{Binding Text}" TextAlignment="Right" />
                 </Grid>
+
             </DataTemplate>
 
             <DataTemplate x:Key="TemplateChecklist" DataType="viewModels:ChecklistItemViewModel">
-                <Grid IsEnabled="{Binding IsEnabled}">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                <Border 
+                    SnapsToDevicePixels="True"
+                    BorderBrush="{StaticResource BrushBorderChecklist}" BorderThickness="0 2 0 1"
+                    Margin="-10 -5 -10 -5"
+                    Padding="10 5 10 5"
+                    >
+                    <Grid IsEnabled="{Binding IsEnabled}"
+                          VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" MinWidth="20" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="{Binding ListNumber}" />
-                    <TextBlock Grid.Column="1" Text="-" />
-                    <TextBlock Grid.Column="2" Text="{Binding Title}" />
-                </Grid>
+                        <TextBlock Text="{Binding ListNumber}"
+                                   FontSize="14" FontWeight="Bold" />
+                        <TextBlock Grid.Column="1" Text="{Binding Title}"
+                                   FontSize="14" FontWeight="Bold"
+                                   Margin="20 0 20 0" />
+                        <TextBlock Grid.Column="2">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="/ {0} /">
+                                    <Binding
+                                        Path="ApplicableContexts"
+                                        Converter="{StaticResource ListToStringConverter}"
+                                        ConverterParameter=" / " />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                        <Border Grid.Column="3"
+                                Margin="20 0 0 0"
+                                Style="{DynamicResource NotAvailable}"
+                                Visibility="{Binding IsEnabled, Converter={StaticResource InvertableBooleanToVisibilityConverter}, ConverterParameter=Inverted}">
+                            <TextBlock>N/A</TextBlock>
+                        </Border>
+                    </Grid>
+                </Border>
             </DataTemplate>
 
             <DataTemplate x:Key="TemplateSeparator" DataType="viewModels:ChecklistItemViewModel">
                 <Separator HorizontalAlignment="Stretch" Width="2" />
             </DataTemplate>
 
-            <utils:UppercaseConverter x:Key="UppercaseConverter" />
-            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
-            <utils:InvertableBooleanToVisibilityConverter x:Key="InvertableBooleanToVisibilityConverter" />
-            <utils:ListToStringConverter x:Key="ListToStringConverter" />
 
         </ResourceDictionary>
     </views:MvxWpfView.Resources>
@@ -289,7 +350,7 @@
 
             </Grid>
         </Border>
-        
+
         <GridSplitter Grid.Column="1" Width="2"
                       ResizeBehavior="PreviousAndNext"
                       ResizeDirection="Columns" />
@@ -315,7 +376,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="*" />
-                            <RowDefinition Height="53"/>
+                            <RowDefinition Height="53" />
                         </Grid.RowDefinitions>
 
                         <!-- CHECKLIST TITLE -->
@@ -345,7 +406,7 @@
                                 </TextBlock>
                             </DockPanel>
                         </Border>
-                        
+
                         <!-- CHECKLIST ITEMS -->
                         <ListBox Grid.Row="1"
                                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
@@ -356,27 +417,70 @@
                                  BorderThickness="1"
                                  Margin="20 20 20 0"
                                  Padding="5 10 5 0"
+                                 FontFamily="{StaticResource MuliRegular}"
+                                 FontSize="12"
+                                 Foreground="{StaticResource BrushTextChecklistItem}"
                                  ItemTemplateSelector="{StaticResource ChecklistItemTemplateSelector}"
                                  ItemsSource="{Binding Children}">
                             <ListBox.Resources>
                                 <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="5 5 0 0"/>
-                                    <Setter Property="SnapsToDevicePixels" Value="True"/>
+                                    <Setter Property="CornerRadius" Value="5 5 0 0" />
+                                    <Setter Property="SnapsToDevicePixels" Value="True" />
                                 </Style>
                             </ListBox.Resources>
                             <ListBox.ItemContainerStyle>
-                                <Style TargetType="ListBoxItem">
+                                <Style TargetType="ListBoxItem"
+                                       d:DataContext="{d:DesignInstance viewModels:ChecklistItemViewModel}">
+                                    <Setter Property="VerticalAlignment" Value="Center" />
                                     <Setter Property="IsEnabled" Value="{Binding IsEnabled}" />
+                                    <Setter Property="Focusable" Value="{Binding IsSelectable}" />
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="ListBoxItem">
+                                                <Border Name="_Border"
+                                                        MinHeight="50"
+                                                        Padding="10 5 10 5"
+                                                        BorderBrush="{DynamicResource BrushBorderChecklist}"
+                                                        BorderThickness="0 0 0 1"
+                                                        SnapsToDevicePixels="true"
+                                                        VerticalAlignment="Center">
+                                                    <ContentPresenter Name="_ContentPresenter" />
+                                                </Border>
+                                                <ControlTemplate.Triggers>
+                                                    <Trigger Property="IsSelected" Value="true">
+                                                        <Setter TargetName="_Border" Property="BorderBrush"
+                                                                Value="{DynamicResource BrushSelection}" />
+                                                        <Setter TargetName="_Border" Property="BorderThickness"
+                                                                Value="1 1 1 1" />
+                                                        <Setter TargetName="_Border" Property="Padding"
+                                                                Value="9 4 9 5" />
+                                                        <Setter TargetName="_ContentPresenter"
+                                                                Property="TextBlock.Foreground"
+                                                                Value="{StaticResource BrushSelection}" />
+                                                    </Trigger>
+                                                    <Trigger Property="IsMouseOver" Value="True">
+                                                        <Setter TargetName="_Border" Property="Background"
+                                                                Value="{DynamicResource BrushBorder}" />
+                                                    </Trigger>
+                                                    <Trigger Property="IsEnabled" Value="False">
+                                                        <Setter TargetName="_Border" Property="Opacity" Value="0.5"></Setter>
+                                                    </Trigger>
+                                                </ControlTemplate.Triggers>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
                                 </Style>
                             </ListBox.ItemContainerStyle>
+
                         </ListBox>
-                        
+
                         <!-- CHECKLIST BUTTONS -->
                         <Border Grid.Row="2" Padding="10" Margin="20 0 20 10"
                                 CornerRadius="0 0 5 5"
                                 VerticalAlignment="Center"
                                 BorderBrush="{DynamicResource BrushBorder}" BorderThickness="1 0 1 1">
-                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal"
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                        Orientation="Horizontal"
                                         DockPanel.Dock="Bottom">
                                 <Button>Speak</Button>
                                 <Button>Skip</Button>

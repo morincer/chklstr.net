@@ -3,13 +3,16 @@
                     xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf">
     <Color x:Key="ColorBackground">White</Color>
     <Color x:Key="ColorBorder">#dddddd</Color>
+    <Color x:Key="ColorBorderChecklist">#ccc5b9</Color>
     <Color x:Key="ColorBackgroundAlt1">#f4f3ef</Color>
     <Color x:Key="ColorBackgroundAlt2">#f4f4f4</Color>
     <Color x:Key="ColorTextAlt2">#66615B</Color>
     <Color x:Key="ColorTextAlt1">#5e5e5e</Color>
+    <Color x:Key="ColorTextChecklistItem">#252422</Color>
     <Color x:Key="ColorSelection">#EB5E28</Color>
     <Color x:Key="ColorOn">#2e7d32</Color>
     <Color x:Key="ColorOff">#ff0000</Color>
+    <Color x:Key="ColorChecked">#47a347</Color>
     <Color x:Key="ColorNotAvailable">#F3BB45</Color>
 
     <FontFamily x:Key="MuliRegular">../Fonts/#Muli</FontFamily>
@@ -19,16 +22,19 @@
 
     <SolidColorBrush x:Key="BrushBackground" Color="{DynamicResource ColorBackground}" />
     <SolidColorBrush x:Key="BrushBorder" Color="{DynamicResource ColorBorder}" />
+    <SolidColorBrush x:Key="BrushBorderChecklist" Color="{DynamicResource ColorBorderChecklist}" />
     <SolidColorBrush x:Key="BrushBackgroundAlt1" Color="{DynamicResource ColorBackgroundAlt1}" />
 
     <SolidColorBrush x:Key="BrushBackgroundAlt2" Color="{DynamicResource ColorBackgroundAlt2}" />
-    <SolidColorBrush x:Key="BrushTextAlt2" Color="{DynamicResource ColorTextAlt2}"></SolidColorBrush>
-    <SolidColorBrush x:Key="BrushTextAlt1" Color="{DynamicResource ColorTextAlt1}"></SolidColorBrush>
+    <SolidColorBrush x:Key="BrushTextAlt2" Color="{DynamicResource ColorTextAlt2}" />
+    <SolidColorBrush x:Key="BrushTextAlt1" Color="{DynamicResource ColorTextAlt1}" />
+    <SolidColorBrush x:Key="BrushTextChecklistItem" Color="{DynamicResource ColorTextChecklistItem}" />
 
-    <SolidColorBrush x:Key="BrushSelection" Color="{DynamicResource ColorSelection}"></SolidColorBrush>
+    <SolidColorBrush x:Key="BrushSelection" Color="{DynamicResource ColorSelection}" />
 
     <SolidColorBrush x:Key="BrushOn" Color="{DynamicResource ColorOn}"></SolidColorBrush>
     <SolidColorBrush x:Key="BrushOff" Color="{DynamicResource ColorOff}"></SolidColorBrush>
+    <SolidColorBrush x:Key="BrushChecked" Color="{DynamicResource ColorChecked}"></SolidColorBrush>
     <SolidColorBrush x:Key="BrushNotAvailable" Color="{DynamicResource ColorNotAvailable}"></SolidColorBrush>
 
     <Style x:Key="TopPanel" TargetType="StackPanel">
@@ -61,20 +67,20 @@
         <Setter Property="Foreground" Value="{StaticResource BrushTextAlt2}" />
         <Setter Property="TextDecorations" Value=""></Setter>
     </Style>
-    
+
     <Style x:Key="NotAvailable" TargetType="Border">
-        <Setter Property="BorderBrush" Value="{DynamicResource BrushNotAvailable}"/>
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="CornerRadius" Value="5"/>
-        <Setter Property="Height" Value="17"/>
-        <Setter Property="Padding" Value="3"/>
-        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource BrushNotAvailable}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Height" Value="17" />
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="Cursor" Value="Hand" />
         <Style.Resources>
             <Style TargetType="TextBlock">
-                <Setter Property="Foreground" Value="{DynamicResource BrushNotAvailable}"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="Foreground" Value="{DynamicResource BrushNotAvailable}" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="10" />
             </Style>
         </Style.Resources>
     </Style>
@@ -87,8 +93,17 @@
     <Color x:Key="ColorButtonBorder">#b5b5b5</Color>
     <Color x:Key="ColorButtonText">#333333</Color>
 
+    <Color x:Key="ColorCheckboxBorder">#5a5a5a</Color>
+    <Color x:Key="ColorCheckboxBackground">Transparent</Color>
+    <Color x:Key="ColorCheckboxBackgroundChecked">#0f9d58</Color>
+    <Color x:Key="ColorCheckboxBorderChecked">#4bb582</Color>
+
     <SolidColorBrush x:Key="BrushButtonBorder" Color="{DynamicResource ColorButtonBorder}" />
     <SolidColorBrush x:Key="BrushButtonText" Color="{DynamicResource ColorButtonText}" />
+    <SolidColorBrush x:Key="BrushCheckboxBorder" Color="{DynamicResource ColorCheckboxBorder}" />
+    <SolidColorBrush x:Key="BrushCheckboxBackground" Color="{DynamicResource ColorCheckboxBackground}" />
+    <SolidColorBrush x:Key="BrushCheckboxBackgroundChecked" Color="{DynamicResource ColorCheckboxBackgroundChecked}" />
+    <SolidColorBrush x:Key="BrushCheckboxBorderChecked" Color="{DynamicResource ColorCheckboxBorderChecked}" />
 
     <Style x:Key="Flat" TargetType="Button">
         <!-- <Setter Property="Background" Value="{x:Null}" /> -->
@@ -149,4 +164,47 @@
         <Setter Property="Margin" Value="0 0 5 0" />
         <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
+
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+    <Style x:Key="RoundCheckbox" TargetType="CheckBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <Border BorderBrush="{StaticResource BrushCheckboxBorder}" CornerRadius="3" BorderThickness="1"
+                            x:Name="_Border"
+                            MinWidth="20"
+                            MinHeight="20"
+                            Cursor="Hand"
+                            VerticalAlignment="Center"
+                            Background="{StaticResource BrushCheckboxBackground}"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}">
+                        <StackPanel VerticalAlignment="Center">
+                            <ContentPresenter />
+                            <TextBlock
+                                Style="{StaticResource Icon}"
+                                Foreground="White"
+                                TextAlignment="Center"
+                                Visibility="{TemplateBinding IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                Margin="0"
+                                Text="&#xf00c;" />
+                        </StackPanel>
+                    </Border>
+
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="_Border" Property="BorderBrush"
+                                    Value="{StaticResource BrushCheckboxBorderChecked}" />
+                            <Setter TargetName="_Border" Property="Background"
+                                    Value="{StaticResource BrushCheckboxBackgroundChecked}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>
