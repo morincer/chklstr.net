@@ -28,6 +28,8 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
         }
     }
 
+    public ICollection<string> ApplicableContexts => Item.Contexts;
+
     private int _checkableItemsCount;
     public int CheckableItemsCount
     {

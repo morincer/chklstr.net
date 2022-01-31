@@ -24,6 +24,7 @@ namespace Chklstr.UI.WPF
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
     }
 }

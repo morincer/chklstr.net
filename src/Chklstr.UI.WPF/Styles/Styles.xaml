@@ -7,47 +7,143 @@
     <Color x:Key="ColorBackgroundAlt2">#f4f4f4</Color>
     <Color x:Key="ColorTextAlt">#66615B</Color>
     <Color x:Key="ColorSelection">#EB5E28</Color>
-    
+    <Color x:Key="ColorOn">#2e7d32</Color>
+    <Color x:Key="ColorOff">#ff0000</Color>
+    <Color x:Key="ColorNotAvailable">#F3BB45</Color>
+
     <FontFamily x:Key="MuliRegular">../Fonts/#Muli</FontFamily>
     <FontFamily x:Key="MuliSemiBold">../Fonts/#Muli SemiBold</FontFamily>
-    
-    <SolidColorBrush x:Key="BrushBackground" Color="{DynamicResource ColorBackground}"/>
-    <SolidColorBrush x:Key="BrushBorder" Color="{DynamicResource ColorBorder}"/>
-    <SolidColorBrush x:Key="BrushBackgroundAlt1" Color="{DynamicResource ColorBackgroundAlt1}"/>
-    
-    <SolidColorBrush x:Key="BrushBackgroundAlt2" Color="{DynamicResource ColorBackgroundAlt2}"/>
+    <FontFamily x:Key="FontAwesome">../Fonts/FontAwesome.otf#Font Awesome 5 Free Solid</FontFamily>
+
+    <SolidColorBrush x:Key="BrushBackground" Color="{DynamicResource ColorBackground}" />
+    <SolidColorBrush x:Key="BrushBorder" Color="{DynamicResource ColorBorder}" />
+    <SolidColorBrush x:Key="BrushBackgroundAlt1" Color="{DynamicResource ColorBackgroundAlt1}" />
+
+    <SolidColorBrush x:Key="BrushBackgroundAlt2" Color="{DynamicResource ColorBackgroundAlt2}" />
     <SolidColorBrush x:Key="BrushTextAlt2" Color="{DynamicResource ColorTextAlt}"></SolidColorBrush>
-    
+
     <SolidColorBrush x:Key="BrushSelection" Color="{DynamicResource ColorSelection}"></SolidColorBrush>
-    
+
+    <SolidColorBrush x:Key="BrushOn" Color="{DynamicResource ColorOn}"></SolidColorBrush>
+    <SolidColorBrush x:Key="BrushOff" Color="{DynamicResource ColorOff}"></SolidColorBrush>
+    <SolidColorBrush x:Key="BrushNotAvailable" Color="{DynamicResource ColorNotAvailable}"></SolidColorBrush>
+
     <Style x:Key="TopPanel" TargetType="StackPanel">
         <Setter Property="Background" Value="{DynamicResource BrushBackground}"></Setter>
     </Style>
-    
+
     <Style x:Key="DialogBackground" TargetType="Panel">
-        <Setter Property="Background" Value="{DynamicResource BrushBackgroundAlt1}"/>
+        <Setter Property="Background" Value="{DynamicResource BrushBackgroundAlt1}" />
     </Style>
-    
+
     <Style x:Key="InnerPanelBorder" TargetType="Border">
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="CornerRadius" Value="5, 5, 5, 5"/>
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="5, 5, 5, 5" />
         <Setter Property="BorderBrush" Value="{DynamicResource BrushBorder}"></Setter>
         <Setter Property="Background" Value="{DynamicResource BrushBackground}"></Setter>
-        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Margin" Value="10" />
         <Setter Property="Padding" Value="10"></Setter>
     </Style>
-    
+
     <Style x:Key="InnerPanel" TargetType="Panel">
-        <Setter Property="HorizontalAlignment" Value="Stretch"/>
-        <Setter Property="Background" Value="{DynamicResource BrushBackground}"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="Background" Value="{DynamicResource BrushBackground}" />
+    </Style>
+
+    <Style x:Key="Header0" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource MuliRegular}" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource BrushTextAlt2}" />
+        <Setter Property="TextDecorations" Value=""></Setter>
     </Style>
     
-    <Style x:Key="Header0" TargetType="TextBlock">
-                <Setter Property="FontFamily" Value="{StaticResource MuliRegular}"/>
-                <Setter Property="FontSize" Value="18"/>
-                <Setter Property="TextAlignment" Value="Center"/>
-                <Setter Property="VerticalAlignment" Value="Center"></Setter>
-                <Setter Property="Foreground" Value="{StaticResource BrushTextAlt2}"/>
-                <Setter Property="TextDecorations" Value=""></Setter>
+    <Style x:Key="NotAvailable" TargetType="Border">
+        <Setter Property="BorderBrush" Value="{DynamicResource BrushNotAvailable}"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="5"/>
+        <Setter Property="Height" Value="17"/>
+        <Setter Property="Padding" Value="3"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Style.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{DynamicResource BrushNotAvailable}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="FontSize" Value="10"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+
+    <LinearGradientBrush x:Key="ButtonBackground" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#eeeeee" Offset="0" />
+        <GradientStop Color="#dadada" Offset="1" />
+    </LinearGradientBrush>
+
+    <Color x:Key="ColorButtonBorder">#b5b5b5</Color>
+    <Color x:Key="ColorButtonText">#333333</Color>
+
+    <SolidColorBrush x:Key="BrushButtonBorder" Color="{DynamicResource ColorButtonBorder}" />
+    <SolidColorBrush x:Key="BrushButtonText" Color="{DynamicResource ColorButtonText}" />
+
+    <Style x:Key="Flat" TargetType="Button">
+        <!-- <Setter Property="Background" Value="{x:Null}" /> -->
+        <Setter Property="BorderBrush" Value="{DynamicResource BrushButtonBorder}" />
+        <Setter Property="Background" Value="{DynamicResource ButtonBackground}" />
+        <Setter Property="Foreground" Value="{DynamicResource BrushButtonText}" />
+        <Setter Property="Padding" Value="10 5 10 5" />
+        <Setter Property="MinWidth" Value="70"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="3"
+                        Cursor="Hand"
+                        SnapsToDevicePixels="True"
+                        Margin="{TemplateBinding Margin}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        MinWidth="{TemplateBinding MinWidth}">
+                        <StackPanel Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <ContentPresenter
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Margin="{TemplateBinding Padding}" RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                        </Trigger>
+                        <Trigger Property="IsDefaulted" Value="true">
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                        </Trigger>
+                        <Trigger Property="ToggleButton.IsChecked" Value="true">
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground"
+                                    Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{x:Null}" />
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter Property="FontWeight" Value="Normal" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="Icon" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{DynamicResource FontAwesome}" />
+        <Setter Property="Margin" Value="0 0 5 0" />
+        <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
 </ResourceDictionary>
