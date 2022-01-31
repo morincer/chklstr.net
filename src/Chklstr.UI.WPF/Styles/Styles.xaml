@@ -5,14 +5,16 @@
     <Color x:Key="ColorBorder">#dddddd</Color>
     <Color x:Key="ColorBackgroundAlt1">#f4f3ef</Color>
     <Color x:Key="ColorBackgroundAlt2">#f4f4f4</Color>
-    <Color x:Key="ColorTextAlt">#66615B</Color>
+    <Color x:Key="ColorTextAlt2">#66615B</Color>
+    <Color x:Key="ColorTextAlt1">#5e5e5e</Color>
     <Color x:Key="ColorSelection">#EB5E28</Color>
     <Color x:Key="ColorOn">#2e7d32</Color>
     <Color x:Key="ColorOff">#ff0000</Color>
     <Color x:Key="ColorNotAvailable">#F3BB45</Color>
 
     <FontFamily x:Key="MuliRegular">../Fonts/#Muli</FontFamily>
-    <FontFamily x:Key="MuliSemiBold">../Fonts/#Muli SemiBold</FontFamily>
+    <FontFamily x:Key="MuliSemiBold">../Fonts/Muli-SemiBold.ttf#Muli</FontFamily>
+    <FontFamily x:Key="MuliBold">../Fonts/Muli-Bold.ttf#Muli</FontFamily>
     <FontFamily x:Key="FontAwesome">../Fonts/FontAwesome.otf#Font Awesome 5 Free Solid</FontFamily>
 
     <SolidColorBrush x:Key="BrushBackground" Color="{DynamicResource ColorBackground}" />
@@ -20,7 +22,8 @@
     <SolidColorBrush x:Key="BrushBackgroundAlt1" Color="{DynamicResource ColorBackgroundAlt1}" />
 
     <SolidColorBrush x:Key="BrushBackgroundAlt2" Color="{DynamicResource ColorBackgroundAlt2}" />
-    <SolidColorBrush x:Key="BrushTextAlt2" Color="{DynamicResource ColorTextAlt}"></SolidColorBrush>
+    <SolidColorBrush x:Key="BrushTextAlt2" Color="{DynamicResource ColorTextAlt2}"></SolidColorBrush>
+    <SolidColorBrush x:Key="BrushTextAlt1" Color="{DynamicResource ColorTextAlt1}"></SolidColorBrush>
 
     <SolidColorBrush x:Key="BrushSelection" Color="{DynamicResource ColorSelection}"></SolidColorBrush>
 
