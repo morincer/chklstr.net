@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Chklstr.Core.Model;
 using Chklstr.UI.Core.ViewModels;
@@ -70,6 +71,15 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
             Assert.That(item.IsEnabled, Is.EqualTo(item.Item.IsAvailableInContext(_checklist.Contexts)));
         }
         
+    }
+
+    [Test]
+    public void ShouldRenderMarkdown()
+    {
+        foreach (var item in _checklist.Children.Where(c => !string.IsNullOrEmpty(c.DescriptionMarkdown)))
+        {
+            Assert.NotNull(item.DescriptionMarkdownFlowDocument);
+        }
     }
     
 }

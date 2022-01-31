@@ -1,4 +1,7 @@
-﻿using Chklstr.Core.Model;
+﻿using System.Windows.Documents;
+using Chklstr.Core.Model;
+using MdXaml;
+using Microsoft.Extensions.Logging;
 using MvvmCross.ViewModels;
 using Serilog;
 
@@ -12,6 +15,8 @@ public class ChecklistItemViewModel : MvxViewModel<ChecklistItem>
     public string Title { get; set; } = "";
     public string Text { get; set; } = "";
     public string? DescriptionMarkdown { get; set; }
+    
+    public FlowDocument DescriptionMarkdownFlowDocument { get; private set; } 
 
     public bool IsSeparator { get; set; }
     public bool IsIndent { get; set; }
@@ -73,6 +78,17 @@ public class ChecklistItemViewModel : MvxViewModel<ChecklistItem>
 
         Update();
     }
+
+    /*public override async Task Initialize()
+    {
+        if (!string.IsNullOrEmpty(DescriptionMarkdown))
+        {
+            await Task.Run(() =>
+            {
+                
+            });
+        }
+    }*/
 
     public void Update()
     {
