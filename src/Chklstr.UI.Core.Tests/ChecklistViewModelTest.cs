@@ -106,6 +106,19 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
         // should rewind
         Assert.That(_checklist.SelectedItem, Is.EqualTo(_checklist.Children[0]));
     }
-    
-    
+
+    [Test]
+    public void ShouldResetChecked()
+    {
+        _checklist.CheckAndAdvance();
+        Assert.True(_checklist.Children.Any(c => c.IsChecked));
+        Assert.That(_checklist.SelectedItem, Is.EqualTo(_checklist.Children[1]));
+        
+        _checklist.Reset();
+        
+        Assert.False(_checklist.Children.Any(c => c.IsChecked));
+        Assert.That(_checklist.SelectedItem, Is.EqualTo(_checklist.Children[0]));
+        
+    }
+
 }

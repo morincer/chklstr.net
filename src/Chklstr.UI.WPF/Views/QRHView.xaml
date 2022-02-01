@@ -539,7 +539,10 @@
                                 </Button>
                                 <Button Style="{DynamicResource ChecklistButton}"
                                         BorderBrush="{DynamicResource BrushButtonReset}"
-                                        Background="{DynamicResource BrushButtonReset}">
+                                        Background="{DynamicResource BrushButtonReset}"
+                                        Command="{Binding ResetCommand}"
+                                        IsEnabled="{Binding CanReset}"
+                                        >
                                     Reset
                                 </Button>
                             </StackPanel>

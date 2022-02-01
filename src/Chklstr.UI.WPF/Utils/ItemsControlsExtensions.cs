@@ -3,33 +3,46 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Threading;
 
 namespace Chklstr.UI.WPF.Utils;
 
 public static class ItemsControlExtensions
 {
-    public static void ScrollToCenterOfView(this ItemsControl itemsControl, object item)
+    public static DependencyProperty VerticalOffsetAnimatedProperty = DependencyProperty.RegisterAttached(
+        "VerticalOffsetAnimated", typeof(double), typeof(ScrollViewer), 
+        new UIPropertyMetadata((o, args) =>
+        {
+            if (o is not ScrollViewer scrollViewer)
+            {
+                return;
+            }
+            
+            scrollViewer.ScrollToVerticalOffset((double) args.NewValue);
+        }));
+    
+    public static void ScrollToCenterOfView(this ItemsControl itemsControl, object item, int animate = 0)
     {
         // Scroll immediately if possible
-        if (!itemsControl.TryScrollToCenterOfView(item))
+        if (!itemsControl.TryScrollToCenterOfView(item, animate))
         {
             // Otherwise wait until everything is loaded, then scroll
             if (itemsControl is ListBox) ((ListBox) itemsControl).ScrollIntoView(item);
             itemsControl.Dispatcher.BeginInvoke(DispatcherPriority.Loaded,
-                new Action(() => { itemsControl.TryScrollToCenterOfView(item); }));
+                new Action(() => { itemsControl.TryScrollToCenterOfView(item, animate); }));
         }
     }
 
-    private static bool TryScrollToCenterOfView(this ItemsControl itemsControl, object item)
+    private static bool TryScrollToCenterOfView(this ItemsControl itemsControl, object item, int animate)
     {
         // Find the container
         var container = itemsControl.ItemContainerGenerator.ContainerFromItem(item) as UIElement;
         if (container == null) return false;
 
         // Find the ScrollContentPresenter
-        ScrollContentPresenter presenter = null;
-        for (Visual vis = container;
+        ScrollContentPresenter? presenter = null;
+        for (Visual? vis = container;
              vis != null && vis != itemsControl;
              vis = VisualTreeHelper.GetParent(vis) as Visual)
             if ((presenter = vis as ScrollContentPresenter) != null)
@@ -63,10 +76,34 @@ public static class ItemsControlExtensions
             else
                 center.Y = logicalCenter;
         }
-
+        
         // Scroll the center of the container to the center of the viewport
         if (scrollInfo.CanVerticallyScroll)
-            scrollInfo.SetVerticalOffset(CenteringOffset(center.Y, scrollInfo.ViewportHeight, scrollInfo.ExtentHeight));
+        {
+            var targetVerticalOffset = CenteringOffset(center.Y, scrollInfo.ViewportHeight, scrollInfo.ExtentHeight);
+
+            if (animate == 0)
+            {
+                scrollInfo.SetVerticalOffset(targetVerticalOffset);
+            }
+            else
+            {
+                var verticalAnimation = new DoubleAnimation();
+                verticalAnimation.From = scrollInfo.VerticalOffset;
+                verticalAnimation.To = targetVerticalOffset;
+                var easingFunction = new QuadraticEase();
+                easingFunction.EasingMode = EasingMode.EaseOut;
+                verticalAnimation.EasingFunction = easingFunction;
+                verticalAnimation.Duration = new Duration(TimeSpan.FromMilliseconds(animate));
+
+                var storyboard = new Storyboard();
+                storyboard.Children.Add(verticalAnimation);
+                Storyboard.SetTarget(verticalAnimation, scrollInfo.ScrollOwner);
+                Storyboard.SetTargetProperty(verticalAnimation, new PropertyPath(VerticalOffsetAnimatedProperty));
+                storyboard.Begin();
+            }
+        }
+
         if (scrollInfo.CanHorizontallyScroll)
             scrollInfo.SetHorizontalOffset(CenteringOffset(center.X, scrollInfo.ViewportWidth, scrollInfo.ExtentWidth));
         return true;

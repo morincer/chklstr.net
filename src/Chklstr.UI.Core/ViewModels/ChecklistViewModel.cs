@@ -187,6 +187,7 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
         }
 
         RaisePropertyChanged(() => CanCheckAndAdvance);
+        RaisePropertyChanged(() => CanReset);
     }
 
     public override void ViewDestroy(bool viewFinishing = true)
@@ -194,6 +195,23 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
         foreach (var listener in _listeners)
         {
             listener.Dispose();
+        }
+    }
+
+    public bool CanReset => CheckedItemsCount > 0 && IsEnabled;
+    public MvxCommand ResetCommand => new(Reset);
+    public void Reset()
+    {
+        foreach (var item in Children)
+        {
+            item.IsChecked = false;
+        }
+
+        SelectedItem = GetNextActiveItem(Children);
+        
+        if (SelectedItem != null)
+        {
+            ScrollIntoViewInteraction.Raise(SelectedItem);
         }
     }
 }

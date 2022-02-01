@@ -84,6 +84,6 @@ public partial class QRHView : MvxWpfView<QRHViewModel>, IComponentConnector
             return;
         }
 
-        listBox.ScrollToCenterOfView(checklistItem);
+        listBox.ScrollToCenterOfView(checklistItem, 500);
     }
 }
