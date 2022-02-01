@@ -32,7 +32,7 @@ Backlog:
 Bugs:
     
 V1:
-    [ ] (FTR) Check and advance
+    [x] (FTR) Check and advance
     [ ] (FTR) Speak functionality
     [ ] (FTR) UI - Style completed checklists
     [ ] (FTR) Open another file    
