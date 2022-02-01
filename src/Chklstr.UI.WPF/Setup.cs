@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Windows;
+using Chklstr.Core.Services.Voice;
+using Chklstr.Infra.Voice;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
+using MvvmCross;
 using MvvmCross.Core;
+using MvvmCross.IoC;
 using MvvmCross.Platforms.Wpf.Core;
 using Serilog;
 using Serilog.Extensions.Logging;
@@ -27,7 +31,16 @@ public class Setup : MvxWpfSetup<Core.App>
             }
         };
     }
-    
+
+    protected override IMvxIoCProvider InitializeIoC()
+    {
+        var ioc = base.InitializeIoC();
+        ioc.RegisterType<ITextToSpeechService, TextToSpeechService>();
+        ioc.RegisterType<IVoiceCommandDetectionService, VoiceCommandDetectionService>();
+
+        return ioc;
+    }
+
     protected override ILoggerProvider? CreateLogProvider()
     {
         return new SerilogLoggerProvider();

@@ -5,6 +5,7 @@ using Chklstr.UI.Core.Utils;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
 using MvvmCross.Binding.Extensions;
+using MvvmCross.Commands;
 using MvvmCross.ViewModels;
 
 namespace Chklstr.UI.Core.ViewModels;
@@ -24,6 +25,21 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook>
     {
         get => _selectedChecklist;
         set => SetProperty(ref _selectedChecklist, value);
+    }
+
+    private bool _isVoiceEnabled;
+
+    public bool IsVoiceEnabled
+    {
+        get => _isVoiceEnabled;
+        set => SetProperty(ref _isVoiceEnabled, value);
+    }
+    
+    public MvxCommand SpeakCommand => new(ToggleSpeak);
+    
+    public void ToggleSpeak()
+    {
+        IsVoiceEnabled = !IsVoiceEnabled;
     }
 
     public String[] SelectedContexts
@@ -62,6 +78,7 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook>
             try
             {
                 var viewModel = Mvx.IoCProvider.IoCConstruct<ChecklistViewModel>();
+                viewModel.QRH = this;
                 viewModel.Prepare(checklist);
                 await viewModel.Initialize();
                 viewModel.ListNumber = level.ToString();

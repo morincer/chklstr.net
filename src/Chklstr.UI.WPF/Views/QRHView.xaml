@@ -519,6 +519,7 @@
                                         Orientation="Horizontal">
                                 <Button Style="{DynamicResource ChecklistButton}"
                                         BorderBrush="{DynamicResource BrushButtonSpeak}"
+                                        Command="{Binding QRH.SpeakCommand}"
                                         Background="{DynamicResource BrushButtonSpeak}">
                                     Speak
                                 </Button>

@@ -14,6 +14,8 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
     public delegate void ChecklistChangedHandler(ChecklistViewModel sender, EventArgs args);
     public Checklist Item { get; private set; }
     
+    public QRHViewModel QRH { get; set; }
+    
     public string ListNumber { get; set; }
     
     public string Name { get; set; }
@@ -66,7 +68,10 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
 
     public MvxCommand CheckAndAdvanceCommand => new(CheckAndAdvance);
 
+    
+
     public MvxInteraction<ChecklistItemViewModel> ScrollIntoViewInteraction { get; init; } = new();
+
     
     public void CheckAndAdvance()
     {

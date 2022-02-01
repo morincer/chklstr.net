@@ -14,6 +14,8 @@ public class TextToSpeechService : ITextToSpeechService
     public TextToSpeechService(ILogger<TextToSpeechService> log)
     {
         _log = log;
+        Rate = 1;
+        _log.LogDebug($"Initialized tts service. Available voices are: {string.Join(", ", Voices)}");
     }
 
     public string VoiceName

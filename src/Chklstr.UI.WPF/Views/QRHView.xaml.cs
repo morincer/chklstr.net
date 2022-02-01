@@ -1,8 +1,11 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
 using Chklstr.UI.Core.ViewModels;
 using Chklstr.UI.WPF.Utils;
+using Chklstr.UI.WPF.Voice;
+using MvvmCross;
 using MvvmCross.Base;
 using MvvmCross.Platforms.Wpf.Presenters.Attributes;
 using MvvmCross.Platforms.Wpf.Views;
@@ -34,7 +37,7 @@ public class ChecklistItemTemplateSelector : DataTemplateSelector
 [MvxViewFor(typeof(QRHViewModel))]
 public partial class QRHView : MvxWpfView<QRHViewModel>, IComponentConnector
 {
-    
+    private QRHVoiceView voiceView;
     public QRHView()
     {
         InitializeComponent();
@@ -49,6 +52,13 @@ public partial class QRHView : MvxWpfView<QRHViewModel>, IComponentConnector
         }
 
         TabControl_Checklists.SelectionChanged += OnChecklistShown;
+
+        voiceView = Mvx.IoCProvider.IoCConstruct<QRHVoiceView>(new Dictionary<string, object>
+        {
+            ["viewModel"] = ViewModel
+        });
+        
+        voiceView.Prepare();
     }
 
     private void OnChecklistShown(object sender, SelectionChangedEventArgs e)
