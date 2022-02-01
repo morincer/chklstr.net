@@ -75,6 +75,7 @@
                     </Grid>
                     <controls:MarkdownScrollViewerEx Grid.Row="1"
                                                      Foreground="Black"
+                                                     MarkdownStyleName="Compact"
                                                      Padding="20 10 10 10"
                                                      HorizontalScrollBarVisibility="Disabled"
                                                      VerticalScrollBarVisibility="Disabled"
@@ -87,7 +88,7 @@
             <DataTemplate x:Key="TemplateChecklist" DataType="viewModels:ChecklistItemViewModel">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Border
@@ -127,7 +128,14 @@
                             </Border>
                         </Grid>
                     </Border>
-
+                    <!--<controls:MarkdownScrollViewerEx Grid.Row="1"
+                                                     MarkdownStyle="{StaticResource DocumentStyleCompact}"
+                                                     Foreground="Black"
+                                                     Padding="20 10 10 10"
+                                                     HorizontalScrollBarVisibility="Disabled"
+                                                     VerticalScrollBarVisibility="Disabled"
+                                                     Markdown="{Binding DescriptionMarkdown}"
+                                                     Visibility="{Binding DescriptionMarkdown, Converter={StaticResource StringToVisibilityConverter}}" />-->
                 </Grid>
             </DataTemplate>
 

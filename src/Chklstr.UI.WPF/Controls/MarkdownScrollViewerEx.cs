@@ -9,6 +9,11 @@ namespace Chklstr.UI.WPF.Controls;
 
 public class MarkdownScrollViewerEx : MarkdownScrollViewer
 {
+    public MarkdownScrollViewerEx()
+    {
+        
+    }
+
     protected override void OnMouseWheel(MouseWheelEventArgs e)
     {
         e.Handled = false;
