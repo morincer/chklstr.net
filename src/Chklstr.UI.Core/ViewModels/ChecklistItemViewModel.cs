@@ -16,8 +16,6 @@ public class ChecklistItemViewModel : MvxViewModel<ChecklistItem>
     public string Text { get; set; } = "";
     public string? DescriptionMarkdown { get; set; }
     
-    public FlowDocument DescriptionMarkdownFlowDocument { get; private set; } 
-
     public bool IsSeparator { get; set; }
     public bool IsIndent { get; set; }
 

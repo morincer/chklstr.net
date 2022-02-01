@@ -74,15 +74,6 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
     }
 
     [Test]
-    public void ShouldRenderMarkdown()
-    {
-        foreach (var item in _checklist.Children.Where(c => !string.IsNullOrEmpty(c.DescriptionMarkdown)))
-        {
-            Assert.NotNull(item.DescriptionMarkdownFlowDocument);
-        }
-    }
-
-    [Test]
     public void ShouldSelectFirstActiveItemUponInitialization()
     {
         Assert.NotNull(_checklist.SelectedItem);
