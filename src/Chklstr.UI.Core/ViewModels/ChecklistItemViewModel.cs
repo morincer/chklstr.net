@@ -1,9 +1,5 @@
-﻿using System.Windows.Documents;
-using Chklstr.Core.Model;
-using MdXaml;
-using Microsoft.Extensions.Logging;
+﻿using Chklstr.Core.Model;
 using MvvmCross.ViewModels;
-using Serilog;
 
 namespace Chklstr.UI.Core.ViewModels;
 

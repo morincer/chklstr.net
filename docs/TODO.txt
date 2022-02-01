@@ -1,0 +1,62 @@
+Backlog:
+	[ ] (FTR) Save book to file
+	[ ] (IMP) Application data and settings storage
+    [ ] (FTR) Remember window size, posisition and last checklist
+    [ ] (IMP) Set default contexts in Checklist
+    [ ] (FTR) Make the voice a bit faster
+    [ ] (FTR) Option - change font
+    [ ] (FTR) Group checklists (like "Prestart", "Emergency", etc.)
+    [ ] (IMP) Test with more sophisticated markdown render (links, images etc.)
+    [ ] (IMP) Hide/show left navbar
+    [ ] (IMP) Add nice window header
+    [ ] (IMP) Layout N/A labels
+    [ ] (IMP) Alternate rows colors in checklist
+    [ ] (IMP) Navigation sublist support:
+        * Scroll to sublist
+    [ ] (FTR) Add support for skipping items
+    [ ] (IMP) Move parser and core model into a separate package
+    [ ] (FTR) Pin + wake shortcut
+    [ ] (IMP) Disable speak on list complete
+    [ ] (FTR) Bind "check" to mouse button or key combination
+    [ ] (FTR) Volume regulation inside application
+    [ ] (FTR) Support voice command for skip
+    [ ] (IMP) Change cursor over buttons
+    [ ] (FTR) Flight book visual editor
+    [ ] (IMP) Next checklist UI
+    [ ] (IMP) Next checklist voice command
+    [ ] (IMP) Add chips for contexts
+    [ ] (IMP) Settings: output audio device selection
+    [ ] (FTR) Create syntax highlighting for notepad++
+
+
+Bugs:
+    
+V1:
+    [ ] (FTR) Check and advance
+    [ ] (FTR) Speak functionality
+    [ ] (FTR) UI - Style completed checklists
+    [ ] (FTR) Open another file    
+    [ ] (FTR) Skip functionality
+    [ ] (FTR) Reset functionality
+    [ ] (FTR) Add parse errors reporting screen
+    [ ] (IMP) Handle book parse failure
+    [ ] (IMP) Parser: add syntax errors reporting
+    [ ] (IMP) Voice checklist and sublist start and end
+    [ ] (FTR) Startup screen
+    [ ] (FTR) Generic exporter extension point
+    [ ] (FTR) Export to HTML
+    [ ] (FTR) Export to JSON
+    [ ] (FTR) Export to XML
+    [ ] (FTR) Export to Word
+    [ ] (IMP) Auto-load last save checklist
+    [ ] (FTR) Checklist editor in external text editor
+    User selects and external editor. System opens the file in external editor and starts monitoring
+    it for changes. Once changes are detected, the user is questioned if he wants to refresh the file
+    [ ] (IMP) Add icon to speak, make it a toggle button
+    [ ] (FTR) Settings:
+            [ ] Settings button
+            [ ] Settings page
+            [ ] Path to external editor
+            [ ] Output device
+            [ ] VAD Threshold + test
+

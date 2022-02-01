@@ -9,8 +9,6 @@
                   xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
                   xmlns:local="clr-namespace:Chklstr.UI.WPF.Views"
                   xmlns:utils="clr-namespace:Chklstr.UI.WPF.Utils"
-                  xmlns:themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna"
-                  xmlns:mdXaml="clr-namespace:MdXaml;assembly=MdXaml"
                   xmlns:controls="clr-namespace:Chklstr.UI.WPF.Controls">
 
     <views:MvxWpfView.Resources>
@@ -22,6 +20,7 @@
             <utils:HasItemsToVisibilityConverter x:Key="HasItemsToVisibilityConverter" />
             <local:ChecklistItemTemplateSelector x:Key="ChecklistItemTemplateSelector" />
             <utils:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
+
 
             <!-- TEMPLATE SINGLE CHECK -->
             <DataTemplate x:Key="TemplateSingleCheckItem" DataType="viewModels:ChecklistItemViewModel">
@@ -39,7 +38,7 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
                     <Grid HorizontalAlignment="Stretch" IsEnabled="{Binding IsEnabled}" VerticalAlignment="Center">
                         <Grid.ColumnDefinitions>
@@ -386,12 +385,14 @@
                       ResizeBehavior="PreviousAndNext"
                       ResizeDirection="Columns" />
         <!-- CHECKLISTS CONTAINER -->
-        <TabControl SelectedItem="{Binding SelectedChecklist}" Grid.Column="2" Grid.Row="0"
-                    Background="{StaticResource BrushBackgroundAlt1}"
-                    BorderThickness="1 1 0 0"
-                    BorderBrush="{DynamicResource BrushBorder}"
-                    SnapsToDevicePixels="True"
-                    Margin="0 -2 0 0" ItemsSource="{Binding Checklists}">
+        <TabControl
+            x:Name="TabControl_Checklists"
+            SelectedItem="{Binding SelectedChecklist}" Grid.Column="2" Grid.Row="0"
+            Background="{StaticResource BrushBackgroundAlt1}"
+            BorderThickness="1 1 0 0"
+            BorderBrush="{DynamicResource BrushBorder}"
+            SnapsToDevicePixels="True"
+            Margin="0 -2 0 0" ItemsSource="{Binding Checklists}">
             <TabControl.ItemContainerStyle>
                 <Style TargetType="TabItem">
                     <Setter Property="Visibility" Value="Collapsed" />
@@ -480,7 +481,7 @@
                                                 </Border>
                                                 <ControlTemplate.Triggers>
                                                     <DataTrigger Binding="{Binding IsChecked}" Value="True">
-                                                        <Setter Property="IsSelected" Value="True"/>
+                                                        <Setter Property="IsSelected" Value="True" />
                                                     </DataTrigger>
                                                     <Trigger Property="IsSelected" Value="true">
                                                         <Setter TargetName="_Border" Property="BorderBrush"
@@ -518,19 +519,26 @@
                                         Orientation="Horizontal">
                                 <Button Style="{DynamicResource ChecklistButton}"
                                         BorderBrush="{DynamicResource BrushButtonSpeak}"
-                                        Background="{DynamicResource BrushButtonSpeak}"
-                                        >Speak</Button>
-                                <Button Style="{DynamicResource ChecklistButton}" 
+                                        Background="{DynamicResource BrushButtonSpeak}">
+                                    Speak
+                                </Button>
+                                <Button Style="{DynamicResource ChecklistButton}"
                                         BorderBrush="{DynamicResource BrushButtonSkip}"
-                                        Background="{DynamicResource BrushButtonSkip}">Skip</Button>
+                                        Background="{DynamicResource BrushButtonSkip}">
+                                    Skip
+                                </Button>
                                 <Button Style="{DynamicResource ChecklistButton}"
                                         BorderBrush="{DynamicResource BrushButtonCheck}"
                                         Background="{DynamicResource BrushButtonCheck}"
-                                        >Check</Button>
+                                        Command="{Binding CheckAndAdvanceCommand}"
+                                        IsEnabled="{Binding CanCheckAndAdvance}">
+                                    Check
+                                </Button>
                                 <Button Style="{DynamicResource ChecklistButton}"
                                         BorderBrush="{DynamicResource BrushButtonReset}"
-                                        Background="{DynamicResource BrushButtonReset}"
-                                        >Reset</Button>
+                                        Background="{DynamicResource BrushButtonReset}">
+                                    Reset
+                                </Button>
                             </StackPanel>
                         </Border>
                     </Grid>

@@ -38,7 +38,7 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
     public void ShouldUpdateCountersWithRespectToContexts()
     {
         _checklist.Item.Items[0].Contexts.Add("ctx");
-        _checklist.UpdateCounters();
+        _checklist.Update();
         
         Assert.That(_checklist.CheckableItemsCount, Is.EqualTo(0));
         Assert.That(_checklist.IsEnabled, Is.False);
@@ -79,5 +79,17 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
         Assert.NotNull(_checklist.SelectedItem);
         Assert.That(_checklist.SelectedItem?.Title, Is.EqualTo("Item"));
     }
+
+    [Test]
+    public void ShouldBeMarkedCompleteOnceAllItemsAreComplete()
+    {
+        foreach (var item in _checklist.Children.Where(c => c.IsEnabled))
+        {
+            item.IsChecked = true;
+        }
+        
+        Assert.True(_checklist.IsComplete);
+    }
+    
     
 }

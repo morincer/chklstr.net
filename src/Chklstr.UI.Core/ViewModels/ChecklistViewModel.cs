@@ -2,6 +2,7 @@
 using Chklstr.Core.Model;
 using Chklstr.UI.Core.Utils;
 using MvvmCross;
+using MvvmCross.Commands;
 using MvvmCross.ViewModels;
 using MvvmCross.WeakSubscription;
 using Serilog;
@@ -24,7 +25,7 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
         set
         {
             _contexts = value;
-            UpdateCounters();
+            Update();
         }
     }
 
@@ -59,10 +60,32 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
 
     private ChecklistItemViewModel? _selectedItem;
 
+    public bool CanCheckAndAdvance => !IsComplete && IsEnabled && GetNextActiveItem() != null;
+
+    public MvxCommand CheckAndAdvanceCommand => new MvxCommand(CheckAndAdvance);
+
+    public MvxInteraction<ChecklistItemViewModel> ScrollIntoViewInteraction { get; init; } = new();
+    
+    public void CheckAndAdvance()
+    {
+        if (!CanCheckAndAdvance) return;
+        SelectedItem!.IsChecked = true;
+        SelectedItem = GetNextActiveItem();
+
+        if (SelectedItem != null)
+        {
+            ScrollIntoViewInteraction.Raise(SelectedItem);
+        }
+    }
+
+
     public ChecklistItemViewModel? SelectedItem
     {
         get => _selectedItem;
-        set => SetProperty(ref _selectedItem, value);
+        set
+        {
+            SetProperty(ref _selectedItem, value);
+        }
     }
 
     public bool IsEnabled => _checkableItemsCount != 0;
@@ -113,7 +136,7 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
             } else if (item is SingleCheckItem)
             {
                 var listener = viewModel.WeakSubscribe(() => viewModel.IsChecked,
-                    (sender, args) => UpdateCounters());
+                    (sender, args) => Update());
                 _listeners.Add(listener);
             } 
 
@@ -123,10 +146,10 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
             }
         }
         
-        UpdateCounters();
+        Update();
     }
 
-    public void UpdateCounters()
+    public void Update()
     {
         foreach (var item in Children)
         {
@@ -140,6 +163,8 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
         {
             SelectedItem = GetNextActiveItem();
         }
+
+        RaisePropertyChanged(() => CanCheckAndAdvance);
     }
 
     public override void ViewDestroy(bool viewFinishing = true)
