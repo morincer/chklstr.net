@@ -60,9 +60,11 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
 
     private ChecklistItemViewModel? _selectedItem;
 
-    public bool CanCheckAndAdvance => !IsComplete && IsEnabled && GetNextActiveItem() != null;
+    public bool HasActiveItems => Children.Any(c => c.IsSelectable && c.IsEnabled && !c.IsChecked);
+    
+    public bool CanCheckAndAdvance => !IsComplete && IsEnabled && HasActiveItems;
 
-    public MvxCommand CheckAndAdvanceCommand => new MvxCommand(CheckAndAdvance);
+    public MvxCommand CheckAndAdvanceCommand => new(CheckAndAdvance);
 
     public MvxInteraction<ChecklistItemViewModel> ScrollIntoViewInteraction { get; init; } = new();
     
@@ -70,7 +72,27 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
     {
         if (!CanCheckAndAdvance) return;
         SelectedItem!.IsChecked = true;
-        SelectedItem = GetNextActiveItem();
+        SelectedItem = GetNextActiveItem(Children);
+
+        if (SelectedItem != null)
+        {
+            ScrollIntoViewInteraction.Raise(SelectedItem);
+        }
+    }
+
+    public MvxCommand SkipCommand => new(Skip);
+
+    public void Skip()
+    {
+        if (SelectedItem == null) return;
+
+        var items = Children
+            .SkipWhile(c => c != SelectedItem)
+            .Skip(1);
+
+        var nextItem = GetNextActiveItem(items);
+
+        SelectedItem = nextItem ?? GetNextActiveItem(Children);
 
         if (SelectedItem != null)
         {
@@ -105,9 +127,9 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
         await InitializeChecklist(Item, new HierarchyLevel());
     }
 
-    public ChecklistItemViewModel? GetNextActiveItem()
+    public ChecklistItemViewModel? GetNextActiveItem(IEnumerable<ChecklistItemViewModel> items)
     {
-        return Children
+        return items
             .FirstOrDefault(c => c.IsSelectable
                                  && !c.IsChecked
                                  && c.Item.IsAvailableInContext(Contexts));
@@ -161,7 +183,7 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
 
         if (IsEnabled && (SelectedItem == null || !SelectedItem.Item.IsAvailableInContext(Contexts)))
         {
-            SelectedItem = GetNextActiveItem();
+            SelectedItem = GetNextActiveItem(Children);
         }
 
         RaisePropertyChanged(() => CanCheckAndAdvance);

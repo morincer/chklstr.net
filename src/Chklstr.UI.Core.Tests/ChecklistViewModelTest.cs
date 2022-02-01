@@ -20,6 +20,7 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
         var book = new QuickReferenceHandbook("Test");
         var cl = book.Add("Test List");
         cl.AddSingleItem("Item", "Check");
+        cl.AddSingleItem("Item2", "Check");
         
         _checklist = new ChecklistViewModel();
         _checklist.Prepare(cl);
@@ -29,7 +30,7 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
     [Test]
     public void ShouldSetCounters()
     {
-        Assert.That(_checklist.CheckableItemsCount, Is.EqualTo(1));
+        Assert.That(_checklist.CheckableItemsCount, Is.EqualTo(2));
         Assert.That(_checklist.CheckedItemsCount, Is.EqualTo(0));
         Assert.That(_checklist.IsEnabled, Is.True);
     }
@@ -38,6 +39,7 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
     public void ShouldUpdateCountersWithRespectToContexts()
     {
         _checklist.Item.Items[0].Contexts.Add("ctx");
+        _checklist.Item.Items[1].Contexts.Add("ctx");
         _checklist.Update();
         
         Assert.That(_checklist.CheckableItemsCount, Is.EqualTo(0));
@@ -45,7 +47,7 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
 
         _checklist.Contexts = new[] {"ctx"};
 
-        Assert.That(_checklist.CheckableItemsCount, Is.EqualTo(1));
+        Assert.That(_checklist.CheckableItemsCount, Is.EqualTo(2));
         Assert.That(_checklist.IsEnabled, Is.True);
     }
 
@@ -89,6 +91,20 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
         }
         
         Assert.True(_checklist.IsComplete);
+    }
+
+    [Test]
+    public void ShouldSkipToNextActiveItem()
+    {
+        _checklist.SelectedItem = _checklist.Children[0];
+        
+        _checklist.Skip();
+        
+        Assert.That(_checklist.SelectedItem, Is.EqualTo(_checklist.Children[1]));
+        
+        _checklist.Skip();
+        // should rewind
+        Assert.That(_checklist.SelectedItem, Is.EqualTo(_checklist.Children[0]));
     }
     
     

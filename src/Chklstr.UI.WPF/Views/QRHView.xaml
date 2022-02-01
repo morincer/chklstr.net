@@ -524,7 +524,10 @@
                                 </Button>
                                 <Button Style="{DynamicResource ChecklistButton}"
                                         BorderBrush="{DynamicResource BrushButtonSkip}"
-                                        Background="{DynamicResource BrushButtonSkip}">
+                                        Background="{DynamicResource BrushButtonSkip}"
+                                        IsEnabled="{Binding CanCheckAndAdvance}"
+                                        Command="{Binding SkipCommand}"
+                                        >
                                     Skip
                                 </Button>
                                 <Button Style="{DynamicResource ChecklistButton}"

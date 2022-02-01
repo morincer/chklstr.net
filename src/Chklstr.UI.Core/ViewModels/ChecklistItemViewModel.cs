@@ -88,4 +88,9 @@ public class ChecklistItemViewModel : MvxViewModel<ChecklistItem>
     {
         IsEnabled = Item.IsAvailableInContext(Parent.Contexts);
     }
+
+    public override string ToString()
+    {
+        return $"{GetType().Name}:{Title}";
+    }
 }
