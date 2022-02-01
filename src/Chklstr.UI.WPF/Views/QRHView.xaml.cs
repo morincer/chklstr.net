@@ -1,8 +1,6 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
-using Chklstr.Core.Model;
 using Chklstr.UI.Core.ViewModels;
 using Chklstr.UI.WPF.Utils;
 using MvvmCross.Base;
