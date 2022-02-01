@@ -81,5 +81,12 @@ public class ChecklistViewModelTest : MvxIoCSupportingTest
             Assert.NotNull(item.DescriptionMarkdownFlowDocument);
         }
     }
+
+    [Test]
+    public void ShouldSelectFirstActiveItemUponInitialization()
+    {
+        Assert.NotNull(_checklist.SelectedItem);
+        Assert.That(_checklist.SelectedItem?.Title, Is.EqualTo("Item"));
+    }
     
 }

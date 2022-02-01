@@ -97,6 +97,16 @@
     <Color x:Key="ColorCheckboxBackground">Transparent</Color>
     <Color x:Key="ColorCheckboxBackgroundChecked">#0f9d58</Color>
     <Color x:Key="ColorCheckboxBorderChecked">#4bb582</Color>
+    
+    <Color x:Key="ColorButtonSkip">#ff9800</Color>
+    <Color x:Key="ColorButtonSpeak">#039be5</Color>
+    <Color x:Key="ColorButtonCheck">#43a047</Color>
+    <Color x:Key="ColorButtonReset">#9e9e9e</Color>
+    
+    <SolidColorBrush x:Key="BrushButtonSkip" Color="{DynamicResource ColorButtonSkip}"/>
+    <SolidColorBrush x:Key="BrushButtonSpeak" Color="{DynamicResource ColorButtonSpeak}"/>
+    <SolidColorBrush x:Key="BrushButtonCheck" Color="{DynamicResource ColorButtonCheck}"/>
+    <SolidColorBrush x:Key="BrushButtonReset" Color="{DynamicResource ColorButtonReset}"/>
 
     <SolidColorBrush x:Key="BrushButtonBorder" Color="{DynamicResource ColorButtonBorder}" />
     <SolidColorBrush x:Key="BrushButtonText" Color="{DynamicResource ColorButtonText}" />
@@ -112,10 +122,13 @@
         <Setter Property="Foreground" Value="{DynamicResource BrushButtonText}" />
         <Setter Property="Padding" Value="10 5 10 5" />
         <Setter Property="MinWidth" Value="70"></Setter>
+        <Setter Property="MinHeight" Value="20"></Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
                         Background="{TemplateBinding Background}"
                         CornerRadius="3"
                         Cursor="Hand"
@@ -126,10 +139,10 @@
                         MinWidth="{TemplateBinding MinWidth}">
                         <StackPanel Background="Transparent" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                             <ContentPresenter
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                HorizontalAlignment="Center"
                                 Margin="{TemplateBinding Padding}" RecognizesAccessKey="True"
                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                VerticalAlignment="Center" />
                         </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -205,6 +218,11 @@
 
             </Setter.Value>
         </Setter>
+    </Style>
+    
+    <Style x:Key="ChecklistButton" TargetType="Button" BasedOn="{StaticResource Flat}">
+        <Setter Property="MinWidth" Value="100"/>
+        <Setter Property="Margin" Value="0 0 5 0"/>
     </Style>
 
 </ResourceDictionary>

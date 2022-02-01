@@ -57,6 +57,14 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
 
     public ObservableCollection<ChecklistItemViewModel> Children { get; init; } = new();
 
+    private ChecklistItemViewModel? _selectedItem;
+
+    public ChecklistItemViewModel? SelectedItem
+    {
+        get => _selectedItem;
+        set => SetProperty(ref _selectedItem, value);
+    }
+
     public bool IsEnabled => _checkableItemsCount != 0;
 
     public bool IsComplete => _checkedItemsCount == _checkableItemsCount && _checkableItemsCount != 0;
@@ -72,6 +80,14 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
     public override async Task Initialize()
     {
         await InitializeChecklist(Item, new HierarchyLevel());
+    }
+
+    public ChecklistItemViewModel? GetNextActiveItem()
+    {
+        return Children
+            .FirstOrDefault(c => c.IsSelectable
+                                 && !c.IsChecked
+                                 && c.Item.IsAvailableInContext(Contexts));
     }
 
     private async Task InitializeChecklist(Checklist checklist, HierarchyLevel level)
@@ -119,6 +135,11 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
         
         CheckableItemsCount = Item.GetCountCheckable(Contexts);
         CheckedItemsCount = Item.GetCountChecked(Contexts);
+
+        if (IsEnabled && (SelectedItem == null || !SelectedItem.Item.IsAvailableInContext(Contexts)))
+        {
+            SelectedItem = GetNextActiveItem();
+        }
     }
 
     public override void ViewDestroy(bool viewFinishing = true)

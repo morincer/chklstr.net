@@ -164,7 +164,7 @@
                     <RowDefinition Height="Auto" /> <!-- TITLE ROW-->
                     <RowDefinition Height="*" /> <!-- CHECKLISTS ROW-->
                     <RowDefinition Height="Auto" /> <!-- CONTEXTS ROW-->
-                    <RowDefinition Height="55" /> <!-- BUTTONS ROW -->
+                    <RowDefinition Height="62" /> <!-- BUTTONS ROW -->
                 </Grid.RowDefinitions>
 
                 <!-- AIRCRAFT TITLE -->
@@ -407,7 +407,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="*" />
-                            <RowDefinition Height="53" />
+                            <RowDefinition Height="60" />
                         </Grid.RowDefinitions>
 
                         <!-- CHECKLIST TITLE -->
@@ -451,6 +451,7 @@
                                  FontFamily="{StaticResource MuliRegular}"
                                  FontSize="12"
                                  Foreground="{StaticResource BrushTextChecklistItem}"
+                                 SelectedItem="{Binding SelectedItem}"
                                  ItemTemplateSelector="{StaticResource ChecklistItemTemplateSelector}"
                                  ItemsSource="{Binding Children}">
                             <ListBox.Resources>
@@ -509,17 +510,27 @@
                         </ListBox>
 
                         <!-- CHECKLIST BUTTONS -->
-                        <Border Grid.Row="2" Padding="10" Margin="20 0 20 10"
+                        <Border Grid.Row="2" Padding="10 10 5 10" Margin="20 0 20 10"
                                 CornerRadius="0 0 5 5"
                                 VerticalAlignment="Center"
                                 BorderBrush="{DynamicResource BrushBorder}" BorderThickness="1 0 1 1">
-                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                                        Orientation="Horizontal"
-                                        DockPanel.Dock="Bottom">
-                                <Button>Speak</Button>
-                                <Button>Skip</Button>
-                                <Button>Check</Button>
-                                <Button>Reset</Button>
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                                        Orientation="Horizontal">
+                                <Button Style="{DynamicResource ChecklistButton}"
+                                        BorderBrush="{DynamicResource BrushButtonSpeak}"
+                                        Background="{DynamicResource BrushButtonSpeak}"
+                                        >Speak</Button>
+                                <Button Style="{DynamicResource ChecklistButton}" 
+                                        BorderBrush="{DynamicResource BrushButtonSkip}"
+                                        Background="{DynamicResource BrushButtonSkip}">Skip</Button>
+                                <Button Style="{DynamicResource ChecklistButton}"
+                                        BorderBrush="{DynamicResource BrushButtonCheck}"
+                                        Background="{DynamicResource BrushButtonCheck}"
+                                        >Check</Button>
+                                <Button Style="{DynamicResource ChecklistButton}"
+                                        BorderBrush="{DynamicResource BrushButtonReset}"
+                                        Background="{DynamicResource BrushButtonReset}"
+                                        >Reset</Button>
                             </StackPanel>
                         </Border>
                     </Grid>
