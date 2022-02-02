@@ -5,10 +5,7 @@ public static class CommandChoices
     public static readonly Dictionary<VoiceCommand, HashSet<string>> Default = new()
     {
         {
-            VoiceCommand.Check, new HashSet<string> {"check", "checked", "yes", "yeah", "yeap"}
-        },
-        {
-            VoiceCommand.Skip, new HashSet<string> {"skip", "skipped", "next"}
+            VoiceCommand.Check, new HashSet<string> {"check", "checked", "yes" }
         }
     };
 }
