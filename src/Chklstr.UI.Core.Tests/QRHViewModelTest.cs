@@ -23,7 +23,7 @@ public class QRHViewModelTest : MvxIoCSupportingTest
         Assert.True(parseResult.IsSuccess());
         Assert.NotNull(parseResult.Result);
         
-        _viewModel = new QRHViewModel(TestData.Logger<QRHViewModel>());
+        _viewModel = new QRHViewModel(new InMemoryUserSettings(), TestData.Logger<QRHViewModel>());
         _viewModel.Prepare(parseResult.Result!);
         await _viewModel.Initialize();
     }

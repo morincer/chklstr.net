@@ -1,18 +1,27 @@
 ﻿using System.Collections.ObjectModel;
 using Chklstr.Core.Model;
 using Chklstr.Core.Utils;
+using Chklstr.UI.Core.Services;
 using Chklstr.UI.Core.Utils;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
 using MvvmCross.Binding.Extensions;
 using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
 namespace Chklstr.UI.Core.ViewModels;
 
-public class QRHViewModel : MvxViewModel<QuickReferenceHandbook>
+public class QRHViewModelResult
+{
+    public QuickReferenceHandbook? RedirectTo { get; set; }
+}
+public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelResult>
 {
     private readonly ILogger<QRHViewModel> _logger;
+    private readonly IUserSettingsService _userSettingsService;
+    private readonly GlobalActions _globalActions;
+    private readonly IMvxNavigationService _navigationService;
     public QuickReferenceHandbook Item { get; private set; }
     public string AircraftName { get; set; }
     public ObservableCollection<ChecklistViewModel> Checklists { get; init; } = new();
@@ -42,14 +51,51 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook>
         IsVoiceEnabled = !IsVoiceEnabled;
     }
 
+    public MvxInteraction<SelectFileRequest> SelectFilePathInteraction = new();
+    public MvxCommand OpenCommand => new(OpenAnotherFile);
+
+    public void OpenAnotherFile()
+    {
+        var config = _userSettingsService.Load();
+
+        var recentCraft = config.RecentCrafts.OrderBy(c => -c.Timestamp).FirstOrDefault();
+
+        var request = new SelectFileRequest()
+        {
+            BaseFolder = recentCraft != null ? Path.GetDirectoryName(recentCraft.Path) : null,
+            FileExtension = "*.chklst",
+            FileSelectedCallback = async path =>
+            {
+                if (path == null) return;
+                var result = await _globalActions.TryOpenAndParse(path);
+
+                if (result != null && result.IsSuccess())
+                {
+                    await Close(result.Result);
+                }
+            }
+        };
+        
+        SelectFilePathInteraction.Raise(request);
+    }
+
+    private async Task Close(QuickReferenceHandbook? redirectTo)
+    {
+        _logger.LogInformation($"Closing QRH {AircraftName}");
+        IsVoiceEnabled = false;
+        await _navigationService.Close(this, new() { RedirectTo = redirectTo });
+    }
+
     public String[] SelectedContexts
     {
         get => Contexts.Where(c => c.Selected).Select(c => c.Name).ToArray();
     }
 
-    public QRHViewModel(ILogger<QRHViewModel> logger)
+    public QRHViewModel(IUserSettingsService userSettingsService,
+        ILogger<QRHViewModel> logger)
     {
         _logger = logger;
+        _userSettingsService = userSettingsService;
     }
 
     public override void Prepare(QuickReferenceHandbook book)

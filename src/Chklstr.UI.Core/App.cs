@@ -16,9 +16,11 @@ public class App : MvxApplication
             .EndingWith("Service")
             .AsInterfaces()
             .RegisterAsLazySingleton();
+
+        Mvx.IoCProvider.ConstructAndRegisterSingleton(typeof(GlobalActions));
         
         Mvx.IoCProvider.RegisterType<IQRHParserService, QRHParserService>();
-        
+
         RegisterAppStart<ApplicationViewModel>();
     }
 }
