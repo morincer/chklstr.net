@@ -35,8 +35,8 @@ V1:
     [x] (FTR) Check and advance
     [x] (FTR) Skip functionality
     [x] (FTR) Reset functionality
-    [ ] (FTR) Speak functionality
-    [ ] (FTR) UI - Style completed checklists
+    [x] (FTR) Speak functionality
+    [x] (FTR) UI - Style completed checklists
     [ ] (FTR) Open another file    
     [ ] (FTR) Add parse errors reporting screen
     [ ] (IMP) Handle book parse failure

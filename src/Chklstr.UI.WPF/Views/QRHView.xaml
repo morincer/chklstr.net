@@ -241,15 +241,21 @@
                             <Grid HorizontalAlignment="Stretch">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" MinWidth="30" />
+                                    <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <Rectangle Grid.ColumnSpan="3" Fill="Transparent"></Rectangle>
                                 <TextBlock Grid.Column="0" Text="{Binding ListNumber}" Margin="0 0 10 0"></TextBlock>
-                                <TextBlock TextWrapping="Wrap" Grid.Column="1"
+                                
+                                <TextBlock Grid.Column="1"
+                                           Visibility="{Binding IsComplete, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                           Style="{StaticResource Icon}" Foreground="{DynamicResource BrushChecked}">&#xf560;</TextBlock>
+                                
+                                <TextBlock TextWrapping="Wrap" Grid.Column="2"
                                            Text="{Binding Name, Converter={StaticResource UppercaseConverter}}" />
-
-                                <Border Grid.Column="2"
+                                
+                                <Border Grid.Column="3"
                                         Style="{DynamicResource NotAvailable}"
                                         Visibility="{Binding IsEnabled, Converter={StaticResource InvertableBooleanToVisibilityConverter}, ConverterParameter=Inverted}">
                                     <TextBlock>N/A</TextBlock>
@@ -270,7 +276,7 @@
                                 </Border>
 
 
-                                <StackPanel Grid.Column="2" Orientation="Horizontal"
+                                <StackPanel Grid.Column="3" Orientation="Horizontal"
                                             Visibility="{Binding IsEnabled, Converter={StaticResource BooleanToVisibilityConverter}}">
                                     <TextBlock Text="{Binding CheckedItemsCount}"></TextBlock>
                                     <TextBlock>/</TextBlock>
