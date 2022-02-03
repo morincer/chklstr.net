@@ -37,7 +37,8 @@ V1:
     [x] (FTR) Reset functionality
     [x] (FTR) Speak functionality
     [x] (FTR) UI - Style completed checklists
-    [ ] (FTR) Open another file    
+    [x] (FTR) Open another file    
+    [ ] (FTR) Global exception dialog
     [ ] (FTR) Add parse errors reporting screen
     [ ] (IMP) Handle book parse failure
     [ ] (IMP) Parser: add syntax errors reporting

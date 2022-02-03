@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Chklstr.Core.Model;
 using Chklstr.Core.Services;
+using Chklstr.UI.Core.Services;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
 using MvvmCross.Navigation;
@@ -12,11 +13,15 @@ namespace Chklstr.UI.Core.ViewModels;
 public partial class ApplicationViewModel : MvxViewModel
 {
     private readonly IMvxNavigationService _navigationService;
+    private readonly IUserSettingsService _userSettingsService;
     private readonly ILogger<ApplicationViewModel> _logger;
 
-    public ApplicationViewModel(IMvxNavigationService navigationService, ILogger<ApplicationViewModel> logger)
+    public ApplicationViewModel(IMvxNavigationService navigationService,
+        IUserSettingsService userSettingsService,
+        ILogger<ApplicationViewModel> logger)
     {
         _navigationService = navigationService;
+        _userSettingsService = userSettingsService;
         _logger = logger;
     }
 
@@ -30,24 +35,49 @@ public partial class ApplicationViewModel : MvxViewModel
 
     public async Task LoadQRH(string pathToFile)
     {
-        var path = Path.GetFullPath(pathToFile);
-        var result = await _navigationService.Navigate<QRHParsingViewModel, string, ParseResult<QuickReferenceHandbook>>(path);
-        if (result == null || !result.IsSuccess()) return;
+        try
+        {
+            var path = Path.GetFullPath(pathToFile);
+            var result = await _navigationService.Navigate<QRHParsingViewModel, string, ParseResult<QuickReferenceHandbook>>(path);
+            if (result == null || !result.IsSuccess()) return;
+
+            var config = _userSettingsService.Load();
+            config.RecentCrafts.Add(new RecentCraftRecord(result.Result!.AircraftName, path));
+            _userSettingsService.Save(config);
         
-        _logger.LogDebug($"Loading QRH ViewModel for {result.Result?.AircraftName}");
-        var quickReferenceHandbook = result.Result!;
         
-        await OpenQRH(quickReferenceHandbook);
+            _logger.LogDebug($"Loading QRH ViewModel for {result.Result?.AircraftName}");
+            var quickReferenceHandbook = result.Result!;
+            
+            await OpenQRH(quickReferenceHandbook);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, e.Message);
+        }
     }
 
     private async Task OpenQRH(QuickReferenceHandbook quickReferenceHandbook)
     {
-        var redirect =
-            await _navigationService.Navigate<QRHViewModel, QuickReferenceHandbook, QRHViewModelResult>(
-                quickReferenceHandbook);
+        try
+        {
+            _logger.LogDebug($"Creating QRH View model for {quickReferenceHandbook.AircraftName}");
+            var redirect =
+                await _navigationService.Navigate<QRHViewModel, QuickReferenceHandbook, QRHViewModelResult>(
+                    quickReferenceHandbook);
 
-        if (redirect?.RedirectTo == null) return;
+            if (redirect?.RedirectTo == null)
+            {
+                _logger.LogDebug("QRH closed without any redirection - exiting");
+                return;
+            }
 
-        await OpenQRH(redirect.RedirectTo);
+            await OpenQRH(redirect.RedirectTo);
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, e.Message);
+            await _navigationService.Close(this);
+        }
     }
 }

@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Markup;
+using Chklstr.UI.Core.Utils;
 using Chklstr.UI.Core.ViewModels;
 using Chklstr.UI.WPF.Utils;
 using Chklstr.UI.WPF.Voice;
@@ -11,6 +13,7 @@ using MvvmCross.Platforms.Wpf.Presenters.Attributes;
 using MvvmCross.Platforms.Wpf.Views;
 using MvvmCross.ViewModels;
 using Serilog;
+using ListBox = System.Windows.Controls.ListBox;
 
 namespace Chklstr.UI.WPF.Views;
 
@@ -48,16 +51,35 @@ public partial class QRHView : MvxWpfView<QRHViewModel>, IComponentConnector
     {
         foreach (var checklist in ViewModel.Checklists)
         {
-            checklist.ScrollIntoViewInteraction.Requested += OnInteractionRequested;
+            checklist.ScrollIntoViewInteraction.Requested += OnScrollIntoViewInteractionRequested;
         }
 
         TabControl_Checklists.SelectionChanged += OnChecklistShown;
 
+        ViewModel.SelectFilePathInteraction.Requested += OnSelectedFileInteractionRequested;
+        
+        InitializeVoiceView();
+    }
+
+    private void OnSelectedFileInteractionRequested(object? sender, MvxValueEventArgs<SelectFileRequest> e)
+    {
+        var openFileDialog = new OpenFileDialog();
+        openFileDialog.Multiselect = false;
+        openFileDialog.Filter = $"Checklist ({e.Value.FileExtension}|{e.Value.FileExtension}";
+        openFileDialog.InitialDirectory = e.Value.BaseFolder;
+
+        var dialogResult = openFileDialog.ShowDialog();
+        
+        e.Value.FileSelectedCallback(dialogResult == DialogResult.OK ? openFileDialog.FileName : null);
+    }
+
+    private void InitializeVoiceView()
+    {
         voiceView = Mvx.IoCProvider.IoCConstruct<QRHVoiceView>(new Dictionary<string, object>
         {
             ["viewModel"] = ViewModel
         });
-        
+
         voiceView.Prepare();
     }
 
@@ -73,7 +95,7 @@ public partial class QRHView : MvxWpfView<QRHViewModel>, IComponentConnector
     }
 
 
-    private void OnInteractionRequested(object? sender, MvxValueEventArgs<ChecklistItemViewModel> e)
+    private void OnScrollIntoViewInteractionRequested(object? sender, MvxValueEventArgs<ChecklistItemViewModel> e)
     {
         var checklistItem = e.Value;
         if (checklistItem.Parent != ViewModel.SelectedChecklist) return;

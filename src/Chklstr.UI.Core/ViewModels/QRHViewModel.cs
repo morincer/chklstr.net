@@ -1,11 +1,10 @@
 ﻿using System.Collections.ObjectModel;
 using Chklstr.Core.Model;
-using Chklstr.Core.Utils;
+using Chklstr.Core.Services;
 using Chklstr.UI.Core.Services;
 using Chklstr.UI.Core.Utils;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
-using MvvmCross.Binding.Extensions;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -20,7 +19,6 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
 {
     private readonly ILogger<QRHViewModel> _logger;
     private readonly IUserSettingsService _userSettingsService;
-    private readonly GlobalActions _globalActions;
     private readonly IMvxNavigationService _navigationService;
     public QuickReferenceHandbook Item { get; private set; }
     public string AircraftName { get; set; }
@@ -67,8 +65,11 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
             FileSelectedCallback = async path =>
             {
                 if (path == null) return;
-                var result = await _globalActions.TryOpenAndParse(path);
 
+                path = Path.GetFullPath(path);
+                
+                _logger.LogInformation($"Trying to load {path}");
+                var result = await _navigationService.Navigate<QRHParsingViewModel, string, ParseResult<QuickReferenceHandbook>>(path);
                 if (result != null && result.IsSuccess())
                 {
                     await Close(result.Result);
@@ -77,6 +78,11 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
         };
         
         SelectFilePathInteraction.Raise(request);
+    }
+
+    public override void ViewDestroy(bool viewFinishing = true)
+    {
+        base.ViewDestroy(false);
     }
 
     private async Task Close(QuickReferenceHandbook? redirectTo)
@@ -92,8 +98,10 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
     }
 
     public QRHViewModel(IUserSettingsService userSettingsService,
+        IMvxNavigationService navigationService,
         ILogger<QRHViewModel> logger)
     {
+        _navigationService = navigationService;
         _logger = logger;
         _userSettingsService = userSettingsService;
     }

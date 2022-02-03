@@ -12,13 +12,6 @@ public class App : MvxApplication
 {
     public override void Initialize()
     {
-        CreatableTypes()
-            .EndingWith("Service")
-            .AsInterfaces()
-            .RegisterAsLazySingleton();
-
-        Mvx.IoCProvider.ConstructAndRegisterSingleton(typeof(GlobalActions));
-        
         Mvx.IoCProvider.RegisterType<IQRHParserService, QRHParserService>();
 
         RegisterAppStart<ApplicationViewModel>();
