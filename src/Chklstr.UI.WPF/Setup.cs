@@ -9,6 +9,7 @@ using Chklstr.Core.Services.Voice;
 using Chklstr.Infra.Voice;
 using Chklstr.UI.Core.Infra;
 using Chklstr.UI.Core.Services;
+using Chklstr.UI.WPF.Services;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 using MvvmCross;
@@ -26,26 +27,43 @@ public class Setup : MvxWpfSetup<Core.App>
     public Setup()
     {
         AttachToParentConsole();
-        AppDomain.CurrentDomain.UnhandledException += (sender, args) => { OnFatalException(args.ExceptionObject); };
-        TaskScheduler.UnobservedTaskException += (sender, args) => OnFatalException(args.Exception);
+        Application.Current.DispatcherUnhandledException += (sender, args) =>
+        {
+            OnFatalException(args.Exception);
+            args.Handled = true;
+        };
+        AppDomain.CurrentDomain.UnhandledException += (sender, args) =>
+        {
+            OnFatalException(args.ExceptionObject);
+        };
+        TaskScheduler.UnobservedTaskException += (sender, args) =>
+        {
+            OnFatalException(args.Exception);
+            args.SetObserved();
+        };
     }
+    
+    
 
-    private static void OnFatalException(object e)
+    public void OnFatalException(object e)
     {
+        Log.Logger.Fatal(e.ToString());
+        
         if (e is Exception exception)
         {
-            Log.Logger.Fatal(exception, exception.Message);
+            Mvx.IoCProvider.Resolve<IErrorReporter>().ReportError(null, exception);
         }
         else
         {
-            Log.Logger.Fatal(e.ToString());
+            Mvx.IoCProvider.Resolve<IErrorReporter>().ReportError(null, new Exception(e.ToString()));
         }
     }
 
     protected override IMvxIoCProvider InitializeIoC()
     {
         var ioc = base.InitializeIoC();
-
+        
+        ioc.LazyConstructAndRegisterSingleton<IErrorReporter, ErrorReporter>();
         ioc.LazyConstructAndRegisterSingleton<ITextToSpeechService, TextToSpeechService>();
         ioc.LazyConstructAndRegisterSingleton<IVoiceCommandDetectionService, VoiceCommandDetectionService>();
         ioc.RegisterSingleton(ApplicationFilesLayout.Default);

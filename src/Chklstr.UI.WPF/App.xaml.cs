@@ -23,6 +23,8 @@ namespace Chklstr.UI.WPF
             this.RegisterSetupType<Setup>();
             this.DispatcherUnhandledException += OnUnhandledException;
         }
+        
+        
 
         private void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {

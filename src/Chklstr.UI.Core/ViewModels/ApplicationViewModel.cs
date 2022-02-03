@@ -53,7 +53,7 @@ public partial class ApplicationViewModel : MvxViewModel
         }
         catch (Exception e)
         {
-            _logger.LogError(e, e.Message);
+            Mvx.IoCProvider.Resolve<IErrorReporter>().ReportError(GetType(), e);
         }
     }
 
@@ -76,7 +76,7 @@ public partial class ApplicationViewModel : MvxViewModel
         }
         catch (Exception e)
         {
-            _logger.LogError(e, e.Message);
+            Mvx.IoCProvider.Resolve<IErrorReporter>().ReportError(GetType(), e);
             await _navigationService.Close(this);
         }
     }

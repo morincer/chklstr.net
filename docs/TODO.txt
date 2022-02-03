@@ -30,6 +30,9 @@ Backlog:
 
 
 Bugs:
+
+Cleanup:
+    [ ] (CLEAN) Replace font awesome font-based style with refs to NuGet's package
     
 V1:
     [x] (FTR) Check and advance
@@ -38,9 +41,9 @@ V1:
     [x] (FTR) Speak functionality
     [x] (FTR) UI - Style completed checklists
     [x] (FTR) Open another file    
-    [ ] (FTR) Global exception dialog
-    [ ] (FTR) Add parse errors reporting screen
+    [x] (FTR) Global exception dialog
     [ ] (IMP) Handle book parse failure
+    [ ] (FTR) Add parse errors reporting screen
     [ ] (IMP) Parser: add syntax errors reporting
     [ ] (IMP) Voice checklist and sublist start and end
     [ ] (FTR) Startup screen

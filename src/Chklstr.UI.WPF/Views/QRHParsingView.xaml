@@ -7,8 +7,118 @@
                   mc:Ignorable="d"
                   xmlns:viewModels="clr-namespace:Chklstr.UI.Core.ViewModels;assembly=Chklstr.UI.Core"
                   d:DataContext="{d:DesignInstance viewModels:QRHParsingViewModel}"
-                  xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf">
-    <Grid>
-        <Button Click="ButtonBase_OnClick">OK</Button>
+                  xmlns:fa="http://schemas.fontawesome.io/icons/"
+                  xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+                  xmlns:utils="clr-namespace:Chklstr.UI.WPF.Utils">
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Style="{DynamicResource DialogBackground}">
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <utils:InverseBooleanConverter x:Key="InverseBooleanConverter"/> 
+        </Grid.Resources>
+        <Border Style="{DynamicResource InnerPanelBorder}">
+            <Grid Style="{DynamicResource InnerPanel}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0"
+                        BorderBrush="{StaticResource BrushBorder}" BorderThickness="0 0 0 1"
+                        Margin="10 0 10 0"
+                        MinHeight="35">
+                    <TextBlock TextWrapping="Wrap"
+                               Text="Checklist Parsing"
+                               Style="{StaticResource Header0}" />
+                </Border>
+                <StackPanel Grid.Row="1" Margin="10 10 10 10" Orientation="Horizontal"
+                            VerticalAlignment="Center">
+                    <TextBlock Margin="0 0 10 0">
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="Loading {0}">
+                                <Binding Path="Path" />
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                    <fa:ImageAwesome Icon="Refresh" Spin="{Binding IsLoading}" Height="10" Width="10" Foreground="Gray"
+                                     Visibility="{Binding IsLoading, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <fa:ImageAwesome Icon="Ban" Height="10" Width="10" Foreground="{StaticResource BrushOff}"
+                                     Visibility="{Binding IsFailed, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <fa:ImageAwesome Icon="Check" Height="10" Width="10" Foreground="{StaticResource BrushOn}"
+                                     Visibility="{Binding IsOk, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                </StackPanel>
+                <Grid Grid.Row="2"
+                      Visibility="{Binding IsFailed, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Failed" DockPanel.Dock="Top"
+                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                               FontFamily="{StaticResource MuliBold}" FontSize="21" />
+
+                    <ListBox Grid.Row="1"
+                             BorderBrush="{StaticResource BrushBorder}"
+                             Margin="5 0 5 0"
+                             ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                             ItemsSource="{Binding ParseResult.Errors}">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListBoxItem">
+                                            <Border BorderBrush="{StaticResource BrushBorder}"
+                                                    BorderThickness="0 0 0 1"
+                                                    Margin="10 0 10 0"
+                                                    Padding="5">
+                                                <ContentPresenter />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid VerticalAlignment="Top">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <fa:ImageAwesome Icon="Check" Height="10" Width="10"
+                                                     Foreground="{StaticResource BrushOff}" />
+                                    <!--<TextBlock TextWrapping="Wrap" Grid.Column="1" Text="{Binding }"></TextBlock>-->
+
+                                    <TextBox Grid.Column="1" Text="{Binding Path=., Mode=OneWay}"
+                                             TextWrapping="Wrap"
+                                             IsReadOnly="True"
+                                             HorizontalAlignment="Stretch"
+                                             BorderThickness="0"
+                                             HorizontalScrollBarVisibility="Disabled"
+                                             VerticalScrollBarVisibility="Disabled"
+                                             Background="Transparent" />
+
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <Border Grid.Row="2" Padding="10 10 5 10" Margin="5 0 5 10"
+                            CornerRadius="0 0 5 5"
+                            VerticalAlignment="Center"
+                            BorderBrush="{DynamicResource BrushBorder}" BorderThickness="1 0 1 1">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                                    Orientation="Horizontal">
+                            <Button Style="{DynamicResource ChecklistButton}"
+                                    BorderBrush="{DynamicResource BrushButtonSpeak}"
+                                    Command="{Binding CommandClose}">
+                                Close
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Border>
     </Grid>
 </views:MvxWpfView>

@@ -142,7 +142,7 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
             }
             catch (Exception e)
             {
-                _logger.LogError(e, e.Message);
+                Mvx.IoCProvider.Resolve<IErrorReporter>().ReportError(typeof(QRHViewModel), e);
             }
         }
         

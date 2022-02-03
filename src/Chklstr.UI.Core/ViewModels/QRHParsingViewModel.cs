@@ -1,6 +1,7 @@
 ﻿using Chklstr.Core.Model;
 using Chklstr.Core.Services;
 using Microsoft.Extensions.Logging;
+using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
@@ -29,7 +30,24 @@ public class QRHParsingViewModel : MvxViewModel<string, ParseResult<QuickReferen
         set => SetProperty(ref _message, value);
     }
 
-    public ParseResult<QuickReferenceHandbook> ParseResult { get; private set; }
+    private ParseResult<QuickReferenceHandbook>? _parseResult;
+
+    public ParseResult<QuickReferenceHandbook>? ParseResult
+    {
+        get => _parseResult;
+        set
+        {
+            SetProperty(ref _parseResult, value);
+            RaisePropertyChanged(() => IsFailed);
+            RaisePropertyChanged(() => IsOk);
+            RaisePropertyChanged(() => ErrorsCount);
+        }
+    }
+    
+    public bool IsFailed => ParseResult != null && !ParseResult.IsSuccess();
+    public bool IsOk => ParseResult != null && ParseResult.IsSuccess();
+
+    public int ErrorsCount => !IsFailed ? 0 : ParseResult!.Errors.Count;
 
     public QRHParsingViewModel(IQRHParserService parserService,
         IMvxNavigationService _navigationService,
@@ -60,8 +78,10 @@ public class QRHParsingViewModel : MvxViewModel<string, ParseResult<QuickReferen
             _logger.LogInformation(Message);
 
             var input = await File.ReadAllTextAsync(Path);
-            ParseResult = _parserService.parse(input);
-
+            var result = _parserService.parse(input);
+            
+            ParseResult = result;
+            
             if (ParseResult.IsSuccess())
             {
                 _logger.LogDebug("QRH Loaded successfully");
@@ -78,6 +98,8 @@ public class QRHParsingViewModel : MvxViewModel<string, ParseResult<QuickReferen
             IsLoading = false;
         }
     }
+
+    public MvxAsyncCommand CommandClose => new(Close);
 
     public async Task Close()
     {
