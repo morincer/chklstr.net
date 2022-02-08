@@ -32,7 +32,7 @@ public class DocxExporter
         try
         {
             using var doc = WordprocessingDocument.CreateFromTemplate(@"./Templates/Docx/template.docx", false);
-            // using var doc = DocxTemplateHelper.Standard;
+            DocxTemplateHelper.CleanContents(doc);
 
             if (doc.MainDocumentPart == null)
             {
@@ -111,7 +111,7 @@ public class DocxExporter
         var cell = row.GetFirstChild<TableCell>();
         
         Debug.Assert(cell != null, "cell != null");
-        cell.AddCellMargin(400);
+        cell.SetCellMargin(0,0 , 200, 400);
 
         cell.RemoveAllChildren<Paragraph>();
         

@@ -370,12 +370,15 @@ public static class MainDocumentExtensions
     }
 
     
-    public static void AddCellMargin(this TableCell cell, int val)
+    public static void SetCellMargin(this TableCell cell, int top, int right, int bottom, int left)
     {
         var tcPr = cell.GetOrCreateTableCellProperties();
         var mar = tcPr.GetOrCreateTableCellMargin();
 
-        mar.LeftMargin = new LeftMargin {Width = val.ToString()};
+        mar.LeftMargin = new LeftMargin {Width = left.ToString()};
+        mar.TopMargin = new TopMargin {Width = top.ToString()};
+        mar.RightMargin = new RightMargin {Width = right.ToString()};
+        mar.BottomMargin = new BottomMargin {Width = bottom.ToString()};
     }
 
 }
