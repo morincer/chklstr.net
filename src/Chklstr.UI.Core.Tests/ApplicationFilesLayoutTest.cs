@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Chklstr.Core.Utils;
 using Chklstr.UI.Core.Infra;
 using NUnit.Framework;
 
@@ -25,7 +26,7 @@ public class ApplicationFilesLayoutTest
         
         Assert.False(Directory.Exists(configPath));
 
-        ApplicationFilesLayout.EnsureDirectoryExists(configPath);
+        FileUtils.EnsureDirectoryExists(configPath);
         
         Assert.True(Directory.Exists(configPath));
     }

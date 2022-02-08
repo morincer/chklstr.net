@@ -7,7 +7,7 @@ namespace Chklstr.Core.Tests;
 
 public static class TestData
 {
-    private static ILoggerFactory _loggerFactory;
+    public static ILoggerFactory LoggerFactory { get; }
     
     static TestData()
     {
@@ -16,12 +16,12 @@ public static class TestData
             .WriteTo.Console()
             .CreateLogger();
 
-        _loggerFactory = new SerilogLoggerFactory();
+        LoggerFactory = new SerilogLoggerFactory();
     }
     
     public static ILogger<T> Logger<T>()
     {
-        return _loggerFactory.CreateLogger<T>();
+        return LoggerFactory.CreateLogger<T>();
     }
     
     public static string readFA50Sample()

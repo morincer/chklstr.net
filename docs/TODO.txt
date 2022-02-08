@@ -42,25 +42,25 @@ V1:
     [x] (FTR) UI - Style completed checklists
     [x] (FTR) Open another file    
     [x] (FTR) Global exception dialog
-    [ ] (IMP) Handle book parse failure
-    [ ] (FTR) Add parse errors reporting screen
-    [ ] (IMP) Parser: add syntax errors reporting
+    [x] (IMP) Handle book parse failure
+    [x] (FTR) Add parse errors reporting screen
+    [x] (IMP) Parser: add syntax errors reporting
+    [ ] (FTR) Export to Word
     [ ] (IMP) Voice checklist and sublist start and end
     [ ] (FTR) Startup screen
     [ ] (FTR) Generic exporter extension point
     [ ] (FTR) Export to HTML
     [ ] (FTR) Export to JSON
     [ ] (FTR) Export to XML
-    [ ] (FTR) Export to Word
-    [ ] (IMP) Auto-load last save checklist
-    [ ] (FTR) Checklist editor in external text editor
-    User selects and external editor. System opens the file in external editor and starts monitoring
-    it for changes. Once changes are detected, the user is questioned if he wants to refresh the file
-    [ ] (IMP) Add icon to speak, make it a toggle button
     [ ] (FTR) Settings:
             [ ] Settings button
             [ ] Settings page
             [ ] Path to external editor
             [ ] Output device
             [ ] VAD Threshold + test
+    [ ] (IMP) Auto-load last save checklist
+    [ ] (FTR) Checklist editor in external text editor
+    User selects and external editor. System opens the file in external editor and starts monitoring
+    it for changes. Once changes are detected, the user is questioned if he wants to refresh the file
+    [ ] (IMP) Add icon to speak, make it a toggle button
 

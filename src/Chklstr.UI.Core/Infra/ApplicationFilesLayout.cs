@@ -11,16 +11,4 @@ public class ApplicationFilesLayout
     {
         BaseDir = Path.GetFullPath(baseDir);
     }
-
-    public static string? EnsureDirectoryExists(string? path)
-    {
-        if (path == null) return path;
-        
-        if (!Directory.Exists(path))
-        {
-            Directory.CreateDirectory(path);
-        }
-
-        return path;
-    }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Chklstr.Core.Utils;
 using Chklstr.UI.Core.Services;
 using Microsoft.Extensions.Logging;
 
@@ -17,7 +18,7 @@ public class JsonUserSettingsService : IUserSettingsService
 
     public Config Load()
     {
-        ApplicationFilesLayout.EnsureDirectoryExists(Path.GetDirectoryName(ConfigFile));
+        FileUtils.EnsureDirectoryExists(Path.GetDirectoryName(ConfigFile));
         
         if (!File.Exists(ConfigFile))
         {
