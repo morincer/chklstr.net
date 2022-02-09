@@ -33,7 +33,7 @@ public class TextToSpeechService : ITextToSpeechService
     public ReadOnlyCollection<string> Voices => new(SpeechSynthesizer.GetInstalledVoices(new CultureInfo("en-US"))
         .Select(c => c.VoiceInfo.Name).ToList());
 
-    public void SayAsync(string text, bool priority = false)
+    public Task SayAsync(string text, bool priority = false)
     {
         _log.LogDebug($"Playing {text} with voice {SpeechSynthesizer.Voice.Name}, rate {SpeechSynthesizer.Rate}");
         if (priority)
@@ -41,11 +41,19 @@ public class TextToSpeechService : ITextToSpeechService
             SpeechSynthesizer.SpeakAsyncCancelAll();
         }
         
-        SpeechSynthesizer.SpeakAsync(text);
+        var prompt = SpeechSynthesizer.SpeakAsync(text);
+        return Task.Run(() =>
+        {
+            while (!prompt.IsCompleted)
+            {
+                Thread.Sleep(200);
+            }
+        });
     }
 
     public void Stop()
     {
+        _log.LogDebug("Stopping all voices");
         SpeechSynthesizer.SpeakAsyncCancelAll();
     }
 }

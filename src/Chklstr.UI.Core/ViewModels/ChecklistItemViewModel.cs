@@ -7,6 +7,8 @@ public class ChecklistItemViewModel : MvxViewModel<ChecklistItem>
 {
     public ChecklistItem Item { get; private set; }
 
+    public string? SectionName => Item.Parent?.Parent !=null ? Item.Parent.Name : null;
+
     public string ListNumber { get; set; } = "";
     public string Title { get; set; } = "";
     public string Text { get; set; } = "";

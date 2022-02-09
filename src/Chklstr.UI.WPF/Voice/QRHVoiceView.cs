@@ -6,6 +6,7 @@ using System.Media;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Windows.Threading;
 using Chklstr.Core.Services.Voice;
 using Chklstr.UI.Core.ViewModels;
 using Microsoft.Extensions.Logging;
@@ -90,6 +91,7 @@ public class QRHVoiceView
                 if (ViewModel.SelectedChecklist!.CanCheckAndAdvance)
                 {
                     _checkedSound.Play();
+                    
                     ViewModel.SelectedChecklist!.CheckAndAdvance();
                 }
 
@@ -102,10 +104,15 @@ public class QRHVoiceView
         if (!ViewModel.IsVoiceEnabled || ViewModel.SelectedChecklist == null ||
             ViewModel.SelectedChecklist.HasActiveItems) return;
 
-        _textToSpeechService.SayAsync($"{ViewModel.SelectedChecklist.Name} checklist complete");
-        ViewModel.IsVoiceEnabled = false;
-        
+        _textToSpeechService.SayAsync($"{ViewModel.SelectedChecklist.Name} checklist complete")
+            .ContinueWith(_ =>
+            {
+                ViewModel.IsVoiceEnabled = false;
+            });
+
         _voiceCommandDetectionService.Stop();
+        
+        
     }
 
     private void OnSelectedItemChanged(object? sender, PropertyChangedEventArgs e)
@@ -121,6 +128,19 @@ public class QRHVoiceView
         {
             _textToSpeechService.SayAsync($"{checklist.Name} checklist started.");
             priority = false;
+        }
+
+        if (selectedItem.SectionName != null)
+        {
+            var activeItems = checklist.GetActiveItems(checklist.Children).ToList();
+            
+            var sectionItems = activeItems
+                .Where(i => selectedItem.SectionName.Equals(i.SectionName)).ToList();
+
+            if (!sectionItems.Any(i => i.IsChecked))
+            {
+                _textToSpeechService.SayAsync($"{selectedItem.SectionName} section started");
+            }
         }
 
         _voiceCommandDetectionService.Stop();

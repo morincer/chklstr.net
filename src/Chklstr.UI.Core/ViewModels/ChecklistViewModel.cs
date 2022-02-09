@@ -42,6 +42,7 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
             SetProperty(ref _checkableItemsCount, value);
             RaisePropertyChanged(() => IsComplete);
             RaisePropertyChanged(() => IsEnabled);
+            RaisePropertyChanged(() => HasActiveItems);
         }
     }
 
@@ -55,6 +56,7 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
             SetProperty(ref _checkedItemsCount, value);
             RaisePropertyChanged(() => IsComplete);
             RaisePropertyChanged(() => IsEnabled);
+            RaisePropertyChanged(() => HasActiveItems);
         }
     }
 
@@ -134,10 +136,15 @@ public class ChecklistViewModel : MvxViewModel<Checklist>
 
     public ChecklistItemViewModel? GetNextActiveItem(IEnumerable<ChecklistItemViewModel> items)
     {
+        return GetActiveItems(items).FirstOrDefault();
+    }
+
+    public IEnumerable<ChecklistItemViewModel> GetActiveItems(IEnumerable<ChecklistItemViewModel> items)
+    {
         return items
-            .FirstOrDefault(c => c.IsSelectable
-                                 && !c.IsChecked
-                                 && c.Item.IsAvailableInContext(Contexts));
+            .Where(c => c.IsSelectable
+                        && !c.IsChecked
+                        && c.Item.IsAvailableInContext(Contexts));
     }
 
     private async Task InitializeChecklist(Checklist checklist, HierarchyLevel level)

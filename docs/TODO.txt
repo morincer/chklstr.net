@@ -27,6 +27,11 @@ Backlog:
     [ ] (IMP) Add chips for contexts
     [ ] (IMP) Settings: output audio device selection
     [ ] (FTR) Create syntax highlighting for notepad++
+    [ ] (IMP) Don't say "Checklist" if there's "check" word in the title
+    [ ] (IMP) Add version number to title
+    [ ] (IMP) Make voice louder
+    [ ] (IMP) Add voice status indicator
+    
 
 
 Bugs:
@@ -46,7 +51,7 @@ V1:
     [x] (FTR) Add parse errors reporting screen
     [x] (IMP) Parser: add syntax errors reporting
     [ ] (FTR) Export to Word
-    [ ] (IMP) Voice checklist and sublist start and end
+    [x] (IMP) Voice checklist and sublist start and end
     [ ] (FTR) Startup screen
     [ ] (FTR) Generic exporter extension point
     [ ] (FTR) Export to HTML
