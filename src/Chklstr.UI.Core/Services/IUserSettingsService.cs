@@ -45,6 +45,9 @@ public class RecentCraftRecord
 
 public class Config
 {
+    public string? ExternalEditorPath { get; set; } = "notepad.exe";
+    public string? SelectedVoice { get; set; }
+    public bool VoiceControlEnabled { get; set; } = true;
     public List<RecentCraftRecord> RecentCrafts { get; set; } = new();
 }
 

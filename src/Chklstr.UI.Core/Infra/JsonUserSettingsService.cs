@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 using Chklstr.Core.Utils;
 using Chklstr.UI.Core.Services;
 using Microsoft.Extensions.Logging;
@@ -52,7 +53,17 @@ public class JsonUserSettingsService : IUserSettingsService
 
         try
         {
-            JsonSerializer.Serialize(fs, config, new JsonSerializerOptions { WriteIndented = true });
+            config.RecentCrafts = config.RecentCrafts
+                .OrderBy(c => -c.Timestamp)
+                .GroupBy(c => c.AircraftName)
+                .Select(g => g.First())
+                .ToList();
+
+            JsonSerializer.Serialize(fs, config, new JsonSerializerOptions
+            {
+                WriteIndented = true, 
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            });
         }
         catch (Exception e)
         {

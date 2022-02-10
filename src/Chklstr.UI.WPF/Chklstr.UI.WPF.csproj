@@ -13,11 +13,14 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="AdonisUI" Version="1.17.1" />
+      <PackageReference Include="AdonisUI.ClassicTheme" Version="1.17.1" />
       <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
       <PackageReference Include="MdXaml" Version="1.12.0" />
       <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
       <PackageReference Include="MvvmCross" Version="8.0.2" />
       <PackageReference Include="MvvmCross.Platforms.Wpf" Version="8.0.2" />
+      <PackageReference Include="MvvmValidation" Version="3.1.2" />
       <PackageReference Include="Serilog" Version="2.10.0" />
       <PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
       <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />

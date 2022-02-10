@@ -31,6 +31,7 @@ public partial class ApplicationViewModel : MvxViewModel
         _logger.LogInformation("Starting application");
 
         Task.Run(() => LoadQRH($"../../../../../samples/FA50.chklst"));
+        // Task.Run(() =>_navigationService.Navigate<SettingsViewModel>());
     }
 
     public async Task LoadQRH(string pathToFile)

@@ -9,7 +9,8 @@
                   xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
                   xmlns:local="clr-namespace:Chklstr.UI.WPF.Views"
                   xmlns:utils="clr-namespace:Chklstr.UI.WPF.Utils"
-                  xmlns:controls="clr-namespace:Chklstr.UI.WPF.Controls">
+                  xmlns:controls="clr-namespace:Chklstr.UI.WPF.Controls"
+                  xmlns:extensions="clr-namespace:AdonisUI.Extensions;assembly=AdonisUI">
 
     <views:MvxWpfView.Resources>
         <ResourceDictionary>
@@ -141,8 +142,6 @@
             <DataTemplate x:Key="TemplateSeparator" DataType="viewModels:ChecklistItemViewModel">
                 <Separator HorizontalAlignment="Stretch" Width="2" />
             </DataTemplate>
-
-
         </ResourceDictionary>
     </views:MvxWpfView.Resources>
 
@@ -186,6 +185,7 @@
                          ItemsSource="{Binding Checklists}"
                          Margin="10 20 10 0"
                          BorderBrush="{StaticResource BrushBorder}" BorderThickness="0 1 0 0"
+                         SnapsToDevicePixels="True"
                          Background="Transparent">
                     <ListBox.ItemContainerStyle>
                         <Style TargetType="ListBoxItem">
@@ -374,7 +374,7 @@
                             </Button>
                         </StackPanel>
                         <StackPanel Grid.Column="1" VerticalAlignment="Center">
-                            <Button Style="{DynamicResource Flat}" Margin="0 0 5 0">
+                            <Button Style="{DynamicResource Flat}" Command="{Binding SettingsCommand}" Margin="0 0 5 0">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Style="{DynamicResource Icon}" Text="&#xf085;" />
                                     <TextBlock>Settings</TextBlock>
@@ -452,6 +452,8 @@
                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                  ScrollViewer.CanContentScroll="False"
                                  BorderBrush="{StaticResource BrushBorder}"
+                                 
+                                 Background="{StaticResource BrushBackground}"
                                  BorderThickness="1"
                                  Margin="20 20 20 0"
                                  Padding="5 10 5 0"
@@ -460,13 +462,14 @@
                                  Foreground="{StaticResource BrushTextChecklistItem}"
                                  SelectedItem="{Binding SelectedItem}"
                                  ItemTemplateSelector="{StaticResource ChecklistItemTemplateSelector}"
+                                 extensions:CornerRadiusExtension.CornerRadius="5 5 0 0"
                                  ItemsSource="{Binding Children}">
-                            <ListBox.Resources>
+                            <!--<ListBox.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="5 5 0 0" />
                                     <Setter Property="SnapsToDevicePixels" Value="True" />
                                 </Style>
-                            </ListBox.Resources>
+                            </ListBox.Resources>-->
                             <ListBox.ItemContainerStyle>
                                 <Style TargetType="ListBoxItem"
                                        d:DataContext="{d:DesignInstance viewModels:ChecklistItemViewModel}">

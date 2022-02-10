@@ -52,6 +52,13 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
     public MvxInteraction<SelectFileRequest> SelectFilePathInteraction = new();
     public MvxCommand OpenCommand => new(OpenAnotherFile);
 
+    public MvxCommand SettingsCommand => new(OpenSettings);
+    
+
+    public async void OpenSettings()
+    {
+        await _navigationService.Navigate<SettingsViewModel>();
+    }
     public void OpenAnotherFile()
     {
         var config = _userSettingsService.Load();
