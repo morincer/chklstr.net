@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Threading;
 using Chklstr.Core.Services.Voice;
 using Chklstr.Core.Utils;
+using Chklstr.UI.Core.Services;
 using Chklstr.UI.Core.ViewModels;
 using Microsoft.Extensions.Logging;
 using MvvmCross.WeakSubscription;
@@ -22,6 +23,7 @@ public class QRHVoiceView
     private readonly ILogger _log;
     private readonly IVoiceCommandDetectionService _voiceCommandDetectionService;
     private readonly ITextToSpeechService _textToSpeechService;
+    private readonly IUserSettingsService _userSettingsService;
     public QRHViewModel ViewModel { get; }
 
     private SoundPlayer _checkedSound;
@@ -31,13 +33,15 @@ public class QRHVoiceView
     public QRHVoiceView(QRHViewModel viewModel,
         ILogger<QRHVoiceView> log,
         IVoiceCommandDetectionService voiceCommandDetectionService,
-        ITextToSpeechService textToSpeechService
+        ITextToSpeechService textToSpeechService,
+        IUserSettingsService userSettingsService
     )
     {
         _log = log;
         _log.LogDebug("Created new voice view service");
         _voiceCommandDetectionService = voiceCommandDetectionService;
         _textToSpeechService = textToSpeechService;
+        _userSettingsService = userSettingsService;
         ViewModel = viewModel;
 
         _context = SynchronizationContext.Current!;
@@ -55,6 +59,10 @@ public class QRHVoiceView
         _textToSpeechService.Stop();
 
         _voiceCommandDetectionService.VoiceCommandDetected += OnVoiceCommand;
+
+        var config = _userSettingsService.Load();
+
+        _textToSpeechService.VoiceName = config.SelectedVoice ?? _textToSpeechService.Voices.First();
 
         ViewModel.IsTextToSpeechEnabled = false;
         _subscriptions.Add(ViewModel.WeakSubscribe(() => ViewModel.SelectedChecklist, OnSelectedChecklistChanged));

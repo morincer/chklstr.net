@@ -72,6 +72,18 @@ public class SettingsViewModel : ValidatableMvxViewModel
         await _navigationService.Close(this);
     }
 
+    public MvxAsyncCommand CommandTestVoice => new(TestVoice);
+
+    public async Task TestVoice()
+    {
+        if (SelectedVoice == null) return;
+        
+        var oldVoice = _textToSpeechService.VoiceName;
+        _textToSpeechService.VoiceName = SelectedVoice;
+        await _textToSpeechService.SayAsync("Prestart checklist started.", true);
+        _textToSpeechService.VoiceName = oldVoice;
+    }
+
     public MvxAsyncCommand CommandSaveAndClose => new(SaveAndClose);
 
     public async Task SaveAndClose()

@@ -76,7 +76,7 @@
                                               ItemsSource="{Binding Voices}"
                                               SelectedItem="{Binding SelectedVoice}"
                                               Style="{StaticResource FieldSelect}"/>
-                                    <Button>Test</Button>
+                                    <Button Command="{Binding CommandTestVoice}">Test</Button>
                                 </StackPanel>
                             </StackPanel>
                         </GroupBox>

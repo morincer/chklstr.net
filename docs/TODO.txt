@@ -58,12 +58,11 @@ V1:
     [ ] (FTR) Export to HTML
     [ ] (FTR) Export to JSON
     [ ] (FTR) Export to XML
-    [ ] (FTR) Settings:
+    [x] (FTR) Settings:
             [x] Settings button
             [x] Settings page
             [x] Path to external editor
-            [ ] Output device
-            [ ] VAD Threshold + test
+            [x] Test voice            
     [ ] (IMP) Auto-load last save checklist
     [ ] (FTR) Checklist editor in external text editor
     User selects and external editor. System opens the file in external editor and starts monitoring
