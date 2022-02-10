@@ -62,13 +62,16 @@ public class VoiceCommandDetectionService : IDisposable, IVoiceCommandDetectionS
 
     public void Start()
     {
+        Stop();
+        
         IsRunning = true;
-        _log.LogInformation("Starting voice recognition service");
+        _log.LogDebug("Starting voice recognition service");
         _recognizer.RecognizeAsync(RecognizeMode.Multiple);
     }
 
     public void Stop()
     {
+        _log.LogDebug("Stopping voice recognition service");
         IsRunning = false;
         _recognizer.RecognizeAsyncCancel();
     }

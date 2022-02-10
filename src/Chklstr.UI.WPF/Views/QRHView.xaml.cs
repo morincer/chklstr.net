@@ -41,13 +41,19 @@ public class ChecklistItemTemplateSelector : DataTemplateSelector
 [MvxViewFor(typeof(QRHViewModel))]
 public partial class QRHView : MvxWpfView<QRHViewModel>, IComponentConnector
 {
-    private QRHVoiceView voiceView;
+    private QRHVoiceView _voiceView;
     public QRHView()
     {
         InitializeComponent();
-        this.Loaded += OnLoaded;
+        Loaded += OnLoaded;
+        Unloaded += OnUnloaded;
     }
-    
+
+    private void OnUnloaded(object sender, RoutedEventArgs e)
+    {
+        _voiceView.ViewDisappearing();
+    }
+
     private void OnLoaded(object sender, RoutedEventArgs e)
     {
         foreach (var checklist in ViewModel.Checklists)
@@ -76,12 +82,12 @@ public partial class QRHView : MvxWpfView<QRHViewModel>, IComponentConnector
 
     private void InitializeVoiceView()
     {
-        voiceView = Mvx.IoCProvider.IoCConstruct<QRHVoiceView>(new Dictionary<string, object>
+        _voiceView = Mvx.IoCProvider.IoCConstruct<QRHVoiceView>(new Dictionary<string, object>
         {
             ["viewModel"] = ViewModel
         });
 
-        voiceView.Prepare();
+        _voiceView.Prepare();
     }
 
     private void OnChecklistShown(object sender, SelectionChangedEventArgs e)

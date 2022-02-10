@@ -13,7 +13,10 @@ public class App : MvxApplication
     public override void Initialize()
     {
         Mvx.IoCProvider.RegisterType<IQRHParserService, QRHParserService>();
+        Mvx.IoCProvider.ConstructAndRegisterSingleton<ApplicationViewModel, ApplicationViewModel>();
 
         RegisterAppStart<ApplicationViewModel>();
     }
+    
+    
 }

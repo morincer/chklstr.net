@@ -49,7 +49,7 @@ public class JsonUserSettingsService : IUserSettingsService
 
     public void Save(Config config)
     {
-        using var fs = new FileStream(ConfigFile, FileMode.OpenOrCreate);
+        using var fs = new FileStream(ConfigFile, FileMode.Create);
 
         try
         {
@@ -64,6 +64,8 @@ public class JsonUserSettingsService : IUserSettingsService
                 WriteIndented = true, 
                 DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
             });
+            
+            fs.Flush();
         }
         catch (Exception e)
         {

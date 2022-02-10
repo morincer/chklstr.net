@@ -53,7 +53,7 @@ public class TextToSpeechService : ITextToSpeechService
 
     public void Stop()
     {
-        _log.LogDebug("Stopping all voices");
+        _log.LogDebug("Stopping tts service");
         SpeechSynthesizer.SpeakAsyncCancelAll();
     }
 }

@@ -7,6 +7,7 @@
                   xmlns:viewModels="clr-namespace:Chklstr.UI.Core.ViewModels;assembly=Chklstr.UI.Core"
                   d:DataContext="{d:DesignInstance viewModels:QRHViewModel}"
                   xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+                  xmlns:fa="http://schemas.fontawesome.io/icons/"
                   xmlns:local="clr-namespace:Chklstr.UI.WPF.Views"
                   xmlns:utils="clr-namespace:Chklstr.UI.WPF.Utils"
                   xmlns:controls="clr-namespace:Chklstr.UI.WPF.Controls"
@@ -241,20 +242,22 @@
                             <Grid HorizontalAlignment="Stretch">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" MinWidth="30" />
-                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="Auto"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
                                 <Rectangle Grid.ColumnSpan="3" Fill="Transparent"></Rectangle>
                                 <TextBlock Grid.Column="0" Text="{Binding ListNumber}" Margin="0 0 10 0"></TextBlock>
-                                
+
                                 <TextBlock Grid.Column="1"
                                            Visibility="{Binding IsComplete, Converter={StaticResource BooleanToVisibilityConverter}}"
-                                           Style="{StaticResource Icon}" Foreground="{DynamicResource BrushChecked}">&#xf560;</TextBlock>
-                                
+                                           Style="{StaticResource Icon}" Foreground="{DynamicResource BrushChecked}">
+                                    &#xf560;
+                                </TextBlock>
+
                                 <TextBlock TextWrapping="Wrap" Grid.Column="2"
                                            Text="{Binding Name, Converter={StaticResource UppercaseConverter}}" />
-                                
+
                                 <Border Grid.Column="3"
                                         Style="{DynamicResource NotAvailable}"
                                         Visibility="{Binding IsEnabled, Converter={StaticResource InvertableBooleanToVisibilityConverter}, ConverterParameter=Inverted}">
@@ -433,15 +436,57 @@
                             <DockPanel>
                                 <TextBlock Text="{Binding Name}" DockPanel.Dock="Left"
                                            FontFamily="{StaticResource MuliBold}" FontSize="21" />
-                                <TextBlock DockPanel.Dock="Right" TextAlignment="Right" VerticalAlignment="Center"
-                                           FontFamily="{StaticResource MuliRegular}" FontSize="16">
-                                    <TextBlock.Text>
-                                        <MultiBinding StringFormat="{}{0} / {1}">
-                                            <Binding Path="CheckedItemsCount"></Binding>
-                                            <Binding Path="CheckableItemsCount"></Binding>
-                                        </MultiBinding>
-                                    </TextBlock.Text>
-                                </TextBlock>
+                                <StackPanel DockPanel.Dock="Right"
+                                            HorizontalAlignment="Right"
+                                            Orientation="Horizontal"
+                                            VerticalAlignment="Center">
+                                    <Border BorderBrush="{StaticResource BrushBorder}" BorderThickness="1"
+                                            Margin="0 0 10 0" Padding="5">
+                                        <fa:ImageAwesome Icon="VolumeDown"
+                                                         Height="10"
+                                                         Width="10">
+                                            <fa:ImageAwesome.Style>
+                                                <Style TargetType="fa:ImageAwesome">
+                                                    <Setter Property="Foreground" Value="{StaticResource BrushBorder}" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding QRH.IsSaying}" Value="True">
+                                                            <Setter Property="Foreground" Value="Green" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </fa:ImageAwesome.Style>
+                                        </fa:ImageAwesome>
+                                    </Border>
+
+                                    <Border BorderBrush="{StaticResource BrushBorder}" BorderThickness="1"
+                                            Visibility="{Binding QRH.IsVoiceControlEnabled, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                            Margin="0 0 10 0" Padding="5">
+                                        <fa:ImageAwesome Icon="Microphone"
+                                                         Height="10"
+                                                         Width="10">
+                                            <fa:ImageAwesome.Style>
+                                                <Style TargetType="fa:ImageAwesome">
+                                                    <Setter Property="Foreground" Value="{StaticResource BrushBorder}" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding QRH.IsListening}" Value="True">
+                                                            <Setter Property="Foreground" Value="Red" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </fa:ImageAwesome.Style>
+                                        </fa:ImageAwesome>
+                                    </Border>
+
+                                    <TextBlock VerticalAlignment="Center"
+                                               FontFamily="{StaticResource MuliRegular}" FontSize="16">
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="{}{0} / {1}">
+                                                <Binding Path="CheckedItemsCount"></Binding>
+                                                <Binding Path="CheckableItemsCount"></Binding>
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </StackPanel>
                             </DockPanel>
                         </Border>
 
@@ -452,7 +497,7 @@
                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                  ScrollViewer.CanContentScroll="False"
                                  BorderBrush="{StaticResource BrushBorder}"
-                                 
+
                                  Background="{StaticResource BrushBackground}"
                                  BorderThickness="1"
                                  Margin="20 20 20 0"
@@ -526,18 +571,67 @@
                                 BorderBrush="{DynamicResource BrushBorder}" BorderThickness="1 0 1 1">
                             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
                                         Orientation="Horizontal">
-                                <Button Style="{DynamicResource ChecklistButton}"
-                                        BorderBrush="{DynamicResource BrushButtonSpeak}"
-                                        Command="{Binding QRH.SpeakCommand}"
-                                        Background="{DynamicResource BrushButtonSpeak}">
+                                <!--<Button
+                                    Background="Transparent"
+                                    Command="{Binding QRH.SpeakCommand}">
+                                    <Button.Style>
+                                        <Style TargetType="Button" BasedOn="{StaticResource ChecklistButton}">
+                                            <Setter Property="Foreground" Value="{StaticResource BrushOff}"/>
+                                            <Setter Property="BorderBrush" Value="{StaticResource BrushOff}"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding QRH.IsTextToSpeechEnabled}" Value="True">
+                                                    <Setter Property="Foreground" Value="{StaticResource BrushOn}"/>
+                                                    <Setter Property="BorderBrush" Value="{StaticResource BrushOn}"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
                                     Speak
-                                </Button>
+                                </Button>-->
+                                <ToggleButton
+                                    Cursor="Hand"
+                                    Width="100"
+                                    Margin="0 0 10 0"
+                                    IsChecked="{Binding QRH.IsTextToSpeechEnabled}">
+                                    <ToggleButton.Content>
+                                        <StackPanel Orientation="Horizontal">
+                                            <fa:FontAwesome Icon="Circle"
+                                                            FontSize="10"
+                                                            VerticalAlignment="Center" Margin="0 0 5 0"/>
+                                            <TextBlock Text="Speak" />
+                                        </StackPanel>
+                                    </ToggleButton.Content>
+                                    <ToggleButton.Template>
+                                        <ControlTemplate TargetType="ToggleButton">
+                                            <Border Name="_Border"
+                                                    Background="{DynamicResource BrushBackgroundAlt2}"
+                                                    BorderThickness="1"
+                                                    SnapsToDevicePixels="True"
+                                                    CornerRadius="5"
+                                                    Padding="10 2 10 2">
+                                                <ContentPresenter HorizontalAlignment="Center"
+                                                                  VerticalAlignment="Center" />
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter TargetName="_Border" Property="BorderBrush"
+                                                            Value="{DynamicResource BrushOn}" />
+                                                    <Setter Property="Foreground" Value="{DynamicResource BrushOn}"></Setter>
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="False">
+                                                    <Setter TargetName="_Border" Property="BorderBrush"
+                                                            Value="{DynamicResource BrushOff}" />
+                                                    <Setter Property="Foreground" Value="{DynamicResource BrushOff}"></Setter>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </ToggleButton.Template>
+                                </ToggleButton>
                                 <Button Style="{DynamicResource ChecklistButton}"
                                         BorderBrush="{DynamicResource BrushButtonSkip}"
                                         Background="{DynamicResource BrushButtonSkip}"
                                         IsEnabled="{Binding CanCheckAndAdvance}"
-                                        Command="{Binding SkipCommand}"
-                                        >
+                                        Command="{Binding SkipCommand}">
                                     Skip
                                 </Button>
                                 <Button Style="{DynamicResource ChecklistButton}"
@@ -551,8 +645,7 @@
                                         BorderBrush="{DynamicResource BrushButtonReset}"
                                         Background="{DynamicResource BrushButtonReset}"
                                         Command="{Binding ResetCommand}"
-                                        IsEnabled="{Binding CanReset}"
-                                        >
+                                        IsEnabled="{Binding CanReset}">
                                     Reset
                                 </Button>
                             </StackPanel>

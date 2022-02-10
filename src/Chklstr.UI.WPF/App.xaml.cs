@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
+using Chklstr.Core.Services.Voice;
+using Chklstr.UI.Core.ViewModels;
+using Microsoft.Extensions.Logging;
+using MvvmCross;
 using MvvmCross.Platforms.Wpf.Core;
-using MvvmCross.Platforms.Wpf.Views;
+using MvvmCross.ViewModels;
 using Serilog;
 using static MvvmCross.Core.MvxSetupExtensions;
+using ILogger = Serilog.ILogger;
+using MvxApplication = MvvmCross.Platforms.Wpf.Views.MvxApplication;
 
 namespace Chklstr.UI.WPF
 {
@@ -23,12 +30,17 @@ namespace Chklstr.UI.WPF
             this.RegisterSetupType<Setup>();
             this.DispatcherUnhandledException += OnUnhandledException;
         }
-        
-        
 
         private void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             Log.Logger.Fatal(e.Exception, e.Exception.Message);
+        }
+
+        protected override void OnExit(ExitEventArgs e)
+        {
+            var applicationViewModel = Mvx.IoCProvider.Resolve<ApplicationViewModel>();
+            applicationViewModel.Exit();
+            Process.GetCurrentProcess().Kill();
         }
     }
 }

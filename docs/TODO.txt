@@ -38,6 +38,7 @@ Bugs:
 
 Cleanup:
     [ ] (CLEAN) Replace font awesome font-based style with refs to NuGet's package
+    [ ] (CLEAN) Make QRHVoiceView a view model
     
 V1:
     [x] (FTR) Check and advance
@@ -58,9 +59,9 @@ V1:
     [ ] (FTR) Export to JSON
     [ ] (FTR) Export to XML
     [ ] (FTR) Settings:
-            [ ] Settings button
-            [ ] Settings page
-            [ ] Path to external editor
+            [x] Settings button
+            [x] Settings page
+            [x] Path to external editor
             [ ] Output device
             [ ] VAD Threshold + test
     [ ] (IMP) Auto-load last save checklist

@@ -34,19 +34,43 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
         set => SetProperty(ref _selectedChecklist, value);
     }
 
-    private bool _isVoiceEnabled;
+    private bool _isTextToSpeechEnabled;
 
-    public bool IsVoiceEnabled
+    public bool IsTextToSpeechEnabled
     {
-        get => _isVoiceEnabled;
-        set => SetProperty(ref _isVoiceEnabled, value);
+        get => _isTextToSpeechEnabled;
+        set => SetProperty(ref _isTextToSpeechEnabled, value);
+    }
+
+    private bool _isVoiceControlEnabled;
+
+    public bool IsVoiceControlEnabled
+    {
+        get => _isVoiceControlEnabled;
+        set => SetProperty(ref _isVoiceControlEnabled, value);
+    }
+
+    private bool _isSaying;
+
+    public bool IsSaying
+    {
+        get => _isSaying;
+        set => SetProperty(ref _isSaying, value);
+    }
+
+    private bool _isListening;
+
+    public bool IsListening
+    {
+        get => _isListening;
+        set => SetProperty(ref _isListening, value);
     }
     
     public MvxCommand SpeakCommand => new(ToggleSpeak);
     
     public void ToggleSpeak()
     {
-        IsVoiceEnabled = !IsVoiceEnabled;
+        IsTextToSpeechEnabled = !IsTextToSpeechEnabled;
     }
 
     public MvxInteraction<SelectFileRequest> SelectFilePathInteraction = new();
@@ -57,6 +81,9 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
 
     public async void OpenSettings()
     {
+        IsTextToSpeechEnabled = false;
+        IsVoiceControlEnabled = false;
+        
         await _navigationService.Navigate<SettingsViewModel>();
     }
     public void OpenAnotherFile()
@@ -87,6 +114,11 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
         SelectFilePathInteraction.Raise(request);
     }
 
+    public override void ViewAppeared()
+    {
+        LoadConfig();
+    }
+
     public override void ViewDestroy(bool viewFinishing = true)
     {
         base.ViewDestroy(false);
@@ -95,7 +127,7 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
     private async Task Close(QuickReferenceHandbook? redirectTo)
     {
         _logger.LogInformation($"Closing QRH {AircraftName}");
-        IsVoiceEnabled = false;
+        IsTextToSpeechEnabled = false;
         await _navigationService.Close(this, new() { RedirectTo = redirectTo });
     }
 
@@ -155,6 +187,12 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
         
         UpdateContexts();
         SelectedChecklist = Checklists.FirstOrDefault(cl => cl.IsEnabled);
+    }
+
+    private void LoadConfig()
+    {
+        var config = _userSettingsService.Load();
+        IsVoiceControlEnabled = config.VoiceControlEnabled;
     }
 
     private void UpdateContexts()

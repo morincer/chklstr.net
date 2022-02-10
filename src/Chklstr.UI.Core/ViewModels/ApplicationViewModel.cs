@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Chklstr.Core.Model;
 using Chklstr.Core.Services;
+using Chklstr.Core.Services.Voice;
 using Chklstr.UI.Core.Services;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
@@ -10,18 +11,26 @@ using MvvmCross.ViewModels;
 
 namespace Chklstr.UI.Core.ViewModels;
 
-public partial class ApplicationViewModel : MvxViewModel
+public partial class 
+    
+    ApplicationViewModel : MvxViewModel
 {
     private readonly IMvxNavigationService _navigationService;
     private readonly IUserSettingsService _userSettingsService;
+    private readonly IVoiceCommandDetectionService _voiceCommandDetectionService;
+    private readonly ITextToSpeechService _textToSpeechService;
     private readonly ILogger<ApplicationViewModel> _logger;
 
     public ApplicationViewModel(IMvxNavigationService navigationService,
         IUserSettingsService userSettingsService,
+        IVoiceCommandDetectionService voiceCommandDetectionService,
+        ITextToSpeechService textToSpeechService,
         ILogger<ApplicationViewModel> logger)
     {
         _navigationService = navigationService;
         _userSettingsService = userSettingsService;
+        _voiceCommandDetectionService = voiceCommandDetectionService;
+        _textToSpeechService = textToSpeechService;
         _logger = logger;
     }
 
@@ -80,5 +89,12 @@ public partial class ApplicationViewModel : MvxViewModel
             Mvx.IoCProvider.Resolve<IErrorReporter>().ReportError(GetType(), e);
             await _navigationService.Close(this);
         }
+    }
+
+    public void Exit()
+    {
+        _logger.LogInformation("Closing the application");
+        _voiceCommandDetectionService.Stop();
+        _textToSpeechService.Stop();
     }
 }
