@@ -1,0 +1,129 @@
+body {
+    font-family: Muli, serif;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.checklist-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #455a64;
+    color: white;
+    /*border-bottom: 1px solid black;*/
+}
+
+.sublist-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.line {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0;
+}
+
+.checklist {
+    border: 0.5px solid black;
+    -webkit-column-break-inside: avoid;
+    /*page-break-inside: avoid;*/
+    margin-bottom: 10px;
+}
+
+.checklist > .checklist-contents {
+    padding: 10px;
+}
+
+.sublist {
+    margin-bottom: 10px;
+}
+
+.sublist > .checklist-contents {
+    padding-left: 15px !important;
+}
+
+.line > * {
+    padding: 0;
+    margin: 0;
+}
+
+span.filler {
+    flex: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+span.name {
+    white-space: nowrap;
+}
+
+span.value {
+    float: right;
+    text-align: right;
+}
+
+.contexts-list {
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.description {
+    font-size: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.single-check-item {
+    margin-bottom: 5px;
+}
+
+.layout {
+    background-color: #f4f3ef;
+    padding: 10px;
+    border: 1px solid #CCC5B9;
+}
+
+.layout .ctx {
+    display: inline;
+    border-left: 1px solid #CCC5B9;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.layout .ctx label {
+    margin-right: 10px;
+}
+
+@media print {
+    .layout {
+        display: none !important;
+    }
+
+    .checklist {
+        border: 2px solid black !important;
+    }
+
+    body {
+        zoom: 80%;
+    }
+
+    .checklist-title {
+        background-color: black;
+        color: white;
+    }
+}

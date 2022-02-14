@@ -1,4 +1,4 @@
-﻿namespace Chklstr.Infra.Export;
+﻿namespace Chklstr.Infra.Export.Docx;
 
 public class Layout
 {

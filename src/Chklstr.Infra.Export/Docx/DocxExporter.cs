@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Reflection;
 using Chklstr.Core.Model;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
@@ -7,7 +6,7 @@ using Markdig;
 using Markdig.Renderers.Docx;
 using Microsoft.Extensions.Logging;
 
-namespace Chklstr.Infra.Export;
+namespace Chklstr.Infra.Export.Docx;
 
 public class DocxExporter
 {
@@ -118,22 +117,5 @@ public class DocxExporter
         var renderer = new DocxDocumentRenderer(doc, new WordDocumentStyles(), _markdownLogger);
         renderer.Cursor.GoInto(cell);
         Markdown.Convert(item.Description, renderer, _markdownPipeline);
-
-        /*
-
-        Document doc = markdownParser.parse(item.getDescription());
-
-        var row = Docx4jHelper.addRow(table, false, new String[]{null});
-        Docx4jHelper.addHorizontalSpan(row, 2);
-
-        var cell = Docx4jHelper.getFirstCell(row);
-        Docx4jHelper.addCellMargin(cell, 400);
-
-        var container = new TableCellContentContainer(cell, wordprocessingMLPackage, new boolean[]{true});
-
-        markdownRenderer.render(doc, wordprocessingMLPackage, container);
-        
-        */
-
     }
 }

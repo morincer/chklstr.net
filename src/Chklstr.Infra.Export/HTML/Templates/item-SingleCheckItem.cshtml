@@ -1,0 +1,12 @@
+@using Chklstr.Core.Model
+@using RazorLight
+@inherits TemplatePage<Chklstr.Infra.Export.HTML.ContextItem>
+
+<div class="single-check-item @(Model.ContextToClasses())">
+    <div class="line">
+        <span class="name">@(Model.As<SingleCheckItem>().CheckName)</span>
+        <span class="filler">@(Model.ExportModel.Filler)</span>
+        <span class="value">@(Model.As<SingleCheckItem>().Value)</span>
+    </div>
+    @{ await IncludeAsync("Templates.description", Model);  }
+</div>

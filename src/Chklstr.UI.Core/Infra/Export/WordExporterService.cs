@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Chklstr.Core.Services;
 using Chklstr.Infra.Export;
+using Chklstr.Infra.Export.Docx;
 using Chklstr.UI.Core.ViewModels;
 using Microsoft.Extensions.Logging;
 using MvvmCross;

@@ -1,4 +1,6 @@
-﻿namespace Chklstr.Core.Model;
+﻿using Markdig;
+
+namespace Chklstr.Core.Model;
 
 public abstract class ChecklistItem
 {
@@ -28,5 +30,10 @@ public abstract class ChecklistItem
     
     public virtual HashSet<string> GetAllAvailableContexts() {
         return Contexts;
+    }
+
+    public string DescriptionAsHtml()
+    {
+        return Markdown.ToHtml(Description);
     }
 }

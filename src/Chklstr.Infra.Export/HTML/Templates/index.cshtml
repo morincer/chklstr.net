@@ -1,0 +1,57 @@
+﻿@using Chklstr.Core.Model
+@using Chklstr.Infra.Export.HTML
+@using RazorLight
+@inherits TemplatePage<Chklstr.Infra.Export.HTML.HtmlExportModel>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>@Model.Book.AircraftName</title>
+</head>
+<style>
+        @{ Output.WriteLine(HtmlHelpers.ReadResource("styles.css")); }
+
+        @if (Model.Layout.MultipleColumns)
+        {
+            @:.checklists-container {
+            @:  column-width: ${layout.columnsCount}px;
+            @:  column-gap: ${layout.columnGapPx}px;
+            @:}
+        }
+        else
+        {
+            @:.checklists-container {
+            @:  width: ${layout.columnsCount}px;
+            @:}
+            @:}
+
+            @:.single-check-item {
+            @:  margin-bottom: 5px;
+            @:}
+        }
+</style>
+<body>
+<!-- LAYOUT PANEL -->
+@* #parse('/templates/html/layout-panel.vm') *@
+@{ await IncludeAsync("Templates.layout-panel", Model); }
+
+<!-- QRH -->
+<h1>@(Model.Book.AircraftName)</h1>
+
+<div class="checklists-container">
+    @foreach (var item in Model.Book.Checklists)
+    {
+       await IncludeAsync("Templates.item-Checklist", new ContextItem(Model, item)); 
+    }
+</div>
+<script type="text/javascript">
+    @{ Output.WriteLine(HtmlHelpers.ReadResource("script.js")); }
+</script>
+</body>
+</html>

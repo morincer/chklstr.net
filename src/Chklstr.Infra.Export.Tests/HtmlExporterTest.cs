@@ -1,23 +1,24 @@
-using System.IO;
+﻿using System.IO;
+using System.Threading.Tasks;
 using Chklstr.Core.Model;
 using Chklstr.Core.Tests;
 using Chklstr.Core.Utils;
-using Chklstr.Infra.Export.Docx;
-using NUnit.Framework;
+using Chklstr.Infra.Export.HTML;
 using Chklstr.Infra.Parser;
+using NUnit.Framework;
 
 namespace Chklstr.Infra.Export.Tests;
 
-public class DocxExporterTest
+public class HtmlExporterTest
 {
-    private DocxExporter _exporter = null!;
-    private Layout _layout = null!;
+    private HtmlExporter _exporter = null!;
+    private HTML.Layout _layout = null!;
     private QuickReferenceHandbook _book = null!;
 
     [SetUp]
     public void Setup()
     {
-        this._exporter = new DocxExporter(TestData.LoggerFactory);
+        this._exporter = new HtmlExporter();
         this._layout = new Layout();
 
         var service = new QRHParserService(TestData.Logger<QRHParserService>());
@@ -27,14 +28,14 @@ public class DocxExporterTest
     }
 
     [Test]
-    public void ShouldGenerateFile()
+    public async Task ShouldGenerateFile()
     {
-        var path = Path.GetFullPath(".test-data/output.docx");
+        var path = Path.GetFullPath(".test-data/output.html");
         if (File.Exists(path)) File.Delete(path);
         
         Assert.False(File.Exists(path));
         
-        this._exporter.Export(this._book, path, this._layout, "APU Start");
+        await this._exporter.Export(this._book, path, this._layout, "APU Start");
         
         Assert.True(File.Exists(path));
         Assert.That(new FileInfo(path).Length, Is.GreaterThan(0));

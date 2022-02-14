@@ -1,16 +1,14 @@
 ﻿using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Office.CustomUI;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace Chklstr.Infra.Export;
+namespace Chklstr.Infra.Export.Docx;
 
 public static class MainDocumentExtensions
 {
     public static readonly string NS_WORD12 = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
-    public static readonly string W_NAMESPACE_DECLARATION = "xmlns:w=\"" + NS_WORD12 + "\"";
 
     public static ILogger Log { get; set; } = NullLogger.Instance;
 

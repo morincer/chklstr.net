@@ -11,6 +11,7 @@
       <PackageReference Include="Markdig" Version="0.27.0" />
       <PackageReference Include="Markdig.Renderers.Docx" Version="1.0.0" />
       <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+      <PackageReference Include="RazorLight" Version="2.0.0-rc.4" />
     </ItemGroup>
 
     <ItemGroup>
@@ -18,9 +19,25 @@
     </ItemGroup>
 
     <ItemGroup>
+      <EmbeddedResource Include="HTML\Templates\index.cshtml" />
       <EmbeddedResource Include="Templates\Docx\template.docx">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
+      <None Remove="Templates\Html\index.cshtml" />
+      <None Remove="HTML\Templates\styles.css.cshtml" />
+      <EmbeddedResource Include="HTML\Templates\styles.css" />
+      <None Remove="HTML\Templates\layout-panel.cshtml" />
+      <EmbeddedResource Include="HTML\Templates\layout-panel.cshtml" />
+      <None Remove="HTML\Templates\item-Checklist.cshtml" />
+      <EmbeddedResource Include="HTML\Templates\item-Checklist.cshtml" />
+      <None Remove="HTML\Templates\item-Separator.cshtml" />
+      <EmbeddedResource Include="HTML\Templates\item-Separator.cshtml" />
+      <None Remove="HTML\Templates\item-SingleCheckItem.cshtml" />
+      <EmbeddedResource Include="HTML\Templates\item-SingleCheckItem.cshtml" />
+      <None Remove="HTML\Templates\script.js" />
+      <EmbeddedResource Include="HTML\Templates\script.js" />
+      <None Remove="HTML\Templates\description.cshtml" />
+      <EmbeddedResource Include="HTML\Templates\description.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
