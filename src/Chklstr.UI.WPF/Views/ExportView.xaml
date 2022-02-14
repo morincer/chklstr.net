@@ -10,7 +10,8 @@
                   xmlns:local="clr-namespace:Chklstr.UI.WPF.Views"
                   xmlns:utils="clr-namespace:Chklstr.UI.WPF.Utils"
                   xmlns:controls="clr-namespace:Chklstr.UI.WPF.Controls"
-                  xmlns:extensions="clr-namespace:AdonisUI.Extensions;assembly=AdonisUI">
+                  xmlns:extensions="clr-namespace:AdonisUI.Extensions;assembly=AdonisUI"
+                  xmlns:fa="http://schemas.fontawesome.io/icons/">
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Style="{DynamicResource DialogBackground}">
         <Grid.Resources>
             <Thickness x:Key="DefaultSpacing">0 0 5 0</Thickness>
@@ -32,6 +33,7 @@
             </Style>
 
             <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <utils:InvertableBooleanToVisibilityConverter x:Key="InvertableBooleanToVisibilityConverter"/>
             <utils:InverseBooleanConverter x:Key="InverseBooleanConverter" />
         </Grid.Resources>
         <Border Style="{DynamicResource InnerPanelBorder}">
@@ -112,10 +114,18 @@
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
                                 Orientation="Horizontal">
                         <Button IsDefault="True" Style="{StaticResource ChecklistButton}"
+                                Visibility="{Binding IsRunning, Converter={StaticResource InvertableBooleanToVisibilityConverter}, ConverterParameter=Inverted}"
                                 Command="{Binding CommandExport}">
-                            Save and Close
+                            Export
                         </Button>
+                        
+                        <fa:ImageAwesome Icon="Refresh" Spin="{Binding IsRunning}" Height="14" Width="14" 
+                                         Foreground="Gray"
+                                         Margin="0 0 10 0"
+                                         Visibility="{Binding IsRunning, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                        
                         <Button Style="{DynamicResource ChecklistButton}" IsCancel="True"
+                                Visibility="{Binding IsRunning, Converter={StaticResource InvertableBooleanToVisibilityConverter}, ConverterParameter=Inverted}"
                                 Command="{Binding CommandClose}">
                             Cancel
                         </Button>

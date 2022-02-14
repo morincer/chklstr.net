@@ -42,17 +42,33 @@ public class ExportViewModel : MvxViewModel<QRHViewModel>
 
     public MvxAsyncCommand CommandExport => new(Export, () => !string.IsNullOrEmpty(TargetPath));
 
+    private bool _isRunning;
+
+    public bool IsRunning
+    {
+        get => _isRunning;
+        set => SetProperty(ref _isRunning, value);
+    }
+
     public async Task Export()
     {
+        IsRunning = true;
         try
         {
-            await ExporterService.Export(this);
+            await Task.Run(() => ExporterService.Export(this));
+            
+            IsRunning = false;
+            
             _errorReporter.ReportSuccess($"Exported to {TargetPath}");
             await _navigationService.Close(this);
         }
         catch (Exception e)
         {
             _errorReporter.ReportError(GetType(), e);
+        }
+        finally
+        {
+            IsRunning = false;
         }
     }
 

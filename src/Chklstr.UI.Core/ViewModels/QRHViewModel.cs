@@ -80,6 +80,7 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
     public MvxInteraction<SelectFileRequest> SelectFilePathInteraction = new();
 
     public MvxCommand ExportToWordCommand => new(ExportToWord);
+    public MvxCommand ExportToHtmlCommand => new(ExportToHtml);
     public MvxCommand OpenCommand => new(OpenAnotherFile);
 
     public MvxCommand SettingsCommand => new(OpenSettings);
@@ -89,8 +90,14 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
         var exporter = new WordExporterService();
         await ExportUsing(exporter);
     }
+    
+    public async void ExportToHtml()
+    {
+        var exporter = new HtmlExporterService();
+        await ExportUsing(exporter);
+    }
 
-    private async Task ExportUsing(WordExporterService exporter)
+    private async Task ExportUsing(IExporterService exporter)
     {
         IsTextToSpeechEnabled = false;
         IsVoiceControlEnabled = false;
