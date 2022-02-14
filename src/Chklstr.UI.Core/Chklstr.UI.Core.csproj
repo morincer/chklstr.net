@@ -15,6 +15,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Chklstr.Core\Chklstr.Core.csproj" />
+      <ProjectReference Include="..\Chklstr.Infra.Export\Chklstr.Infra.Export.csproj" />
       <ProjectReference Include="..\Chklstr.Infra.Parser\Chklstr.Infra.Parser.csproj" />
     </ItemGroup>
 

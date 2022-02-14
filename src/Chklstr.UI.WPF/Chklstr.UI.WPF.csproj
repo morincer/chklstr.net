@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Chklstr.Infra.Export\Chklstr.Infra.Export.csproj" />
       <ProjectReference Include="..\Chklstr.Infra.Voice\Chklstr.Infra.Voice.csproj" />
       <ProjectReference Include="..\Chklstr.UI.Core\Chklstr.UI.Core.csproj" />
     </ItemGroup>

@@ -64,6 +64,8 @@ public partial class QRHView : MvxWpfView<QRHViewModel>, IComponentConnector
         TabControl_Checklists.SelectionChanged += OnChecklistShown;
 
         ViewModel.SelectFilePathInteraction.Requested += OnSelectedFileInteractionRequested;
+
+        SplitButtonExport.Click += (o, args) => { SplitButtonExport.SplitMenu.IsOpen = true; };
         
         InitializeVoiceView();
     }

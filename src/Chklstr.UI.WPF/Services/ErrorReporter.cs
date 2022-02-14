@@ -8,6 +8,11 @@ namespace Chklstr.UI.WPF.Services;
 
 public class ErrorReporter : IErrorReporter
 {
+    public void ReportSuccess(string message)
+    {
+        MessageBox.Show(message, "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+    }
+    
     public void ReportError(Type? senderType, Exception e)
     {
         var factory = Mvx.IoCProvider.Resolve<ILoggerFactory>();

@@ -33,7 +33,7 @@ public class DocxExporterTest
         
         Assert.False(File.Exists(path));
         
-        this._exporter.export(this._book, path, this._layout, "APU Start");
+        this._exporter.Export(this._book, path, this._layout, "APU Start");
         
         Assert.True(File.Exists(path));
         Assert.That(new FileInfo(path).Length, Is.GreaterThan(0));

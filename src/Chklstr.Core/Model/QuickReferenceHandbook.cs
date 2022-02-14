@@ -3,6 +3,7 @@ namespace Chklstr.Core.Model;
 
 public class QuickReferenceHandbook
 {
+    public Metadata Metadata { get; } = new();
     public string AircraftName { get; }
     public List<Checklist> Checklists { get; } = new() ;
 

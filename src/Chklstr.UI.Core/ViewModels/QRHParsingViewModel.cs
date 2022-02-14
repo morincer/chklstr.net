@@ -85,6 +85,8 @@ public class QRHParsingViewModel : MvxViewModel<string, ParseResult<QuickReferen
             if (ParseResult.IsSuccess())
             {
                 _logger.LogDebug("QRH Loaded successfully");
+                ParseResult.Result!.Metadata.LoadedFrom = Path;
+                
                 await Close();
             }
         }

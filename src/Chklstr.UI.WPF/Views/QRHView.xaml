@@ -11,6 +11,7 @@
                   xmlns:local="clr-namespace:Chklstr.UI.WPF.Views"
                   xmlns:utils="clr-namespace:Chklstr.UI.WPF.Utils"
                   xmlns:controls="clr-namespace:Chklstr.UI.WPF.Controls"
+                  xmlns:adonisControls="clr-namespace:AdonisUI.Controls;assembly=AdonisUI"
                   xmlns:extensions="clr-namespace:AdonisUI.Extensions;assembly=AdonisUI">
 
     <views:MvxWpfView.Resources>
@@ -369,12 +370,32 @@
                                 </StackPanel>
                             </Button>
 
-                            <Button Style="{DynamicResource Flat}" Margin="0 0 5 0">
+                            <!--<Button Style="{DynamicResource Flat}" Margin="0 0 5 0">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Style="{DynamicResource Icon}" Text="&#xf56e;" />
                                     <TextBlock>Export</TextBlock>
                                 </StackPanel>
-                            </Button>
+                            </Button>-->
+
+                            <adonisControls:SplitButton MinWidth="70" MinHeight="20"
+                                                        Background="{StaticResource ButtonBackground}"
+                                                        x:Name="SplitButtonExport"
+                                                        extensions:CornerRadiusExtension.CornerRadius="3"
+                                                        extensions:CursorSpotlightExtension.BorderBrush="{StaticResource BrushButtonBorder}"
+                                                        extensions:CursorSpotlightExtension.BackgroundBrush="{StaticResource BrushBackgroundAlt2}"
+                                                        >
+                                <adonisControls:SplitButton.SplitMenu>
+                                    <ContextMenu
+                                        MinWidth="{Binding PlacementTarget.ActualWidth, RelativeSource={RelativeSource Self}}">
+                                        <MenuItem Header="Export to Word (*.docx)" Command="{Binding ExportToWordCommand}" />
+                                    </ContextMenu>
+                                </adonisControls:SplitButton.SplitMenu>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <TextBlock Style="{DynamicResource Icon}" Text="&#xf56e;" />
+                                    <TextBlock>Export</TextBlock>
+                                </StackPanel>
+                            </adonisControls:SplitButton>
+
                         </StackPanel>
                         <StackPanel Grid.Column="1" VerticalAlignment="Center">
                             <Button Style="{DynamicResource Flat}" Command="{Binding SettingsCommand}" Margin="0 0 5 0">
@@ -509,12 +530,7 @@
                                  ItemTemplateSelector="{StaticResource ChecklistItemTemplateSelector}"
                                  extensions:CornerRadiusExtension.CornerRadius="5 5 0 0"
                                  ItemsSource="{Binding Children}">
-                            <!--<ListBox.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="5 5 0 0" />
-                                    <Setter Property="SnapsToDevicePixels" Value="True" />
-                                </Style>
-                            </ListBox.Resources>-->
+
                             <ListBox.ItemContainerStyle>
                                 <Style TargetType="ListBoxItem"
                                        d:DataContext="{d:DesignInstance viewModels:ChecklistItemViewModel}">
@@ -571,23 +587,7 @@
                                 BorderBrush="{DynamicResource BrushBorder}" BorderThickness="1 0 1 1">
                             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
                                         Orientation="Horizontal">
-                                <!--<Button
-                                    Background="Transparent"
-                                    Command="{Binding QRH.SpeakCommand}">
-                                    <Button.Style>
-                                        <Style TargetType="Button" BasedOn="{StaticResource ChecklistButton}">
-                                            <Setter Property="Foreground" Value="{StaticResource BrushOff}"/>
-                                            <Setter Property="BorderBrush" Value="{StaticResource BrushOff}"/>
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding QRH.IsTextToSpeechEnabled}" Value="True">
-                                                    <Setter Property="Foreground" Value="{StaticResource BrushOn}"/>
-                                                    <Setter Property="BorderBrush" Value="{StaticResource BrushOn}"/>
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </Button.Style>
-                                    Speak
-                                </Button>-->
+
                                 <ToggleButton
                                     Cursor="Hand"
                                     Width="100"
@@ -597,7 +597,7 @@
                                         <StackPanel Orientation="Horizontal">
                                             <fa:FontAwesome Icon="Circle"
                                                             FontSize="10"
-                                                            VerticalAlignment="Center" Margin="0 0 5 0"/>
+                                                            VerticalAlignment="Center" Margin="0 0 5 0" />
                                             <TextBlock Text="Speak" />
                                         </StackPanel>
                                     </ToggleButton.Content>

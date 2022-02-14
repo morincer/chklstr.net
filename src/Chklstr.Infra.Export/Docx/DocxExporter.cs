@@ -27,7 +27,7 @@ public class DocxExporter
         _markdownPipeline = new MarkdownPipelineBuilder().UseEmphasisExtras().Build();
     }
 
-    public void export(QuickReferenceHandbook book, string outputPath, Layout layout, params string[] contexts)
+    public void Export(QuickReferenceHandbook book, string outputPath, Layout layout, params string[] contexts)
     {
         try
         {

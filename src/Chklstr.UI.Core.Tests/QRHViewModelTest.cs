@@ -5,6 +5,7 @@ using Chklstr.Core.Model;
 using Chklstr.Core.Services;
 using Chklstr.Core.Tests;
 using Chklstr.Infra.Parser;
+using Chklstr.UI.Core.Services;
 using Chklstr.UI.Core.ViewModels;
 using Moq;
 using MvvmCross.Navigation;
@@ -20,6 +21,7 @@ public class QRHViewModelTest : MvxIoCSupportingTest
 {
     private QRHViewModel _viewModel;
     private Mock<IMvxNavigationService> _navigationServiceMock;
+    private Mock<IErrorReporter> _errorReporterMock;
 
     [SetUp]
     public new async Task Setup()
@@ -31,10 +33,11 @@ public class QRHViewModelTest : MvxIoCSupportingTest
         Assert.NotNull(parseResult.Result);
 
         _navigationServiceMock = new Mock<IMvxNavigationService>();
+        _errorReporterMock = new Mock<IErrorReporter>();
 
         _viewModel = new QRHViewModel(
             new InMemoryUserSettings(),
-            _navigationServiceMock.Object,
+            _navigationServiceMock.Object, _errorReporterMock.Object,
             TestData.Logger<QRHViewModel>());
         _viewModel.Prepare(parseResult.Result!);
         await _viewModel.Initialize();

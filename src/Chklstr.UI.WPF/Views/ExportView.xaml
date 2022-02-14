@@ -1,0 +1,127 @@
+﻿<views:MvxWpfView x:Class="Chklstr.UI.WPF.Views.ExportView" x:TypeArguments="viewModels:ExportViewModel"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                  mc:Ignorable="d"
+                  xmlns:viewModels="clr-namespace:Chklstr.UI.Core.ViewModels;assembly=Chklstr.UI.Core"
+                  d:DataContext="{d:DesignInstance viewModels:ExportViewModel}"
+                  xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+                  xmlns:local="clr-namespace:Chklstr.UI.WPF.Views"
+                  xmlns:utils="clr-namespace:Chklstr.UI.WPF.Utils"
+                  xmlns:controls="clr-namespace:Chklstr.UI.WPF.Controls"
+                  xmlns:extensions="clr-namespace:AdonisUI.Extensions;assembly=AdonisUI">
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Style="{DynamicResource DialogBackground}">
+        <Grid.Resources>
+            <Thickness x:Key="DefaultSpacing">0 0 5 0</Thickness>
+            <Style TargetType="GroupBox">
+                <Setter Property="Padding" Value="10 0 10 10" />
+                <Setter Property="Margin" Value="0 0 0 10" />
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="0 0 0 0" />
+                <Setter Property="FontWeight" Value="Bold" />
+            </Style>
+            <Style x:Key="FieldBrowse" TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+                <Setter Property="MinWidth" Value="300" />
+                <Setter Property="Margin" Value="{StaticResource DefaultSpacing}" />
+            </Style>
+            <Style x:Key="FieldSelect" TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}">
+                <Setter Property="MinWidth" Value="300" />
+                <Setter Property="Margin" Value="{StaticResource DefaultSpacing}" />
+            </Style>
+
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <utils:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+        </Grid.Resources>
+        <Border Style="{DynamicResource InnerPanelBorder}">
+            <Grid Style="{DynamicResource InnerPanel}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0"
+                        BorderBrush="{StaticResource BrushBorder}" BorderThickness="0 0 0 1"
+                        SnapsToDevicePixels="True"
+                        Margin="5 0 5 0"
+                        MinHeight="35">
+                    <TextBlock TextWrapping="Wrap"
+                               Style="{StaticResource Header0}">
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="Export to {0} (*.{1})">
+                                <Binding Path="ExporterService.FormatName"/>
+                                <Binding Path="ExporterService.FormatExtension"/>
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </Border>
+                <Border Grid.Row="1"
+                        BorderBrush="{StaticResource BrushBorder}"
+                        SnapsToDevicePixels="True"
+                        BorderThickness="1 0 1 1"
+                        Margin="5 0 5 0">
+                    <StackPanel Margin="10 10 10 10" Orientation="Vertical"
+                                VerticalAlignment="Stretch">
+                        <GroupBox Header="Target">
+                            <StackPanel>
+                                <Label>Target Path</Label>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBox extensions:WatermarkExtension.Watermark="Path to external editor..."
+                                             Style="{StaticResource FieldBrowse}"
+                                             Text="{Binding TargetPath}" />
+                                    <Button Command="{Binding ChooseTargetPathCommand}">...</Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Contexts">
+                            <ItemsControl ItemsSource="{Binding Contexts}" 
+                                     HorizontalAlignment="Stretch" x:Name="ListBoxContexts">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <CheckBox 
+                                            Content="{Binding Name}" 
+                                            IsChecked="{Binding Selected}"
+                                            Margin="10 10 0 0"
+                                            />
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel FlowDirection="LeftToRight" MaxWidth="{Binding ElementName=ListBoxContexts, Path=ActualWidth}"/>
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                            </ItemsControl>
+                        </GroupBox>
+                        <GroupBox Header="Layout">
+                            <StackPanel>
+                                <CheckBox
+                                    Margin="0 10 0 0"
+                                    IsChecked="{Binding ShowDescriptions}">
+                                    Export Descriptions
+                                </CheckBox>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Row="2" Padding="10 10 5 10" Margin="5 0 5 10"
+                        CornerRadius="0 0 5 5"
+                        VerticalAlignment="Center"
+                        BorderBrush="{DynamicResource BrushBorder}" BorderThickness="1 0 1 1">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                                Orientation="Horizontal">
+                        <Button IsDefault="True" Style="{StaticResource ChecklistButton}"
+                                Command="{Binding CommandExport}">
+                            Save and Close
+                        </Button>
+                        <Button Style="{DynamicResource ChecklistButton}" IsCancel="True"
+                                Command="{Binding CommandClose}">
+                            Cancel
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</views:MvxWpfView>

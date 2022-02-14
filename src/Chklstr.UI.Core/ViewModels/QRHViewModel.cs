@@ -3,6 +3,7 @@ using Chklstr.Core.Model;
 using Chklstr.Core.Services;
 using Chklstr.UI.Core.Services;
 using Chklstr.UI.Core.Utils;
+using Chklstr.UI.WPF.Services.Export;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
 using MvvmCross.Commands;
@@ -20,8 +21,11 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
     private readonly ILogger<QRHViewModel> _logger;
     private readonly IUserSettingsService _userSettingsService;
     private readonly IMvxNavigationService _navigationService;
+    private readonly IErrorReporter _errorReporter;
     public QuickReferenceHandbook Item { get; private set; }
     public string AircraftName { get; set; }
+    
+    public string? LoadedFrom { get; set; }
     public ObservableCollection<ChecklistViewModel> Checklists { get; init; } = new();
 
     public ObservableCollection<ContextViewModel> Contexts { get; init; } = new();
@@ -74,10 +78,26 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
     }
 
     public MvxInteraction<SelectFileRequest> SelectFilePathInteraction = new();
+
+    public MvxCommand ExportToWordCommand => new(ExportToWord);
     public MvxCommand OpenCommand => new(OpenAnotherFile);
 
     public MvxCommand SettingsCommand => new(OpenSettings);
-    
+
+    public async void ExportToWord()
+    {
+        var exporter = new WordExporterService();
+        await ExportUsing(exporter);
+    }
+
+    private async Task ExportUsing(WordExporterService exporter)
+    {
+        IsTextToSpeechEnabled = false;
+        IsVoiceControlEnabled = false;
+        var viewModel = new ExportViewModel(_navigationService, _errorReporter, exporter);
+        viewModel.Prepare(this);
+        await _navigationService.Navigate(viewModel);
+    }
 
     public async void OpenSettings()
     {
@@ -138,9 +158,11 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
 
     public QRHViewModel(IUserSettingsService userSettingsService,
         IMvxNavigationService navigationService,
+        IErrorReporter errorReporter,
         ILogger<QRHViewModel> logger)
     {
         _navigationService = navigationService;
+        _errorReporter = errorReporter;
         _logger = logger;
         _userSettingsService = userSettingsService;
     }
@@ -153,6 +175,7 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
     public override async Task Initialize()
     {
         AircraftName = Item.AircraftName;
+        LoadedFrom = Item.Metadata.LoadedFrom;
 
         var level = new HierarchyLevel();
 
