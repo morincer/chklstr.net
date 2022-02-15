@@ -2,7 +2,7 @@
 using Chklstr.Infra.Export.HTML;
 using Chklstr.UI.Core.ViewModels;
 
-namespace Chklstr.UI.WPF.Services.Export;
+namespace Chklstr.UI.Core.Infra.Export;
 
 public class HtmlExporterService : IExporterService
 {

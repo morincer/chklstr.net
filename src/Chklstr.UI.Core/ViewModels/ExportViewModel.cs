@@ -37,7 +37,7 @@ public class ExportViewModel : MvxViewModel<QRHViewModel>
         get => _showDescriptions;
         set => SetProperty(ref _showDescriptions, value);
     }
-
+    
     public QuickReferenceHandbook Book { get; private set; }
 
     public MvxAsyncCommand CommandExport => new(Export, () => !string.IsNullOrEmpty(TargetPath));

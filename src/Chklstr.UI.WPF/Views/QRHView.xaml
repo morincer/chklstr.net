@@ -389,6 +389,7 @@
                                         MinWidth="{Binding PlacementTarget.ActualWidth, RelativeSource={RelativeSource Self}}">
                                         <MenuItem Header="Export to Word (*.docx)" Command="{Binding ExportToWordCommand}" />
                                         <MenuItem Header="Export to Html (*.html)" Command="{Binding ExportToHtmlCommand}" />
+                                        <MenuItem Header="Export to Json (*.json)" Command="{Binding ExportToJsonCommand}" />
                                     </ContextMenu>
                                 </adonisControls:SplitButton.SplitMenu>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">

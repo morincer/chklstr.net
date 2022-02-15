@@ -1,9 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using Chklstr.Core.Model;
 using Chklstr.Core.Services;
+using Chklstr.UI.Core.Infra.Export;
 using Chklstr.UI.Core.Services;
 using Chklstr.UI.Core.Utils;
-using Chklstr.UI.WPF.Services.Export;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
 using MvvmCross.Commands;
@@ -81,10 +81,16 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
 
     public MvxCommand ExportToWordCommand => new(ExportToWord);
     public MvxCommand ExportToHtmlCommand => new(ExportToHtml);
+    public MvxCommand ExportToJsonCommand => new(ExportToJson);
     public MvxCommand OpenCommand => new(OpenAnotherFile);
 
     public MvxCommand SettingsCommand => new(OpenSettings);
 
+    public async void ExportToJson()
+    {
+        await ExportUsing(new JsonExporterService());
+    }
+    
     public async void ExportToWord()
     {
         var exporter = new WordExporterService();

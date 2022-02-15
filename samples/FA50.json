@@ -1,0 +1,2231 @@
+{
+  "aircraftName": "Flysimware Falcon 50",
+  "defaultContexts": [
+    "APU Start"
+  ],
+  "allAvailableContexts": [
+    "Real",
+    "Full Prestart",
+    "APU Start",
+    "External Power",
+    "Eng.2 as APU"
+  ],
+  "selectedContexts": [
+    "APU Start"
+  ],
+  "checklists": [
+    {
+      "name": "Before Engine Start (Power Off)",
+      "type": "checklist",
+      "contexts": [
+        "Real"
+      ],
+      "availableInCurrentContexts": false,
+      "items": [
+        {
+          "name": "Exterior Inspection",
+          "type": "section",
+          "availableInCurrentContexts": false,
+          "items": [
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Normal Static Ports Cover/Condition",
+              "value": "REMOVED/CLEAR"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Stall Warning Sensor Cover/Condition",
+              "value": "REMOVED/CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Emergency Static Port Cover/Condition",
+              "value": "REMOVED/CLEAR"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "separator"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Pilot Pitot Probe Cover/Condition",
+              "value": "REMOVED/CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Temperature Probe Cover/Condition",
+              "value": "REMOVED/CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Cockpit Windows",
+              "value": "CHECKED/CLEAR"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Windshield Wipers",
+              "value": "CHECKED/STOWED",
+              "description": {
+                "markdown": "If wiper blades will not stow, limit speed to 205 KIAS.",
+                "html": "<p>If wiper blades will not stow, limit speed to 205 KIAS.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Nose Landing Gear",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Taxi Light",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Eight Nose Cone Latches",
+              "value": "CHECKED/LATCHED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Copilot Pitot Probe Cover/Condition",
+              "value": "REMOVED/CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Emergency Static Port Cover/Condition",
+              "value": "REMOVED/CLEAR"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Stall Warning Sensor Cover/Condition",
+              "value": "REMOVED/CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Normal Static Ports Cover/Condition",
+              "value": "REMOVED/CLEAR"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Waste Water Drain Access Door",
+              "value": "CHECKED/CLOSED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Angle-of-Attack Transmitter Cover/Condition",
+              "value": "REMOVED/CHECKED",
+              "description": {
+                "markdown": "If installed, remove cover and check transmitter tor freedom of movement.",
+                "html": "<p>If installed, remove cover and check transmitter tor freedom of movement.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Belly Anticollision Light",
+              "value": "CHECKED",
+              "description": {
+                "markdown": "Check for proper attachment and overall condition.",
+                "html": "<p>Check for proper attachment and overall condition.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Fuel Sump Drains (8)",
+              "value": "CHECKED\tFOR LEAKS"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Parking Brake Accumulator",
+              "value": "CHECKED",
+              "description": {
+                "markdown": "Precharge pressure is 950 psi.",
+                "html": "<p>Precharge pressure is 950 psi.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Right Wing Fuel Vent Valve",
+              "value": "CLEAR/NO LEAKS"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Antennas",
+              "value": "CHECKED",
+              "description": {
+                "markdown": "Check tor installation and integrity.",
+                "html": "<p>Check tor installation and integrity.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "RH Landing Light",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "RH Emergency Exit",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Center Engine Air Intake Cover/Condition",
+              "value": "REMOVED/CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Right Engine Air Intake Cover/Condition",
+              "value": "REMOVED/CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Leading Edge Condition",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Emergency Exit Light in Leading Edge Condition",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Life Line Pip Pin Attachment",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Gravity Fueling Plug",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Wing Check for Fuel Leaks",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Navigation/Strobe Lights",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Static Dischargers",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Right Aileron",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Flaps",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Airbrakes",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Right Main Landing Gear",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Right Engine Nacelle and Pylon",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Single-Point Refueling Panel",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "External Power Connector Access Door",
+              "value": "CLOSED/LATCHED (2)"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Hydraulic 2 Ground Connection Panel",
+              "value": "CLOSED/LATCHED (2)"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Crew/Cabin ECU Intakes/Exits",
+              "value": "CHECKED",
+              "description": {
+                "markdown": "**NOTE**\r\n\r\nThe top unit is the crew ECU and the bottom is the Cabin ECU. The ditching door is associated with the Cabin ECU air intake.",
+                "html": "<p><strong>NOTE</strong></p>\n<p>The top unit is the crew ECU and the bottom is the Cabin ECU. The ditching door is associated with the Cabin ECU air intake.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "APU Air Intake and Exhaust",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Aft Navigation Light",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Center Engine Nacelle and Exhaust",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Horizontal Stabilizer",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Vertical Stabilizer",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "APU No. 2 Engine Vent Ports",
+              "value": "CHECKED",
+              "description": {
+                "markdown": "**NOTE**\r\n\r\nNo. 2 engine generator intake ports on side of fuselage is for ground cooling when airflow through S-duct is minimal at low power settings. A spring-loaded flapper door is on inside left of S-duct. which opens when air¬flow increases in the duct.",
+                "html": "<p><strong>NOTE</strong></p>\n<p>No. 2 engine generator intake ports on side of fuselage is for ground cooling when airflow through S-duct is minimal at low power settings. A spring-loaded flapper door is on inside left of S-duct. which opens when air¬flow increases in the duct.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Rear Compartment",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Fire Extinguisher Frangible Discs",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Baggage Compartment",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Feeder Tank Vent Valve",
+              "value": "CLEAR/NO LEAKS"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Left Engine Nacelle and Pylon",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Left Main Landing Gear",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Airbrakes",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Flaps",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Left Aileron",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Static Dischargers",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Navigation/Strobe Lights",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Wing Check for Fuel Leaks",
+              "value": "CHECKED"
+            }
+          ]
+        },
+        {
+          "name": "Interior Inspection",
+          "type": "section",
+          "availableInCurrentContexts": false,
+          "items": [
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "First Aid Kit (1)",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Fire Extinguishers (2)",
+              "value": "CHECKED",
+              "description": {
+                "markdown": "One CO2 and one waler extinguisher must be on board.",
+                "html": "<p>One CO2 and one waler extinguisher must be on board.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Crash Axe (1)",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Documents",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "L7G Free Fall Extension Controls(3)",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Ditching Door Control",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Fuel Transter Shutoff Valve Controls",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Survival Equipment Stowed",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Goggles (2)",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Flashlights",
+              "value": "AS REQUIRED"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prestart",
+      "type": "checklist",
+      "availableInCurrentContexts": true,
+      "items": [
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "DC Power Selection",
+          "value": "NORMAL"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Batteries",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Battery Lights",
+          "value": "OFF"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Voltage",
+          "value": "CHECKED",
+          "description": {
+            "markdown": "**NOTE** \r\n\r\nIf external power is to be used for checklist accomplishment and engine starting, run the external power checklist first and then proceed to accomplish the folowing checklists.\r\n\r\nIf external power wiil not be used, run this checklist first and start APU or No. 2 engine when so indicated below using the appropriate APU Start or Start No. 2 Engine as APU checklists.",
+            "html": "<p><strong>NOTE</strong></p>\n<p>If external power is to be used for checklist accomplishment and engine starting, run the external power checklist first and then proceed to accomplish the folowing checklists.</p>\n<p>If external power wiil not be used, run this checklist first and start APU or No. 2 engine when so indicated below using the appropriate APU Start or Start No. 2 Engine as APU checklists.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Emergency Battery Voltage",
+          "value": "CHECK"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Parking Brake Light",
+          "value": "NOT FLASHING",
+          "description": {
+            "markdown": "**NOTE** \r\n\r\nIf this light is blinking (less than 1,200 psi), recharge the accumulator by placing the standby pump on. Once the light is on steady, place the standby pump off",
+            "html": "<p><strong>NOTE</strong></p>\n<p>If this light is blinking (less than 1,200 psi), recharge the accumulator by placing the standby pump on. Once the light is on steady, place the standby pump off</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Park Brake",
+          "value": "SET/LIGHT ON STEADY"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Fuel Quantity",
+          "value": "CHECKED/SET REAR"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Fuel Counters",
+          "value": "ZEROED/SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Gross Weight Counter",
+          "value": "SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Takeoff Computations",
+          "value": "BUGS SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Generator Switches",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Batteries",
+          "value": "OFF"
+        },
+        {
+          "name": "Initial State Check",
+          "type": "section",
+          "contexts": [
+            "Full Prestart"
+          ],
+          "availableInCurrentContexts": false,
+          "items": [
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Radios",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Circuit Breakers",
+              "value": "IN"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Engine Computer Switches",
+              "value": "ON"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Start Selector Switches",
+              "value": "GROUND START"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Transfer Pumps",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "L and R Intercom",
+              "value": "CLOSED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Boost Pumps",
+              "value": "OFF",
+              "description": {
+                "markdown": "**NOTE**\r\n\r\nIf the APU is running, the No. 2 boost pump should be on.",
+                "html": "<p><strong>NOTE</strong></p>\n<p>If the APU is running, the No. 2 boost pump should be on.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "L and R Crossfeed",
+              "value": "CLOSED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Pitot Heat Switches",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Windshield Heat Switches",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Inverters",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "HP Bleed Switches",
+              "value": "AUTO"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "PRV Switch",
+              "value": "AUTO"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Isolation Valve",
+              "value": "OPEN"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Cabin and Crew Bleed Air Switches",
+              "value": "AUTO"
+            },
+            {
+              "contexts": [
+                "Real"
+              ],
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Bag Air",
+              "value": "ON"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Anti-ice Switches",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Windshield Wipers",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Aircraft Lighting",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Floor Heat",
+              "value": "BOTH OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Static Selector",
+              "value": "NORMAL"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Compass Switches",
+              "value": "BOTH\tSLAVED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Brake Selector",
+              "value": "NO. 1 ON"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Standby Pump",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Temperature Controller",
+              "value": "AUTO/12 O’CLOCK"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Emergency Stow Switch",
+              "value": "GUARDED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Fire Pull Handles",
+              "value": "IN"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Extinguisher Switches",
+              "value": "ZERO/SAFETIED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Normal Gear Handle",
+              "value": "DOWN/GUARDED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Emergency Gear Handle",
+              "value": "IN"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Emergency Fuel Transfer Switch (If Equipped)",
+              "value": "OFF/GUARDED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Altitude Controller",
+              "value": "SET"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Pressurization Selector",
+              "value": "AUTO/GUARDED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Manual Pressurization Knob",
+              "value": "GREEN INDEX"
+            },
+            {
+              "contexts": [
+                "Real"
+              ],
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Pitot Static Selector",
+              "value": "NORMAL"
+            },
+            {
+              "contexts": [
+                "Real"
+              ],
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Oxygen Mask/System",
+              "value": "TESTED/RESET"
+            },
+            {
+              "contexts": [
+                "Real"
+              ],
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Windshield Demist (If Equipped)",
+              "value": "OFF"
+            },
+            {
+              "contexts": [
+                "Real"
+              ],
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Nose Lever",
+              "value": "OPEN"
+            },
+            {
+              "contexts": [
+                "Real"
+              ],
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "ELT/Flap Override (If Equipped)",
+              "value": "GUARDED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Emergency Slat Switch",
+              "value": "GUARDED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Slat/Flap Handle",
+              "value": "CLEAN"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Mach Trim",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Yaw Damper",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Auto Pilot",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Airbrake",
+              "value": "IN"
+            }
+          ]
+        },
+        {
+          "name": "APU Start",
+          "type": "section",
+          "contexts": [
+            "APU Start"
+          ],
+          "availableInCurrentContexts": true,
+          "items": [
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Sliding Window",
+              "value": "AS REQUIRED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Batteries",
+              "value": "CHECKED/ON"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Bus Tie",
+              "value": "TIED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Bus C and D Switches",
+              "value": "ON"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "No. 2 Boost Pump",
+              "value": "ON"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "No. 2 Engine and Airframe Anti-ice Switches",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Anticollision Lights",
+              "value": "AS REQUIRED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Fire Warning",
+              "value": "TESTED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "APU Master",
+              "value": "ON/GREEN"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "APU Generator Switch",
+              "value": "ON"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "APU Start Switch",
+              "value": "DEPRESS/START CHECKED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Ensure Batteries No. 1 and No. 2",
+              "value": "CHARGING"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "APU Bleed",
+              "value": "AS REQUIRED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Inverters",
+              "value": "CHECKED/ON",
+              "description": {
+                "markdown": "**NOTE**\r\n\r\nIndicated voltage should be 115 ±5 volts.",
+                "html": "<p><strong>NOTE</strong></p>\n<p>Indicated voltage should be 115 ±5 volts.</p>\n"
+              }
+            },
+            {
+              "contexts": [
+                "Real"
+              ],
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "INS/IRS",
+              "value": "STANDBY/ALIGN"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Navigation",
+              "value": "PROGRAMMED",
+              "description": {
+                "markdown": "Enter all waypoint information to be used for the flight into the FMS.",
+                "html": "<p>Enter all waypoint information to be used for the flight into the FMS.</p>\n"
+              }
+            }
+          ]
+        },
+        {
+          "name": "External Power",
+          "type": "section",
+          "contexts": [
+            "External Power"
+          ],
+          "availableInCurrentContexts": false,
+          "items": [
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Batteries",
+              "value": "CHECKED/ON"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Battery Lights",
+              "value": "OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Bus Tie",
+              "value": "TIED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "External Power",
+              "value": "CONNECTED",
+              "description": {
+                "markdown": "**NOTE**\r\n\r\nThe GPU must be set to provide 1,000 to 1,100 amps maximum for engine starting.",
+                "html": "<p><strong>NOTE</strong></p>\n<p>The GPU must be set to provide 1,000 to 1,100 amps maximum for engine starting.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "DC Selector",
+              "value": "EXT POWER/ВАТ LIGHTS ON"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Voltage",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Battery Lights",
+              "value": "ON"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Bus C and D Switch",
+              "value": "ON"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Inverters",
+              "value": "CHECKED/ON",
+              "description": {
+                "markdown": "* a.\tPlace the stanby inverter to AC 1. Check the AC bus 1 voltage, and check that the AC 1 light on the master fault panel is out.\r\n* b.\tPlace AC 1 inverter on. The standby inverter maintains bus priority.\r\n* c.\tPlace the standby inverter to AC 2. Check AC bus 1 and AC bus 2 voltage, and check that the AC 1 and AC 2 lights on the master fault panel are out. AC 1 inverter powers AC bus 1 while the standby inverter powers AC bus 2.\r\n* d.\tPlace AC 2 inverter on. The standby inverter maintains bus priority.\r\n* e.\tPlace standby inverter off. AC 2 inverter powers AC bus 2. Check voltage on AC bus 2, and check that the AC 2 light on the master fault panel is out.\r\n\r\n**NOTE**\r\n\r\nIndicated voltage should be 115 ±5 volts.",
+                "html": "<ul>\n<li>a.\tPlace the stanby inverter to AC 1. Check the AC bus 1 voltage, and check that the AC 1 light on the master fault panel is out.</li>\n<li>b.\tPlace AC 1 inverter on. The standby inverter maintains bus priority.</li>\n<li>c.\tPlace the standby inverter to AC 2. Check AC bus 1 and AC bus 2 voltage, and check that the AC 1 and AC 2 lights on the master fault panel are out. AC 1 inverter powers AC bus 1 while the standby inverter powers AC bus 2.</li>\n<li>d.\tPlace AC 2 inverter on. The standby inverter maintains bus priority.</li>\n<li>e.\tPlace standby inverter off. AC 2 inverter powers AC bus 2. Check voltage on AC bus 2, and check that the AC 2 light on the master fault panel is out.</li>\n</ul>\n<p><strong>NOTE</strong></p>\n<p>Indicated voltage should be 115 ±5 volts.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Fire Warning",
+              "value": "TESTED"
+            },
+            {
+              "contexts": [
+                "Real"
+              ],
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "INS/IRS",
+              "value": "STANDBY/ALIGN",
+              "description": {
+                "markdown": "Place the mode selector to ST-BY (standby). The INS/IRS is now ready to receive present position. The system is not affected by airplane movement in standby. Place the mode selector to ALIGN. The airplane must not be moved while in ALIGN.",
+                "html": "<p>Place the mode selector to ST-BY (standby). The INS/IRS is now ready to receive present position. The system is not affected by airplane movement in standby. Place the mode selector to ALIGN. The airplane must not be moved while in ALIGN.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Navigation",
+              "value": "PROGRAMMED",
+              "description": {
+                "markdown": "Enter all waypoint information to be used for the flight into the FMS.",
+                "html": "<p>Enter all waypoint information to be used for the flight into the FMS.</p>\n"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Start No. 2 Engine as APU",
+          "type": "section",
+          "contexts": [
+            "Eng.2 as APU"
+          ],
+          "availableInCurrentContexts": false,
+          "items": [
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Power Lever",
+              "value": "CUT-OFF"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Start Selector",
+              "value": "MOTOR-START\tSTOP"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Start Button (If Dry Motor Is Required)",
+              "value": "DEPRESS 15 SECONDS"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Sliding Window",
+              "value": "AS REQUIRED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Batteries",
+              "value": "CHECKED/ON"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Bus Tie",
+              "value": "TIED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Bus C and D Switches",
+              "value": "ON"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Anticollision Lights",
+              "value": "AS REQUIRED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Fire Warning",
+              "value": "TESTED"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "TO CONFIG/ENG 2 FAIL Lights",
+              "value": "TEST"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "No. 2 Boost Pump",
+              "value": "ON"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "No. 2 Engine",
+              "value": "START/CHECKED",
+              "description": {
+                "markdown": "**NOTE**\r\n\r\nThe crew must check for ITT rise ten seconds after the throttle is moved to IDLE, oil pressure ten seconds after light-off, and indication by 20% Ng. Terminate the start if any of the above are not achieved. Starting times will vary with the starting mode selected, but in all cases after 50 seconds discontinue start.",
+                "html": "<p><strong>NOTE</strong></p>\n<p>The crew must check for ITT rise ten seconds after the throttle is moved to IDLE, oil pressure ten seconds after light-off, and indication by 20% Ng. Terminate the start if any of the above are not achieved. Starting times will vary with the starting mode selected, but in all cases after 50 seconds discontinue start.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Inverters",
+              "value": "CHECKED/ON",
+              "description": {
+                "markdown": "a.\tPlace the stanby inverter to AC 1. Check the AC bus 1 voltage, and check, that the AC 1 light on the master fault panel is out.\r\nb.\tPlace AC 1 inverter on. The standby inverter maintains bus priority.\r\nc.\tPlace the standby inverter to AC 2. Check AC bus 1 and AC bus 2 voltage, and check that the AC 1 and AC 2 lights on the master fault panel are out. AC 1 inverter powers AC bus 1 while the standby inverter powers AC bus 2.\r\nd.\tPlace AC 2 inverter on. The standby inverter maintains bus priority.\r\ne.\tPlace standby inverter off. AC 2 inverter powers AC bus 2. Check voltage on AC bus 2. and check that the AC 2 light on the master fault panel is out.\r\n\r\n*NOTE*\r\n\r\nIndicated voltage should be 115 +5 volts.",
+                "html": "<p>a.\tPlace the stanby inverter to AC 1. Check the AC bus 1 voltage, and check, that the AC 1 light on the master fault panel is out.\nb.\tPlace AC 1 inverter on. The standby inverter maintains bus priority.\nc.\tPlace the standby inverter to AC 2. Check AC bus 1 and AC bus 2 voltage, and check that the AC 1 and AC 2 lights on the master fault panel are out. AC 1 inverter powers AC bus 1 while the standby inverter powers AC bus 2.\nd.\tPlace AC 2 inverter on. The standby inverter maintains bus priority.\ne.\tPlace standby inverter off. AC 2 inverter powers AC bus 2. Check voltage on AC bus 2. and check that the AC 2 light on the master fault panel is out.</p>\n<p><em>NOTE</em></p>\n<p>Indicated voltage should be 115 +5 volts.</p>\n"
+              }
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "INS/IRS",
+              "value": "STANDBY/ALIGN"
+            },
+            {
+              "availableInCurrentContexts": false,
+              "type": "singlecheck",
+              "name": "Navigation",
+              "value": "PROGRAMMED",
+              "description": {
+                "markdown": "Enter all way point information to be used for the flight into the FMS.",
+                "html": "<p>Enter all way point information to be used for the flight into the FMS.</p>\n"
+              }
+            }
+          ]
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Master Failure Warning Panel",
+          "value": "TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Landing Gear Panel",
+          "value": "TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Battery Temperature Monitor",
+          "value": "TEST"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Emergency Stabilizer Trim",
+          "value": "CHECK"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Stabilizer Trim",
+          "value": "CHECKED/SET FOR T.O."
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "TO GONFIG/ENG 2 FAIL Lights",
+          "value": "TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Voice/Flight Recorder",
+          "value": "TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Crossover/Selector Switches",
+          "value": "AS REQUIRED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Standby Pump",
+          "value": "ON/AUTO"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "EFIS (If Installed)",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Emergency Aileron Trim",
+          "value": "CHECKED/LIGHT OUT"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Rudder Trim",
+          "value": "CHECKED/SET FOR T.O."
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Aileron Trim",
+          "value": "CHECKED/SET FOR T.O."
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Audible Warnings (CAB/VM0)",
+          "value": "TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "No. 2 Stall",
+          "value": "TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Airbrake",
+          "value": "CYCLED/IN LIGHT OUT"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Autopilot Disengagement",
+          "value": "CHECKED/DISENGAGED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Standby Pump",
+          "value": "OFF",
+          "description": {
+            "markdown": "Select the OFF position to reduce unnecessary cycling of the pump.",
+            "html": "<p>Select the OFF position to reduce unnecessary cycling of the pump.</p>\n"
+          }
+        },
+        {
+          "contexts": [
+            "Real"
+          ],
+          "availableInCurrentContexts": false,
+          "type": "singlecheck",
+          "name": "INS/IRS",
+          "value": "ALIGNED/NAV"
+        },
+        {
+          "contexts": [
+            "Real"
+          ],
+          "availableInCurrentContexts": false,
+          "type": "singlecheck",
+          "name": "WITHOUT NAVIGATION",
+          "value": "ATT REF",
+          "description": {
+            "markdown": "**NOTE**\r\nTo move the airplane, place the selector to ATT REF. This provides only pitch, roll and platform heading outputs.",
+            "html": "<p><strong>NOTE</strong>\nTo move the airplane, place the selector to ATT REF. This provides only pitch, roll and platform heading outputs.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "EFIS (If Installed)",
+          "value": "OFF"
+        }
+      ]
+    },
+    {
+      "name": "Start",
+      "type": "checklist",
+      "availableInCurrentContexts": true,
+      "items": [
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Cabin Door Light",
+          "value": "OUT"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Entrance Curtain",
+          "value": "OPEN"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Seat Belt/No Smoking",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Exit Lights",
+          "value": "ARMED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Anti-Collision Lights",
+          "value": "AS REQUIRED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Fire Warning",
+          "value": "TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Boost Pumps",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "DC Power Selector",
+          "value": "AS REQUIRED",
+          "description": {
+            "markdown": "If a battery start and SAT greater than -15° C ... NORMAL\r\n\t\r\n**CAUTION**\r\n\r\nIt the batteries are warm, with their temperature above 120* F and the WARM indicator light illuminated, do not attempt to start the engines using the batteries. Start them using a ground power unit (GPU). It the tempera-ture reaches 15O'J F (illumination of the HOT BAT indi¬cator light), the battery must be isolated from the circuit, cooling observed, and then be removed from the air¬plane and bench tested.\r\n\r\n* It a battery start, no APU, and SAT less than -15°C ... LOW TEMP START\r\n* If an APU assisted start ... NORMAL\r\n* If an external power (GPU) start ...EXT POWER",
+            "html": "<p>If a battery start and SAT greater than -15° C ... NORMAL</p>\n<p><strong>CAUTION</strong></p>\n<p>It the batteries are warm, with their temperature above 120* F and the WARM indicator light illuminated, do not attempt to start the engines using the batteries. Start them using a ground power unit (GPU). It the tempera-ture reaches 15O'J F (illumination of the HOT BAT indi¬cator light), the battery must be isolated from the circuit, cooling observed, and then be removed from the air¬plane and bench tested.</p>\n<ul>\n<li>It a battery start, no APU, and SAT less than -15°C ... LOW TEMP START</li>\n<li>If an APU assisted start ... NORMAL</li>\n<li>If an external power (GPU) start ...EXT POWER</li>\n</ul>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "No. 2 Engine",
+          "value": "START/CHECKED",
+          "description": {
+            "markdown": "Recommended start sequence: \t2-3-1\r\na.\tWith APU or GPU:\t\t\t2-3-1\r\nb.\tWith batteries only:\t\t2-3-1\r\n\r\n**CAUTION**\r\n\r\nDo not start No. 1 engine first under any circum¬stances as electrical eccentricities may occur. No. 2 engine should be started first.\r\n\r\n**NOTE 1**\r\n\r\nConfirm the No. 2 engine computer is on, place No. 2 boost pump on, and confirm their lights on the master fail¬ure warning panel are out. Push the start button (two sec¬onds maximum). When N2 is between 12 and 15% with Ni indicating, advance the throttle to IDLE, which acti¬vates the ignition (igniter light) and allows fuel to the fuel nozzles. Observe engine accelerates to between 52% and 67%, Al 50%, the ignition system automatically deac¬tivates, and the generator is placed on the line. Observe both igniter and No. 2 generator lights are out.\r\n\r\n**NOTE 2**\r\n\r\nThe crew must check for ITT rise ten seconds after the throttle is moved to IDLE, oil pressure ten seconds after light-off, and Nj indication by 20% N2. Terminate the start if any of the above are not achieved. Starting times will vary with the starting mode selected, but in all cases idle must be achieved withing 50 seconds or the start must be discontinued.",
+            "html": "<p>Recommended start sequence: \t2-3-1\na.\tWith APU or GPU:\t\t\t2-3-1\nb.\tWith batteries only:\t\t2-3-1</p>\n<p><strong>CAUTION</strong></p>\n<p>Do not start No. 1 engine first under any circum¬stances as electrical eccentricities may occur. No. 2 engine should be started first.</p>\n<p><strong>NOTE 1</strong></p>\n<p>Confirm the No. 2 engine computer is on, place No. 2 boost pump on, and confirm their lights on the master fail¬ure warning panel are out. Push the start button (two sec¬onds maximum). When N2 is between 12 and 15% with Ni indicating, advance the throttle to IDLE, which acti¬vates the ignition (igniter light) and allows fuel to the fuel nozzles. Observe engine accelerates to between 52% and 67%, Al 50%, the ignition system automatically deac¬tivates, and the generator is placed on the line. Observe both igniter and No. 2 generator lights are out.</p>\n<p><strong>NOTE 2</strong></p>\n<p>The crew must check for ITT rise ten seconds after the throttle is moved to IDLE, oil pressure ten seconds after light-off, and Nj indication by 20% N2. Terminate the start if any of the above are not achieved. Starting times will vary with the starting mode selected, but in all cases idle must be achieved withing 50 seconds or the start must be discontinued.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "No. 3 Engine",
+          "value": "START/CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "No. 1 Engine",
+          "value": "START/CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "DC Power Selector",
+          "value": "NORMAL",
+          "description": {
+            "markdown": "**NOTE**\r\n\r\nIf external power was used to start the engines, after all three engines have been started, place the DC power selector to NORMAL before directing disconnect of the external power unit. When switching to NORMAL, battery lights will go out and all three generator lights will remain on until the external power has been turned off.",
+            "html": "<p><strong>NOTE</strong></p>\n<p>If external power was used to start the engines, after all three engines have been started, place the DC power selector to NORMAL before directing disconnect of the external power unit. When switching to NORMAL, battery lights will go out and all three generator lights will remain on until the external power has been turned off.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "External Power Cord",
+          "value": "DISCONNECTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Engine\tParameters",
+          "value": "CHECKED",
+          "description": {
+            "markdown": "a.\tN,\tROTATING\r\nb.\tN2\t52%-65%\r\nc.\tOil Pressure\t25-46\tPSI\r\nd.\tOil Temperature\tLESS\tTHAN 127° C\r\ne.\tITT\tWITHIN\tLIMITS\r\n\r\n**NOTE**\r\n\r\nOther instrument readings will vary greatly with altitude and temperature depending on the individual engine. During cold weather, Garrett recommends that idle engine rpm not be exceeded until oil temperature reaches +30’ C.",
+            "html": "<p>a.\tN,\tROTATING\nb.\tN2\t52%-65%\nc.\tOil Pressure\t25-46\tPSI\nd.\tOil Temperature\tLESS\tTHAN 127° C\ne.\tITT\tWITHIN\tLIMITS</p>\n<p><strong>NOTE</strong></p>\n<p>Other instrument readings will vary greatly with altitude and temperature depending on the individual engine. During cold weather, Garrett recommends that idle engine rpm not be exceeded until oil temperature reaches +30’ C.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Bus Tie",
+          "value": "NORMAL (LIGHT OUT)"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Batteries: Amps/Temps",
+          "value": "CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Generators: Volts/Amps",
+          "value": "CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Transfer Fuel Pumps",
+          "value": "ALL\tON/LIGHTS OUT"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "EFIS",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Aircraft Lighting",
+          "value": "AS REQUIRED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Emergency Horizon",
+          "value": "UNCAGED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Emergency Batteries",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Radios",
+          "value": "ON/SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Transponder",
+          "value": "STANDBY"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Marker Beacons",
+          "value": "TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "GPWS",
+          "value": "TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Radar",
+          "value": "STANDBY"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Interphone",
+          "value": "CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "No. 1 Stall",
+          "value": "TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Mach Trim",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Compass Headings",
+          "value": "BOTH CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Circuit Breakers",
+          "value": "IN"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Galley Power",
+          "value": "SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Windshield Heat'Side",
+          "value": "NORMAL/ON",
+          "description": {
+            "markdown": "**NOTE**\r\n\r\nWindshield heat will affect the accuracy of the standby compass.",
+            "html": "<p><strong>NOTE</strong></p>\n<p>Windshield heat will affect the accuracy of the standby compass.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "APU Shutdown",
+          "value": "PER MANUFACTURER"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Standby Pump",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Engine Computers Manual Mode",
+          "value": "CHECKED/ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Anti-ice",
+          "value": "CYCLED/SET FOR T.O."
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Airframe Anti-Ice",
+          "value": "NORMAL/STANDBY/OFF",
+          "description": {
+            "markdown": "**NOTE**\r\n\r\nThis test should be accomplished in minimum time to preclude overheating the wings.\r\n\r\n**CAUTION**\r\n\r\nAirframe anti-ice is not to be used while on the ground. In flight, do not use airframe anti-ice when TAT is above +10° C. With visible moisture present and TAT C or below, airframe anti-ice should be placed on after gear retraction.\r\n\r\n**NOTE**\r\n\r\nEngine anti-ice is to be used anytime the TAT is below +5Э C and there is visible moisture, ground or flight.",
+            "html": "<p><strong>NOTE</strong></p>\n<p>This test should be accomplished in minimum time to preclude overheating the wings.</p>\n<p><strong>CAUTION</strong></p>\n<p>Airframe anti-ice is not to be used while on the ground. In flight, do not use airframe anti-ice when TAT is above +10° C. With visible moisture present and TAT C or below, airframe anti-ice should be placed on after gear retraction.</p>\n<p><strong>NOTE</strong></p>\n<p>Engine anti-ice is to be used anytime the TAT is below +5Э C and there is visible moisture, ground or flight.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Anti-Skid",
+          "value": "TESTED",
+          "description": {
+            "markdown": "a.\tSimulates an 85-knots wheel-speed signal ... LIGHTS REMAIN ON Release the button maintaining both pedals depressed:\r\nb.\tSimulates a locked wheel-speed signal ... LIGHT GO OUT\r\nc.\t50-knots wheel-speed signal ... LIGHTS COME ON\r\nd.\tWheel speed decreases signal ... LIGHTS\tGO OUT\r\ne.\tIf brakes are held ... LIGHTS COME ON\r\n\r\n*NOTE*\r\nAntiskid test is complete after step d above. If brake pedals are held, the lights will come on again, simulat¬ing a speed less than 23 knots where the antiskid sys¬tem is deactivated.",
+            "html": "<p>a.\tSimulates an 85-knots wheel-speed signal ... LIGHTS REMAIN ON Release the button maintaining both pedals depressed:\nb.\tSimulates a locked wheel-speed signal ... LIGHT GO OUT\nc.\t50-knots wheel-speed signal ... LIGHTS COME ON\nd.\tWheel speed decreases signal ... LIGHTS\tGO OUT\ne.\tIf brakes are held ... LIGHTS COME ON</p>\n<p><em>NOTE</em>\nAntiskid test is complete after step d above. If brake pedals are held, the lights will come on again, simulat¬ing a speed less than 23 knots where the antiskid sys¬tem is deactivated.</p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Taxi",
+      "type": "checklist",
+      "availableInCurrentContexts": true,
+      "items": [
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Park Brake",
+          "value": "OFF"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Taxi Light",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Passenger Briefing",
+          "value": "COMPLETE"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "No. 2 Brakes",
+          "value": "CHECKED/AS REQUIRED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Sliding Window",
+          "value": "CLOSED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Slats/Flaps",
+          "value": "CYCLED/SET FOR T.O.",
+          "description": {
+            "markdown": "Cycle through all positions on first flight ot day. Select all detents and observe the slats and flaps operate properly. Select the proper takeoff setting. On subsequent flights, slats/flaps need be set only for takeoff.",
+            "html": "<p>Cycle through all positions on first flight ot day. Select all detents and observe the slats and flaps operate properly. Select the proper takeoff setting. On subsequent flights, slats/flaps need be set only for takeoff.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Flight Controls",
+          "value": "CHECKED",
+          "description": {
+            "markdown": "Actuate all three primary flight controls over their full range. These controls should be completely free and automatically return to the neutral position. Normally, the copilot checks the top (ailerons and elevators) while the captain checks the bottom (rudders).",
+            "html": "<p>Actuate all three primary flight controls over their full range. These controls should be completely free and automatically return to the neutral position. Normally, the copilot checks the top (ailerons and elevators) while the captain checks the bottom (rudders).</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Thrust Reverser",
+          "value": "CHECKED/STOWED",
+          "description": {
+            "markdown": "**NOTE**\r\n\r\nThe red master failure warning panel REV UNLOCK light will illuminate momentarily when a stowing signal is sent and the target doors have not reached their stowed position. The light should extinguish when the test cycle is complete.",
+            "html": "<p><strong>NOTE</strong></p>\n<p>The red master failure warning panel REV UNLOCK light will illuminate momentarily when a stowing signal is sent and the target doors have not reached their stowed position. The light should extinguish when the test cycle is complete.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Hydraulic: Pressure/Quantity",
+          "value": "CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Altimeters",
+          "value": "SET/CROSS-CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Radio Altimeters",
+          "value": "SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Flight Directors",
+          "value": "CHECKED/SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Autopilot",
+          "value": "OFF (LIGHT OUT)"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Yaw Damper (it required)",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Flight Instruments",
+          "value": "TESTED/SET FOR T.O."
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "APU Master (With Zero RPM)",
+          "value": "PUSHED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "T.O. Briefing",
+          "value": "COMPLETE",
+          "description": {
+            "markdown": "**NOTE**\r\n\r\nThe pilot observing the problem will say “abort.”\r\n\r\nThe airplane will be stopped by:\r\n(1)\tThrottles\tIDLE\r\n(2)\tAirbrake\tEXTENDED\r\n(3)\tAntiskid braking\tMAXIMUM\r\n(4)\tT/R\tAS\tNECESSARY",
+            "html": "<p><strong>NOTE</strong></p>\n<p>The pilot observing the problem will say “abort.”</p>\n<p>The airplane will be stopped by:\n(1)\tThrottles\tIDLE\n(2)\tAirbrake\tEXTENDED\n(3)\tAntiskid braking\tMAXIMUM\n(4)\tT/R\tAS\tNECESSARY</p>\n"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Before Takeoff",
+      "type": "checklist",
+      "availableInCurrentContexts": true,
+      "items": [
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Brake Selector",
+          "value": "#1 ON/LIGHTSOUT"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Pitot Heat",
+          "value": "ON/LIGHTS OUT"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Warning Panel Lights",
+          "value": "OUT"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Anticollision Lights",
+          "value": "ALL",
+          "description": {
+            "markdown": "Place the anti collision light switch to ALL.",
+            "html": "<p>Place the anti collision light switch to ALL.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Landing Lights",
+          "value": "ON",
+          "description": {
+            "markdown": "**NOTE**\r\n\r\nDo not use the landing lights on the ground for more than 15 minutes as damage may result. A 45-minute cooling period is necessary if these lights are on for 15 minutes on the ground.",
+            "html": "<p><strong>NOTE</strong></p>\n<p>Do not use the landing lights on the ground for more than 15 minutes as damage may result. A 45-minute cooling period is necessary if these lights are on for 15 minutes on the ground.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Ignitors",
+          "value": "AS\tREQUIRED",
+          "description": {
+            "markdown": "**NOTE**\r\n\r\nIt is advisable to use ignition for all takeoffs and land¬ings because it can immediately relight an engine if it should flame out.",
+            "html": "<p><strong>NOTE</strong></p>\n<p>It is advisable to use ignition for all takeoffs and land¬ings because it can immediately relight an engine if it should flame out.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Radar",
+          "value": "AS REQUIRED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Transponder",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "FATS (Flaps/Airbrakes/Trims/Speeds)",
+          "value": "SET FOR TAKEOFF"
+        }
+      ]
+    },
+    {
+      "name": "After Takeoff",
+      "type": "checklist",
+      "availableInCurrentContexts": true,
+      "items": [
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Landing Gear",
+          "value": "UP (LIGHTS OUT)"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Anti-icing",
+          "value": "AS REQUIRED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Yaw Damper",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Slats/Flaps",
+          "value": "CLEAN"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Hydraulics",
+          "value": "CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Standby Pump",
+          "value": "AUTO"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Ignitors",
+          "value": "GROUND START"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Taxi Light",
+          "value": "OFF"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "No Smoking/Seat Belt Sign",
+          "value": "AS REQUIRED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Pressurization",
+          "value": "CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Temperature",
+          "value": "CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Climb Thrust",
+          "value": "SET"
+        }
+      ]
+    },
+    {
+      "name": "10,000 Foot Check",
+      "type": "checklist",
+      "availableInCurrentContexts": true,
+      "items": [
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Landing Lights",
+          "value": "OFF"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Seat Belt Sign",
+          "value": "AS REQUIRED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Entrance Curtain",
+          "value": "AS\tREQUIRED"
+        }
+      ]
+    },
+    {
+      "name": "18,000 Foot Check",
+      "type": "checklist",
+      "availableInCurrentContexts": true,
+      "items": [
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Altimeters",
+          "value": "29.92"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Oxygen",
+          "value": "AS REQUIRED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Station Check",
+          "value": "COMPLETE"
+        }
+      ]
+    },
+    {
+      "name": "Cruise",
+      "type": "checklist",
+      "availableInCurrentContexts": true,
+      "items": [
+        {
+          "name": "Station Check",
+          "type": "section",
+          "availableInCurrentContexts": true,
+          "items": [
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Circuit Breakers",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Electrical Panel",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Engine Parameters",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Hydraulic Panel",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Fuel Panel",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Pressurization",
+              "value": "CHECKED"
+            },
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Temperature",
+              "value": "CHECKED"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Descent Check",
+      "type": "checklist",
+      "availableInCurrentContexts": true,
+      "items": [
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Entrance Curtain",
+          "value": "OPEN"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "ATIS",
+          "value": "ACQUIRED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Cabin Altitude Controller",
+          "value": "SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Anti-icing",
+          "value": "AS REQUIRED",
+          "description": {
+            "markdown": "NOTE\r\nNever use airframe anti-ice above +10*' C TAT.",
+            "html": "<p>NOTE\nNever use airframe anti-ice above +10*' C TAT.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Fuel XFR Intercom and X-Feed",
+          "value": "CLOSED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Altimeters",
+          "value": "SET/X-CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Radio Altimeter",
+          "value": "SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Landing Computations",
+          "value": "LD/LFL/V ref"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Approach Speed",
+          "value": "BUGS SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Approach Briefing",
+          "value": "COMPLETE"
+        },
+        {
+          "name": "Below 10,000 FT",
+          "type": "section",
+          "availableInCurrentContexts": true,
+          "items": [
+            {
+              "availableInCurrentContexts": true,
+              "type": "singlecheck",
+              "name": "Landing Lights",
+              "value": "ON/AS REQUIRED"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Approach",
+      "type": "checklist",
+      "availableInCurrentContexts": true,
+      "items": [
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Siats/Flaps",
+          "value": "SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Seat Belt Sign",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Anti-icing\tAS",
+          "value": "REQUIRED",
+          "description": {
+            "markdown": "**NOTE**\r\n\r\nNever use engine or airframe anti-ice above +10°C TAT.",
+            "html": "<p><strong>NOTE</strong></p>\n<p>Never use engine or airframe anti-ice above +10°C TAT.</p>\n"
+          }
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Radios",
+          "value": "SET\tFOR APPROACH"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Passenger Briefing",
+          "value": "COMPLETED"
+        }
+      ]
+    },
+    {
+      "name": "Landing",
+      "type": "checklist",
+      "availableInCurrentContexts": true,
+      "items": [
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Landing Gear",
+          "value": "DOWN/THREE GREEN"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Brake Selector",
+          "value": "#1 ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Antiskid",
+          "value": "TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Hydraulics (Pressure/Quantity)",
+          "value": "CHECKED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "TesVStall (Aircraft without SB166)",
+          "value": "STALL 1/STALL 2 TESTED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "TesVStall (Aircraft with SB166)",
+          "value": "AUTO SLAT LIGHT OUT"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Flaps",
+          "value": "SET"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "No Smoking\tSign",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Taxi Light",
+          "value": "ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Windshield Wipers",
+          "value": "AS\tREQUIRED"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Airbrakes",
+          "value": "IN/LIGHT OUT"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Yaw Damper (As Required)",
+          "value": "OFF/ON"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Autopilot",
+          "value": "OFF\t(LIGHT OUT)"
+        },
+        {
+          "availableInCurrentContexts": true,
+          "type": "singlecheck",
+          "name": "Igniters",
+          "value": "AS REQUIRED"
+        }
+      ]
+    }
+  ]
+}

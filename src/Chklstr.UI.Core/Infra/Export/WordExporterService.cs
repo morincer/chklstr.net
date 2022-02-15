@@ -1,13 +1,10 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using Chklstr.Core.Services;
-using Chklstr.Infra.Export;
+﻿using Chklstr.Core.Services;
 using Chklstr.Infra.Export.Docx;
 using Chklstr.UI.Core.ViewModels;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
 
-namespace Chklstr.UI.WPF.Services.Export;
+namespace Chklstr.UI.Core.Infra.Export;
 
 public class WordExporterService : IExporterService
 {
