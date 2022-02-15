@@ -44,9 +44,9 @@ Cleanup:
     [ ] (CLEAN) Make QRHVoiceView a view model
     
 V1:
-    [ ] (FTR) Export to JSON
+    [x] (FTR) Export to JSON
     [ ] (FTR) Checklist editor in external text editor
-    User selects and external editor. System opens the file in external editor and starts monitoring
+    User selects an external editor. System opens the file in external editor and starts monitoring
     it for changes. Once changes are detected, the user is questioned if he wants to refresh the file
     [ ] (FTR) Export to XML
     [ ] (FTR) Startup screen

@@ -3,6 +3,7 @@ using System.Diagnostics;
 using Chklstr.Core.Model;
 using Chklstr.Core.Services;
 using Chklstr.Core.Services.Voice;
+using Chklstr.UI.Core.Infra;
 using Chklstr.UI.Core.Services;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
@@ -25,13 +26,13 @@ public partial class
         IUserSettingsService userSettingsService,
         IVoiceCommandDetectionService voiceCommandDetectionService,
         ITextToSpeechService textToSpeechService,
-        ILogger<ApplicationViewModel> logger)
+        ILoggerFactory loggerFactory)
     {
         _navigationService = navigationService;
         _userSettingsService = userSettingsService;
         _voiceCommandDetectionService = voiceCommandDetectionService;
         _textToSpeechService = textToSpeechService;
-        _logger = logger;
+        _logger = loggerFactory.CreateLogger<ApplicationViewModel>();
     }
 
     public override void Start()
@@ -54,8 +55,7 @@ public partial class
             var config = _userSettingsService.Load();
             config.RecentCrafts.Add(new RecentCraftRecord(result.Result!.AircraftName, path));
             _userSettingsService.Save(config);
-        
-        
+
             _logger.LogDebug($"Loading QRH ViewModel for {result.Result?.AircraftName}");
             var quickReferenceHandbook = result.Result!;
             

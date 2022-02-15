@@ -1,11 +1,14 @@
 ﻿using System.Collections.ObjectModel;
 using Chklstr.Core.Model;
 using Chklstr.Core.Services;
+using Chklstr.UI.Core.Infra;
 using Chklstr.UI.Core.Infra.Export;
 using Chklstr.UI.Core.Services;
 using Chklstr.UI.Core.Utils;
+using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
+using MvvmCross.Base;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -77,12 +80,44 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
         IsTextToSpeechEnabled = !IsTextToSpeechEnabled;
     }
 
+    public MvxCommand EditCommand => new(OpenExternalEditor);
+
+    public void OpenExternalEditor()
+    {
+        var cmd = this._userSettingsService.Load().ExternalEditorPath;
+        if (string.IsNullOrEmpty(cmd) || string.IsNullOrEmpty(Item.Metadata.LoadedFrom)) return;
+
+        var path = Path.GetFullPath(Item.Metadata.LoadedFrom);
+        
+        if (cmd.Contains("%1"))
+        {
+            cmd = cmd.Replace("%1", path);
+        }
+        else
+        {
+            cmd = $"\"{cmd}\" \"{path}\"";
+        }
+        
+        _logger.LogInformation("Executing command " + cmd);
+
+        System.Diagnostics.Process.Start(cmd);
+    }
+
     public MvxInteraction<SelectFileRequest> SelectFilePathInteraction = new();
+    private readonly FileWatchService _fileWatchService;
 
     public MvxCommand ExportToWordCommand => new(ExportToWord);
     public MvxCommand ExportToHtmlCommand => new(ExportToHtml);
     public MvxCommand ExportToJsonCommand => new(ExportToJson);
     public MvxCommand OpenCommand => new(OpenAnotherFile);
+
+    public MvxCommand ReloadCommand => new(Reload);
+
+    public async void Reload()
+    {
+        if (LoadedFrom == null) return;
+        await RequestQRHOpen(LoadedFrom);
+    }
 
     public MvxCommand SettingsCommand => new(OpenSettings);
 
@@ -136,24 +171,38 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
                 path = Path.GetFullPath(path);
                 
                 _logger.LogInformation($"Trying to load {path}");
-                var result = await _navigationService.Navigate<QRHParsingViewModel, string, ParseResult<QuickReferenceHandbook>>(path);
-                if (result != null && result.IsSuccess())
-                {
-                    await Close(result.Result);
-                }
+                await RequestQRHOpen(path);
             }
         };
         
         SelectFilePathInteraction.Raise(request);
     }
 
+    private async Task RequestQRHOpen(string path)
+    {
+        var result =
+            await _navigationService.Navigate<QRHParsingViewModel, string, ParseResult<QuickReferenceHandbook>>(path);
+        if (result != null && result.IsSuccess())
+        {
+            await Close(result.Result);
+        }
+    }
+
     public override void ViewAppeared()
     {
         LoadConfig();
+        if (LoadedFrom != null)
+        {
+            _fileWatchService.Register(LoadedFrom);
+        }
     }
 
     public override void ViewDestroy(bool viewFinishing = true)
     {
+        if (LoadedFrom != null)
+        {
+            _fileWatchService.Unregister(LoadedFrom);
+        }
         base.ViewDestroy(false);
     }
 
@@ -164,6 +213,14 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
         await _navigationService.Close(this, new() { RedirectTo = redirectTo });
     }
 
+    private bool _isDirty;
+
+    public bool IsDirty
+    {
+        get => _isDirty;
+        set => SetProperty(ref _isDirty, value);
+    }
+
     public String[] SelectedContexts
     {
         get => Contexts.Where(c => c.Selected).Select(c => c.Name).ToArray();
@@ -172,12 +229,20 @@ public class QRHViewModel : MvxViewModel<QuickReferenceHandbook, QRHViewModelRes
     public QRHViewModel(IUserSettingsService userSettingsService,
         IMvxNavigationService navigationService,
         IErrorReporter errorReporter,
-        ILogger<QRHViewModel> logger)
+        ILoggerFactory loggerFactory)
     {
         _navigationService = navigationService;
         _errorReporter = errorReporter;
-        _logger = logger;
+        _logger = loggerFactory.CreateLogger<QRHViewModel>();
         _userSettingsService = userSettingsService;
+        _fileWatchService = new FileWatchService(loggerFactory.CreateLogger<FileWatchService>());
+        _fileWatchService.FileChanged += _ =>
+        {
+            Mvx.IoCProvider.Resolve<IMvxMainThreadAsyncDispatcher>().ExecuteOnMainThreadAsync(() =>
+            {
+                IsDirty = true;
+            });
+        };
     }
 
     public override void Prepare(QuickReferenceHandbook book)

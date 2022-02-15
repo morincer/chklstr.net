@@ -38,7 +38,7 @@ public class QRHViewModelTest : MvxIoCSupportingTest
         _viewModel = new QRHViewModel(
             new InMemoryUserSettings(),
             _navigationServiceMock.Object, _errorReporterMock.Object,
-            TestData.Logger<QRHViewModel>());
+            TestData.LoggerFactory);
         _viewModel.Prepare(parseResult.Result!);
         await _viewModel.Initialize();
         _viewModel.Start();

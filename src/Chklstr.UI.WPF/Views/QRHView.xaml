@@ -172,9 +172,20 @@
                         BorderBrush="{StaticResource BrushBorder}" BorderThickness="0 0 0 1"
                         Margin="10 0 10 0"
                         MinHeight="35">
-                    <TextBlock TextWrapping="Wrap"
-                               Text="{Binding AircraftName, Converter={StaticResource UppercaseConverter}}"
-                               Style="{StaticResource Header0}" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock TextWrapping="Wrap"
+                                   Text="{Binding AircraftName, Converter={StaticResource UppercaseConverter}}"
+                                   Style="{StaticResource Header0}" />
+                        
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center" 
+                                   Visibility="{Binding IsDirty, Converter={StaticResource BooleanToVisibilityConverter}}">
+                            <Button Style="{StaticResource Flat}" Command="{Binding ReloadCommand}">Reload</Button>
+                        </StackPanel>
+                    </Grid>
                 </Border>
 
                 <!-- CHECKLISTS NAV -->
@@ -363,7 +374,7 @@
                                 </StackPanel>
                             </Button>
 
-                            <Button Style="{DynamicResource Flat}" Margin="0 0 5 0">
+                            <Button Style="{DynamicResource Flat}" Margin="0 0 5 0" Command="{Binding EditCommand}">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Style="{DynamicResource Icon}" Text="&#xf044;" />
                                     <TextBlock>Edit</TextBlock>
@@ -382,14 +393,16 @@
                                                         x:Name="SplitButtonExport"
                                                         extensions:CornerRadiusExtension.CornerRadius="3"
                                                         extensions:CursorSpotlightExtension.BorderBrush="{StaticResource BrushButtonBorder}"
-                                                        extensions:CursorSpotlightExtension.BackgroundBrush="{StaticResource BrushBackgroundAlt2}"
-                                                        >
+                                                        extensions:CursorSpotlightExtension.BackgroundBrush="{StaticResource BrushBackgroundAlt2}">
                                 <adonisControls:SplitButton.SplitMenu>
                                     <ContextMenu
                                         MinWidth="{Binding PlacementTarget.ActualWidth, RelativeSource={RelativeSource Self}}">
-                                        <MenuItem Header="Export to Word (*.docx)" Command="{Binding ExportToWordCommand}" />
-                                        <MenuItem Header="Export to Html (*.html)" Command="{Binding ExportToHtmlCommand}" />
-                                        <MenuItem Header="Export to Json (*.json)" Command="{Binding ExportToJsonCommand}" />
+                                        <MenuItem Header="Export to Word (*.docx)"
+                                                  Command="{Binding ExportToWordCommand}" />
+                                        <MenuItem Header="Export to Html (*.html)"
+                                                  Command="{Binding ExportToHtmlCommand}" />
+                                        <MenuItem Header="Export to Json (*.json)"
+                                                  Command="{Binding ExportToJsonCommand}" />
                                     </ContextMenu>
                                 </adonisControls:SplitButton.SplitMenu>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
