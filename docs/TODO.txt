@@ -33,10 +33,8 @@ Backlog:
     [ ] (IMP) Add voice status indicator
     [ ] (IMP) Make Word template overridable
     [ ] (FTR) Generic exporter extension point
+    [ ] (FTR) Export to XML        
         
-    
-
-
 Bugs:
 
 Cleanup:
@@ -44,13 +42,12 @@ Cleanup:
     [ ] (CLEAN) Make QRHVoiceView a view model
     
 V1:
-    [x] (FTR) Export to JSON
-    [ ] (FTR) Checklist editor in external text editor
-    User selects an external editor. System opens the file in external editor and starts monitoring
-    it for changes. Once changes are detected, the user is questioned if he wants to refresh the file
-    [ ] (FTR) Export to XML
     [ ] (FTR) Startup screen
     [ ] (IMP) Auto-load last save checklist
+    [x] (FTR) Export to JSON
+    [x] (FTR) Checklist editor in external text editor
+    User selects an external editor. System opens the file in external editor and starts monitoring
+    it for changes. Once changes are detected, the user is questioned if he wants to refresh the file   
     [x] (IMP) Add icon to speak, make it a toggle button
     [x] (FTR) Export to Word
     [x] (FTR) Export to HTML

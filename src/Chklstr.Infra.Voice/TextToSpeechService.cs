@@ -16,6 +16,7 @@ public class TextToSpeechService : ITextToSpeechService
         _log = log;
         Rate = 1;
         _log.LogDebug($"Initialized tts service. Available voices are: {string.Join(", ", Voices)}");
+        _log.LogDebug($"Volume: {SpeechSynthesizer.Volume}, Rate: {SpeechSynthesizer.Rate}");
     }
 
     public string VoiceName
@@ -40,6 +41,7 @@ public class TextToSpeechService : ITextToSpeechService
         {
             SpeechSynthesizer.SpeakAsyncCancelAll();
         }
+        
         
         var prompt = SpeechSynthesizer.SpeakAsync(text);
         return Task.Run(() =>

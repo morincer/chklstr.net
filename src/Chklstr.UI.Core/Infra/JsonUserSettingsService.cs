@@ -10,7 +10,9 @@ public class JsonUserSettingsService : IUserSettingsService
 {
     private readonly ILogger<JsonUserSettingsService> _logger;
     public string ConfigFile { get; }
-    
+
+    private readonly object _lock = new();
+
     public JsonUserSettingsService(string configFile, ILogger<JsonUserSettingsService> logger)
     {
         _logger = logger;
@@ -20,58 +22,71 @@ public class JsonUserSettingsService : IUserSettingsService
     public Config Load()
     {
         FileUtils.EnsureDirectoryExists(Path.GetDirectoryName(ConfigFile));
-        
+
         if (!File.Exists(ConfigFile))
         {
             _logger.LogInformation($"No config file exist at location {ConfigFile}. Creating default settings");
             return new Config();
         }
 
-        using var fs = new FileStream(ConfigFile, FileMode.Open);
 
         Config? config = null;
-        
-        try
+
+        lock (_lock)
         {
-            _logger.LogInformation($"Reading configuration file at {ConfigFile}");
-            config = JsonSerializer.Deserialize<Config>(fs);
-        }
-        catch (Exception e)
-        {
-            _logger.LogError(e, e.Message);
+            using var fs = new FileStream(ConfigFile, FileMode.Open);
+
+            try
+            {
+                _logger.LogInformation($"Reading configuration file at {ConfigFile}");
+                config = JsonSerializer.Deserialize<Config>(fs);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+            }
+            finally
+            {
+                fs.Close();
+            }
         }
 
         if (config != null) return config;
-        
+
         _logger.LogWarning($"Failed to read configuration - falling back to default");
         return new Config();
     }
 
     public void Save(Config config)
     {
-        using var fs = new FileStream(ConfigFile, FileMode.Create);
-
-        try
+        lock (_lock)
         {
-            config.RecentCrafts = config.RecentCrafts
-                .OrderBy(c => -c.Timestamp)
-                .GroupBy(c => c.AircraftName)
-                .Select(g => g.First())
-                .ToList();
+            using var fs = new FileStream(ConfigFile, FileMode.Create);
 
-            JsonSerializer.Serialize(fs, config, new JsonSerializerOptions
+            try
             {
-                WriteIndented = true, 
-                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-            });
-            
-            fs.Flush();
+                config.RecentCrafts = config.RecentCrafts
+                    .OrderBy(c => -c.Timestamp)
+                    .GroupBy(c => c.AircraftName)
+                    .Select(g => g.First())
+                    .ToList();
+
+                JsonSerializer.Serialize(fs, config, new JsonSerializerOptions
+                {
+                    WriteIndented = true,
+                    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+                });
+
+                fs.Flush();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+            }
+            finally
+            {
+                fs.Close();
+            }
         }
-        catch (Exception e)
-        {
-            _logger.LogError(e, e.Message);
-        }
-        
-        fs.Close();
     }
 }

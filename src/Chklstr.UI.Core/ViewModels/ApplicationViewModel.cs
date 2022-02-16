@@ -1,12 +1,15 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using Chklstr.Core.Model;
 using Chklstr.Core.Services;
 using Chklstr.Core.Services.Voice;
+using Chklstr.Core.Utils;
 using Chklstr.UI.Core.Infra;
 using Chklstr.UI.Core.Services;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
+using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
@@ -22,6 +25,8 @@ public partial class
     private readonly ITextToSpeechService _textToSpeechService;
     private readonly ILogger<ApplicationViewModel> _logger;
 
+    public ObservableCollection<RecentCraftRecord> RecentCrafts { get; } = new();
+
     public ApplicationViewModel(IMvxNavigationService navigationService,
         IUserSettingsService userSettingsService,
         IVoiceCommandDetectionService voiceCommandDetectionService,
@@ -35,13 +40,27 @@ public partial class
         _logger = loggerFactory.CreateLogger<ApplicationViewModel>();
     }
 
+    public MvxAsyncCommand<string> LoadQRHCommand => new(LoadQRH);
+
     public override void Start()
     {
         Trace.WriteLine("test trace");
         _logger.LogInformation("Starting application");
 
-        Task.Run(() => LoadQRH($"../../../../../samples/FA50.chklst"));
-        // Task.Run(() =>_navigationService.Navigate<SettingsViewModel>());
+        var lastLoaded = _userSettingsService.Load().RecentCrafts
+            .OrderBy(c => -c.Timestamp).FirstOrDefault();
+
+        if (lastLoaded != null)
+        {
+            Task.Run(() => LoadQRH(lastLoaded.Path));
+        }
+
+    }
+
+    public override void ViewAppeared()
+    {
+        RecentCrafts.Clear();
+        RecentCrafts.AddAll(_userSettingsService.Load().RecentCrafts);
     }
 
     public async Task LoadQRH(string pathToFile)
