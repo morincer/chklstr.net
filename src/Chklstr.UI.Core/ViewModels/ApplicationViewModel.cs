@@ -47,13 +47,13 @@ public partial class
         Trace.WriteLine("test trace");
         _logger.LogInformation("Starting application");
 
-        var lastLoaded = _userSettingsService.Load().RecentCrafts
+        /*var lastLoaded = _userSettingsService.Load().RecentCrafts
             .OrderBy(c => -c.Timestamp).FirstOrDefault();
 
         if (lastLoaded != null)
         {
             Task.Run(() => LoadQRH(lastLoaded.Path));
-        }
+        }*/
 
     }
 
@@ -71,10 +71,6 @@ public partial class
             var result = await _navigationService.Navigate<QRHParsingViewModel, string, ParseResult<QuickReferenceHandbook>>(path);
             if (result == null || !result.IsSuccess()) return;
 
-            var config = _userSettingsService.Load();
-            config.RecentCrafts.Add(new RecentCraftRecord(result.Result!.AircraftName, path));
-            _userSettingsService.Save(config);
-
             _logger.LogDebug($"Loading QRH ViewModel for {result.Result?.AircraftName}");
             var quickReferenceHandbook = result.Result!;
             
@@ -90,6 +86,14 @@ public partial class
     {
         try
         {
+            if (quickReferenceHandbook.Metadata.LoadedFrom != null)
+            {
+                var config = _userSettingsService.Load();
+                config.RecentCrafts.Add(new RecentCraftRecord(quickReferenceHandbook.AircraftName,
+                    quickReferenceHandbook.Metadata.LoadedFrom));
+                _userSettingsService.Save(config);
+            }
+
             _logger.LogDebug($"Creating QRH View model for {quickReferenceHandbook.AircraftName}");
             var redirect =
                 await _navigationService.Navigate<QRHViewModel, QuickReferenceHandbook, QRHViewModelResult>(
