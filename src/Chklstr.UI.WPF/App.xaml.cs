@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.Loader;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
@@ -30,6 +33,8 @@ namespace Chklstr.UI.WPF
             this.RegisterSetupType<Setup>();
             this.DispatcherUnhandledException += OnUnhandledException;
         }
+
+        
 
         private void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {

@@ -17,6 +17,7 @@ using MvvmCross.Core;
 using MvvmCross.IoC;
 using MvvmCross.Platforms.Wpf.Core;
 using Serilog;
+using Serilog.Events;
 using Serilog.Extensions.Logging;
 using ILogger = Serilog.ILogger;
 
@@ -89,6 +90,7 @@ public class Setup : MvxWpfSetup<Core.App>
             .WriteTo.Console(
                 outputTemplate:
                 "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level}] ({SourceContext}.{Method}) {Message}{NewLine}{Exception}")
+            .WriteTo.File("logs/chklstr.log", rollingInterval: RollingInterval.Day)
             .CreateLogger();
 
         return new SerilogLoggerFactory();

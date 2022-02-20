@@ -42,8 +42,7 @@ Cleanup:
     [ ] (CLEAN) Make QRHVoiceView a view model
     
 V1:
-    [ ] (FTR) Startup screen
-    [ ] (IMP) Auto-load last save checklist
+    [x] (FTR) Startup screen
     [x] (FTR) Export to JSON
     [x] (FTR) Checklist editor in external text editor
     User selects an external editor. System opens the file in external editor and starts monitoring

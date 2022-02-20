@@ -4,9 +4,16 @@
         <OutputType>WinExe</OutputType>
         <TargetFramework>net6.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
-        <UseWPF>true</UseWPF>        
+        <UseWPF>true</UseWPF>
+        <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+        <RootNamespace>Chklstr.UI.WPF</RootNamespace>
+        <AssemblyName>Chklstr</AssemblyName>
     </PropertyGroup>
-
+    
+    <ItemGroup>
+        <RuntimeHostConfigurationOption Include="SubdirectoriesToProbe" Value="lib" />
+    </ItemGroup>
+    
     <ItemGroup>
       <ProjectReference Include="..\Chklstr.Infra.Export\Chklstr.Infra.Export.csproj" />
       <ProjectReference Include="..\Chklstr.Infra.Voice\Chklstr.Infra.Voice.csproj" />
@@ -14,6 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        
       <PackageReference Include="AdonisUI" Version="1.17.1" />
       <PackageReference Include="AdonisUI.ClassicTheme" Version="1.17.1" />
       <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
@@ -25,11 +33,13 @@
       <PackageReference Include="Serilog" Version="2.10.0" />
       <PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
       <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1" />
+      <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
       <PackageReference Include="Serilog.Sinks.Trace" Version="3.0.0" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Fonts" />
+      <Folder Include="Properties" />
       <Folder Include="Sounds" />
     </ItemGroup>
 
@@ -50,11 +60,17 @@
       <Resource Include="Fonts\Muli-SemiBoldItalic.ttf" />
       <Resource Include="Fonts\FontAwesome.otf" />
       <None Remove="Sounds\266017__joedeshon__a-click-01.wav" />
+      <None Remove="Properties\Settings.settings" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="Sounds\checked.wav" />
       <EmbeddedResource Include="Sounds\checked.wav" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Properties\Settings.Designer.cs" />
+      <Compile Remove="Properties\Resources.Designer.cs" />
     </ItemGroup>
 
 </Project>

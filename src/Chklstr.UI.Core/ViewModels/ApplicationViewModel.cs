@@ -7,6 +7,7 @@ using Chklstr.Core.Services.Voice;
 using Chklstr.Core.Utils;
 using Chklstr.UI.Core.Infra;
 using Chklstr.UI.Core.Services;
+using Chklstr.UI.Core.Utils;
 using Microsoft.Extensions.Logging;
 using MvvmCross;
 using MvvmCross.Commands;
@@ -61,6 +62,34 @@ public partial class
     {
         RecentCrafts.Clear();
         RecentCrafts.AddAll(_userSettingsService.Load().RecentCrafts);
+    }
+    
+    public MvxInteraction<SelectFileRequest> SelectFilePathInteraction = new();
+
+    public MvxCommand OpenFileCommand => new MvxCommand(OpenAnotherFile);
+
+    public void OpenAnotherFile()
+    {
+        var config = _userSettingsService.Load();
+
+        var recentCraft = config.RecentCrafts.OrderBy(c => -c.Timestamp).FirstOrDefault();
+
+        var request = new SelectFileRequest()
+        {
+            BaseFolder = recentCraft != null ? Path.GetDirectoryName(recentCraft.Path) : null,
+            FileExtension = "*.chklst",
+            FileSelectedCallback = async path =>
+            {
+                if (path == null) return;
+
+                path = Path.GetFullPath(path);
+                
+                _logger.LogInformation($"Trying to load {path}");
+                await LoadQRH(path);
+            }
+        };
+        
+        SelectFilePathInteraction.Raise(request);
     }
 
     public async Task LoadQRH(string pathToFile)

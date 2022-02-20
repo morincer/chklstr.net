@@ -8,5 +8,5 @@
         <span class="filler">@(Model.ExportModel.Filler)</span>
         <span class="value">@(Model.As<SingleCheckItem>().Value)</span>
     </div>
-    @{ await IncludeAsync("Templates.description", Model);  }
+    @{ await IncludeAsync("description", Model);  }
 </div>

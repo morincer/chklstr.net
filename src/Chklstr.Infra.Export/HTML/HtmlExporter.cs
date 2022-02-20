@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using Chklstr.Core.Model;
 using Chklstr.Core.Utils;
+using Chklstr.Infra.Export.Templates.Html;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
 using RazorLight;
 
@@ -12,7 +13,7 @@ public class HtmlExporter
     public async Task Export(QuickReferenceHandbook book, string outputPath, Layout layout, params string[] contexts)
     {
         var engine = new RazorLightEngineBuilder()
-            .UseEmbeddedResourcesProject(typeof(HtmlExportModel))
+            .UseEmbeddedResourcesProject(typeof(HtmlTemplatesRoot))
             .SetOperatingAssembly(typeof(HtmlExportModel).Assembly)
             .UseMemoryCachingProvider()
             .EnableDebugMode()
@@ -34,7 +35,7 @@ public class HtmlExporter
         viewModel.SelectedContexts.AddAll(contexts);
 
 
-        var result = await engine.CompileRenderAsync("Templates.index", viewModel);
+        var result = await engine.CompileRenderAsync("index", viewModel);
         await File.WriteAllTextAsync(outputPath, result);
     }
 }

@@ -114,7 +114,7 @@ public class DocxExporter
 
         cell.RemoveAllChildren<Paragraph>();
         
-        var renderer = new DocxDocumentRenderer(doc, new WordDocumentStyles(), _markdownLogger);
+        var renderer = new DocxDocumentRenderer(doc, new DocumentStyles(), _markdownLogger);
         renderer.Cursor.GoInto(cell);
         Markdown.Convert(item.Description, renderer, _markdownPipeline);
     }

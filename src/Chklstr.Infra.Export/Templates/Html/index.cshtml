@@ -39,7 +39,7 @@
 <body>
 <!-- LAYOUT PANEL -->
 @* #parse('/templates/html/layout-panel.vm') *@
-@{ await IncludeAsync("Templates.layout-panel", Model); }
+@{ await IncludeAsync("layout-panel", Model); }
 
 <!-- QRH -->
 <h1>@(Model.Book.AircraftName)</h1>
@@ -47,7 +47,7 @@
 <div class="checklists-container">
     @foreach (var item in Model.Book.Checklists)
     {
-       await IncludeAsync("Templates.item-Checklist", new ContextItem(Model, item)); 
+       await IncludeAsync("item-Checklist", new ContextItem(Model, item)); 
     }
 </div>
 <script type="text/javascript">
