@@ -167,7 +167,9 @@ public class QRHVoiceView
 
         if (selectedItem.SectionName != null)
         {
-            var activeItems = checklist.GetActiveItems(checklist.Children).ToList();
+            var activeItems = checklist.Children
+                .Where(c => c.IsSelectable && c.Item.IsAvailableInContext(checklist.Contexts))
+                .ToList();
 
             var sectionItems = activeItems
                 .Where(i => selectedItem.SectionName.Equals(i.SectionName)).ToList();
@@ -175,6 +177,7 @@ public class QRHVoiceView
             if (!sectionItems.Any(i => i.IsChecked))
             {
                 SayAsync($"{selectedItem.SectionName} section started");
+                priority = false;
             }
         }
 
