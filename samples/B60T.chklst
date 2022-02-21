@@ -130,17 +130,15 @@
 	[ ] Props  ......  Set
 	[ ] Prop Synchroniser  ......  On
 ```
-	* Cruise climb  ......  2000 fpm
-	
-	* Max climb  ......  4000 fpm
+* Cruise climb  ......  2000 fpm	
+* Max climb  ......  4000 fpm
 ```
 
 	[ ] Oil Doors  ......  Open during max climb
 	[ ] Engine instruments  ......  Monitor
 ```
-	* If oil temperature is excessive, open oil doors and/or increase airspeed by reducing rate of climb.
-
-	* Reduce power as necessary to keep TRQ, ITT and NG within safe limits (green arcs).
+* If oil temperature is excessive, open oil doors and/or increase airspeed by reducing rate of climb.
+* Reduce power as necessary to keep TRQ, ITT and NG within safe limits (green arcs).
 ```
 
 	[ ] Cabin pressurisation  ......  Check
@@ -159,8 +157,13 @@
 
 	[ ] Pressurisation  ......  Zero differential pressure
 	[ ] Prop synchroniser  ......  Off
-	[ ] Flaps  ......  Approach (max. extension speed 174 KIAS)
-	[ ] Landing gear  ......  Down (max. extension speed 174 KIAS)
+	
+	[ ] Flaps  ......  Approach
+```(max. extension speed 174 KIAS)```
+	
+	[ ] Landing gear  ......  Down
+```(max. extension speed 174 KIAS)```
+	
 	[ ] Lights  ......  As required
 
 
@@ -170,7 +173,8 @@
 	[ ] Initial approach airspeed  ......  120 KIAS
 	
 --- Short final:
-	[ ] Flaps  ......  Full down (max. extension speed 140 KIAS)
+	[ ] Flaps  ......  Full down 
+```(max. extension speed 140 KIAS)```
 	[ ] Props  ......  High RPM
 	[ ] Short final airspeed  ......  100 KIAS
 	[ ] Power  ......  Beta or reverse

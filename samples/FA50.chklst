@@ -156,7 +156,7 @@ If the APU is running, the No. 2 boost pump should be on.
 [ ] Aircraft Lighting			...... OFF
 [ ] Floor Heat					...... BOTH OFF
 [ ] Static Selector				...... NORMAL
-[ ] Compass Switches			...... BOTH	SLAVED
+[ ] Compass Switches			...... BOTH SLAVED
 [ ] Brake Selector				...... NO. 1 ON
 [ ] Standby Pump				...... OFF
 [ ] Temperature Controller		...... AUTO/12 O’CLOCK
@@ -385,7 +385,7 @@ Other instrument readings will vary greatly with altitude and temperature depend
 [ ] Bus Tie						...... NORMAL (LIGHT OUT)
 [ ] Batteries: Amps/Temps		...... CHECKED
 [ ] Generators: Volts/Amps		...... CHECKED
-[ ] Transfer Fuel Pumps			...... ALL	ON/LIGHTS OUT
+[ ] Transfer Fuel Pumps			...... ALL ON/LIGHTS OUT
 [ ] EFIS						...... ON
 [ ] Aircraft Lighting			...... AS REQUIRED
 [ ] Emergency Horizon			...... UNCAGED
@@ -523,7 +523,7 @@ It is advisable to use ignition for all takeoffs and land¬ings because it can i
 === 10,000 Foot Check
 [ ] Landing Lights				...... OFF
 [ ] Seat Belt Sign				...... AS REQUIRED
-[ ] Entrance Curtain			...... AS	REQUIRED
+[ ] Entrance Curtain			...... AS REQUIRED
 
 === 18,000 Foot Check
 [ ] Altimeters					...... 29.92
@@ -570,7 +570,7 @@ Never use airframe anti-ice above +10*' C TAT.
 
 Never use engine or airframe anti-ice above +10°C TAT. 
 ```
-[ ] Radios	...... SET	FOR APPROACH
+[ ] Radios	...... SET FOR APPROACH
 [ ] Passenger Briefing	...... COMPLETED
 
 
@@ -584,7 +584,7 @@ Never use engine or airframe anti-ice above +10°C TAT.
 [ ] Flaps	...... SET
 [ ] No Smoking	Sign	...... ON
 [ ] Taxi Light	...... ON
-[ ] Windshield Wipers	...... AS	REQUIRED
+[ ] Windshield Wipers	...... AS REQUIRED
 [ ] Airbrakes	...... IN/LIGHT OUT
 [ ] Yaw Damper (As Required)	...... OFF/ON
 [ ] Autopilot	...... OFF	(LIGHT OUT)
