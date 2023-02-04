@@ -6,6 +6,6 @@
         xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
         xmlns:local="clr-namespace:Chklstr.UI.WPF"
         mc:Ignorable="d"
-        Title="Chklstr" Height="800" Width="1000" >
+        Title="{Binding WindowTitle, RelativeSource={RelativeSource Mode=Self}}" Height="800" Width="1000" >
     
 </views:MvxWindow>

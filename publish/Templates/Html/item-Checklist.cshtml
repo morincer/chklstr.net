@@ -1,0 +1,26 @@
+@using Chklstr.Core.Model
+@using Chklstr.Infra.Export.HTML
+@using RazorLight
+@inherits TemplatePage<ContextItem>
+
+<div class="@if (Model.As<Checklist>().Parent != null){ @("sublist") } else { @("checklist") } @(Model.ContextToClasses())">
+
+    @if (Model.As<Checklist>().Parent != null)
+    {
+        <div class="sublist-title">@(Model.As<Checklist>().Name)</div>
+    }
+    else
+    {
+        <div class="checklist-title">@(Model.As<Checklist>().Name)</div>
+    }
+
+    @{ await IncludeAsync("description", Model);  }
+
+    <div class="checklist-contents">
+        @foreach (var item in Model.As<Checklist>().Items)
+        {
+           await IncludeAsync("item-" + item.GetType().Name, new ContextItem(Model.ExportModel, item));
+        }
+    </div>
+
+</div>

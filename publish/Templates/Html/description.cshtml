@@ -1,0 +1,10 @@
+﻿@using Chklstr.Infra.Export.HTML
+@using RazorLight
+@inherits TemplatePage<ContextItem>
+
+@if (!string.IsNullOrEmpty(Model.Item.Description))
+{
+    <div class="description">
+        @{ await Output.WriteLineAsync(Model.Item.DescriptionAsHtml());}
+    </div>
+}

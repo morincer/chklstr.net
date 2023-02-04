@@ -1,0 +1,60 @@
+2022-08-04 01:43:38.096 +03:00 [VRB] Setup: Primary start
+2022-08-04 01:43:38.129 +03:00 [VRB] Setup: FirstChance start
+2022-08-04 01:43:38.129 +03:00 [VRB] Setup: MvvmCross settings start
+2022-08-04 01:43:38.136 +03:00 [VRB] Setup: Singleton Cache start
+2022-08-04 01:43:38.136 +03:00 [VRB] Setup: ViewDispatcher start
+2022-08-04 01:43:38.140 +03:00 [VRB] Setup: Bootstrap actions
+2022-08-04 01:43:38.151 +03:00 [VRB] Setup: StringToTypeParser start
+2022-08-04 01:43:38.152 +03:00 [VRB] Setup: FillableStringToTypeParser start
+2022-08-04 01:43:38.152 +03:00 [VRB] Setup: PluginManagerFramework start
+2022-08-04 01:43:38.179 +03:00 [VRB] Setup: Create App
+2022-08-04 01:43:38.179 +03:00 [VRB] Setup: NavigationService
+2022-08-04 01:43:38.180 +03:00 [VRB] Setup: Load navigation routes
+2022-08-04 01:43:38.180 +03:00 [VRB] Setup: App start
+2022-08-04 01:43:38.180 +03:00 [VRB] Setup: Application Initialize - On background thread
+2022-08-04 01:43:38.185 +03:00 [DBG] Initialize recognizer to match: check, checked, yes
+2022-08-04 01:43:38.366 +03:00 [DBG] Initialized tts service. Available voices are: Microsoft David Desktop, Microsoft Zira Desktop
+2022-08-04 01:43:38.367 +03:00 [DBG] Volume: 100, Rate: 1
+2022-08-04 01:43:38.373 +03:00 [VRB] Setup: ViewModelTypeFinder start
+2022-08-04 01:43:38.374 +03:00 [VRB] Setup: ViewsContainer start
+2022-08-04 01:43:38.374 +03:00 [VRB] Setup: Lookup Dictionary start
+2022-08-04 01:43:38.381 +03:00 [WRN] No view model association found for candidate view MainWindow
+2022-08-04 01:43:38.382 +03:00 [VRB] Setup: Views start
+2022-08-04 01:43:38.382 +03:00 [VRB] Setup: CommandCollectionBuilder start
+2022-08-04 01:43:38.382 +03:00 [VRB] Setup: NavigationSerializer start
+2022-08-04 01:43:38.382 +03:00 [VRB] Setup: InpcInterception start
+2022-08-04 01:43:38.382 +03:00 [VRB] Setup: InpcInterception start
+2022-08-04 01:43:38.382 +03:00 [VRB] Setup: LastChance start
+2022-08-04 01:43:38.387 +03:00 [VRB] Setup: Secondary end
+2022-08-04 01:43:38.388 +03:00 [VRB] AppStart: Application Startup - On UI thread
+2022-08-04 01:43:38.388 +03:00 [INF] Starting application
+2022-08-04 01:43:42.393 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-08-04 01:43:46.255 +03:00 [DBG] Parsing D:\Workspace\chklstr.net\samples\FA50.chklst
+2022-08-04 01:43:46.262 +03:00 [INF] Loading QRH from D:\Workspace\chklstr.net\samples\FA50.chklst
+2022-08-04 01:43:46.311 +03:00 [DBG] QRH Loaded successfully
+2022-08-04 01:43:46.316 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-08-04 01:43:46.319 +03:00 [DBG] Loading QRH ViewModel for Flysimware Falcon 50
+2022-08-04 01:43:46.320 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-08-04 01:43:46.326 +03:00 [DBG] Creating QRH View model for Flysimware Falcon 50
+2022-08-04 01:43:46.337 +03:00 [DBG] Adding checklist Before Engine Start (Power Off)
+2022-08-04 01:43:46.340 +03:00 [DBG] Adding checklist Prestart
+2022-08-04 01:43:46.340 +03:00 [DBG] Adding checklist Start
+2022-08-04 01:43:46.340 +03:00 [DBG] Adding checklist Taxi
+2022-08-04 01:43:46.340 +03:00 [DBG] Adding checklist Before Takeoff
+2022-08-04 01:43:46.341 +03:00 [DBG] Adding checklist After Takeoff
+2022-08-04 01:43:46.341 +03:00 [DBG] Adding checklist 10,000 Foot Check
+2022-08-04 01:43:46.341 +03:00 [DBG] Adding checklist 18,000 Foot Check
+2022-08-04 01:43:46.341 +03:00 [DBG] Adding checklist Cruise
+2022-08-04 01:43:46.341 +03:00 [DBG] Adding checklist Descent Check
+2022-08-04 01:43:46.341 +03:00 [DBG] Adding checklist Approach
+2022-08-04 01:43:46.341 +03:00 [DBG] Adding checklist Landing
+2022-08-04 01:43:47.092 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-08-04 01:43:47.092 +03:00 [DBG] Registering file watch for D:\Workspace\chklstr.net\samples\FA50.chklst
+2022-08-04 01:43:47.104 +03:00 [DBG] Created new voice view service
+2022-08-04 01:43:47.104 +03:00 [DBG] Binding QRH Flysimware Falcon 50 to voice controller view
+2022-08-04 01:43:47.104 +03:00 [DBG] Stopping voice recognition service
+2022-08-04 01:43:47.105 +03:00 [DBG] Stopping tts service
+2022-08-04 01:43:47.105 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-08-04 01:45:50.514 +03:00 [INF] Closing the application
+2022-08-04 01:45:50.514 +03:00 [DBG] Stopping voice recognition service
+2022-08-04 01:45:50.514 +03:00 [DBG] Stopping tts service

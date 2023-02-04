@@ -8,6 +8,7 @@
         <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
         <RootNamespace>Chklstr.UI.WPF</RootNamespace>
         <AssemblyName>Chklstr</AssemblyName>
+        <AssemblyVersion>0.0.1</AssemblyVersion>
     </PropertyGroup>
     
     <ItemGroup>

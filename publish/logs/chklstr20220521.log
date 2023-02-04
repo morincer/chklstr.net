@@ -1,0 +1,181 @@
+2022-05-21 00:49:35.569 +03:00 [VRB] Setup: Primary start
+2022-05-21 00:49:35.586 +03:00 [VRB] Setup: FirstChance start
+2022-05-21 00:49:35.587 +03:00 [VRB] Setup: MvvmCross settings start
+2022-05-21 00:49:35.587 +03:00 [VRB] Setup: Singleton Cache start
+2022-05-21 00:49:35.587 +03:00 [VRB] Setup: ViewDispatcher start
+2022-05-21 00:49:35.589 +03:00 [VRB] Setup: Bootstrap actions
+2022-05-21 00:49:35.594 +03:00 [VRB] Setup: StringToTypeParser start
+2022-05-21 00:49:35.595 +03:00 [VRB] Setup: FillableStringToTypeParser start
+2022-05-21 00:49:35.595 +03:00 [VRB] Setup: PluginManagerFramework start
+2022-05-21 00:49:35.606 +03:00 [VRB] Setup: Create App
+2022-05-21 00:49:35.607 +03:00 [VRB] Setup: NavigationService
+2022-05-21 00:49:35.612 +03:00 [VRB] Setup: Load navigation routes
+2022-05-21 00:49:35.612 +03:00 [VRB] Setup: App start
+2022-05-21 00:49:35.612 +03:00 [VRB] Setup: Application Initialize - On background thread
+2022-05-21 00:49:35.618 +03:00 [DBG] Initialize recognizer to match: check, checked, yes
+2022-05-21 00:49:35.718 +03:00 [DBG] Initialized tts service. Available voices are: Microsoft David Desktop, Microsoft Zira Desktop
+2022-05-21 00:49:35.718 +03:00 [DBG] Volume: 100, Rate: 1
+2022-05-21 00:49:35.721 +03:00 [VRB] Setup: ViewModelTypeFinder start
+2022-05-21 00:49:35.721 +03:00 [VRB] Setup: ViewsContainer start
+2022-05-21 00:49:35.722 +03:00 [VRB] Setup: Lookup Dictionary start
+2022-05-21 00:49:35.726 +03:00 [WRN] No view model association found for candidate view MainWindow
+2022-05-21 00:49:35.727 +03:00 [VRB] Setup: Views start
+2022-05-21 00:49:35.727 +03:00 [VRB] Setup: CommandCollectionBuilder start
+2022-05-21 00:49:35.727 +03:00 [VRB] Setup: NavigationSerializer start
+2022-05-21 00:49:35.727 +03:00 [VRB] Setup: InpcInterception start
+2022-05-21 00:49:35.727 +03:00 [VRB] Setup: InpcInterception start
+2022-05-21 00:49:35.727 +03:00 [VRB] Setup: LastChance start
+2022-05-21 00:49:35.739 +03:00 [VRB] Setup: Secondary end
+2022-05-21 00:49:35.739 +03:00 [VRB] AppStart: Application Startup - On UI thread
+2022-05-21 00:49:35.740 +03:00 [INF] Starting application
+2022-05-21 00:49:36.079 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-21 00:49:38.063 +03:00 [INF] Closing the application
+2022-05-21 00:49:38.063 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:49:38.063 +03:00 [DBG] Stopping tts service
+2022-05-21 00:49:47.982 +03:00 [VRB] Setup: Primary start
+2022-05-21 00:49:47.997 +03:00 [VRB] Setup: FirstChance start
+2022-05-21 00:49:47.997 +03:00 [VRB] Setup: MvvmCross settings start
+2022-05-21 00:49:47.997 +03:00 [VRB] Setup: Singleton Cache start
+2022-05-21 00:49:47.997 +03:00 [VRB] Setup: ViewDispatcher start
+2022-05-21 00:49:47.999 +03:00 [VRB] Setup: Bootstrap actions
+2022-05-21 00:49:48.004 +03:00 [VRB] Setup: StringToTypeParser start
+2022-05-21 00:49:48.006 +03:00 [VRB] Setup: FillableStringToTypeParser start
+2022-05-21 00:49:48.006 +03:00 [VRB] Setup: PluginManagerFramework start
+2022-05-21 00:49:48.016 +03:00 [VRB] Setup: Create App
+2022-05-21 00:49:48.016 +03:00 [VRB] Setup: NavigationService
+2022-05-21 00:49:48.016 +03:00 [VRB] Setup: Load navigation routes
+2022-05-21 00:49:48.017 +03:00 [VRB] Setup: App start
+2022-05-21 00:49:48.017 +03:00 [VRB] Setup: Application Initialize - On background thread
+2022-05-21 00:49:48.023 +03:00 [DBG] Initialize recognizer to match: check, checked, yes
+2022-05-21 00:49:48.113 +03:00 [DBG] Initialized tts service. Available voices are: Microsoft David Desktop, Microsoft Zira Desktop
+2022-05-21 00:49:48.113 +03:00 [DBG] Volume: 100, Rate: 1
+2022-05-21 00:49:48.116 +03:00 [VRB] Setup: ViewModelTypeFinder start
+2022-05-21 00:49:48.116 +03:00 [VRB] Setup: ViewsContainer start
+2022-05-21 00:49:48.116 +03:00 [VRB] Setup: Lookup Dictionary start
+2022-05-21 00:49:48.121 +03:00 [WRN] No view model association found for candidate view MainWindow
+2022-05-21 00:49:48.122 +03:00 [VRB] Setup: Views start
+2022-05-21 00:49:48.122 +03:00 [VRB] Setup: CommandCollectionBuilder start
+2022-05-21 00:49:48.122 +03:00 [VRB] Setup: NavigationSerializer start
+2022-05-21 00:49:48.122 +03:00 [VRB] Setup: InpcInterception start
+2022-05-21 00:49:48.122 +03:00 [VRB] Setup: InpcInterception start
+2022-05-21 00:49:48.122 +03:00 [VRB] Setup: LastChance start
+2022-05-21 00:49:48.134 +03:00 [VRB] Setup: Secondary end
+2022-05-21 00:49:48.134 +03:00 [VRB] AppStart: Application Startup - On UI thread
+2022-05-21 00:49:48.135 +03:00 [INF] Starting application
+2022-05-21 00:49:48.402 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-21 00:49:49.405 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-21 00:49:51.599 +03:00 [INF] Trying to load D:\Workspace\chklstr.net\samples\B60T.chklst
+2022-05-21 00:49:51.625 +03:00 [DBG] Parsing D:\Workspace\chklstr.net\samples\B60T.chklst
+2022-05-21 00:49:51.631 +03:00 [INF] Loading QRH from D:\Workspace\chklstr.net\samples\B60T.chklst
+2022-05-21 00:49:51.665 +03:00 [DBG] QRH Loaded successfully
+2022-05-21 00:49:51.670 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-21 00:49:51.673 +03:00 [DBG] Loading QRH ViewModel for Beechcraft Turbine Duke
+2022-05-21 00:49:51.673 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-21 00:49:51.677 +03:00 [DBG] Creating QRH View model for Beechcraft Turbine Duke
+2022-05-21 00:49:51.683 +03:00 [DBG] Adding checklist BEFORE STARTING
+2022-05-21 00:49:51.683 +03:00 [DBG] Adding checklist RIGHT ENGINE START
+2022-05-21 00:49:51.683 +03:00 [DBG] Adding checklist LEFT ENGINE START
+2022-05-21 00:49:51.684 +03:00 [DBG] Adding checklist AFTER START
+2022-05-21 00:49:51.684 +03:00 [DBG] Adding checklist BEFORE TAKEOFF
+2022-05-21 00:49:51.684 +03:00 [DBG] Adding checklist AFTER TAKEOFF
+2022-05-21 00:49:51.684 +03:00 [DBG] Adding checklist CLIMB
+2022-05-21 00:49:51.684 +03:00 [DBG] Adding checklist DESCENT
+2022-05-21 00:49:51.684 +03:00 [DBG] Adding checklist BEFORE LANDING
+2022-05-21 00:49:51.685 +03:00 [DBG] Adding checklist LANDING
+2022-05-21 00:49:51.685 +03:00 [DBG] Adding checklist BALKED LANDING
+2022-05-21 00:49:51.685 +03:00 [DBG] Adding checklist AFTER LANDING
+2022-05-21 00:49:51.685 +03:00 [DBG] Adding checklist SHUTDOWN
+2022-05-21 00:49:51.944 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-21 00:49:51.945 +03:00 [DBG] Registering file watch for D:\Workspace\chklstr.net\samples\B60T.chklst
+2022-05-21 00:49:51.947 +03:00 [DBG] Created new voice view service
+2022-05-21 00:49:51.947 +03:00 [DBG] Binding QRH Beechcraft Turbine Duke to voice controller view
+2022-05-21 00:49:51.948 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:49:51.948 +03:00 [DBG] Stopping tts service
+2022-05-21 00:49:51.948 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-21 00:49:56.025 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:49:56.026 +03:00 [DBG] Stopping tts service
+2022-05-21 00:49:56.920 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:49:56.920 +03:00 [DBG] Stopping tts service
+2022-05-21 00:49:59.365 +03:00 [DBG] Playing AFTER START checklist started. with voice Microsoft Mark, rate 1
+2022-05-21 00:49:59.366 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:49:59.366 +03:00 [DBG] Playing Inverter switch, MN INV with voice Microsoft Mark, rate 1
+2022-05-21 00:49:59.371 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:49:59.371 +03:00 [DBG] Starting voice recognition service
+2022-05-21 00:50:14.184 +03:00 [DBG] Detected word check, confidence 0,9404801
+2022-05-21 00:50:14.187 +03:00 [DBG] Word check mapped to Check
+2022-05-21 00:50:14.187 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:14.220 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:14.220 +03:00 [DBG] Playing Avionics master, On with voice Microsoft Mark, rate 1
+2022-05-21 00:50:14.220 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:14.220 +03:00 [DBG] Starting voice recognition service
+2022-05-21 00:50:16.955 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-21 00:50:16.955 +03:00 [DBG] Word checked mapped to Check
+2022-05-21 00:50:16.956 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:16.984 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:16.984 +03:00 [DBG] Playing Lights, As required with voice Microsoft Mark, rate 1
+2022-05-21 00:50:16.984 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:16.984 +03:00 [DBG] Starting voice recognition service
+2022-05-21 00:50:21.017 +03:00 [DBG] Detected word checked, confidence 0,9556845
+2022-05-21 00:50:21.018 +03:00 [DBG] Word checked mapped to Check
+2022-05-21 00:50:21.018 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:21.046 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:21.046 +03:00 [DBG] Playing Radios, Xpnder, On with voice Microsoft Mark, rate 1
+2022-05-21 00:50:21.047 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:21.047 +03:00 [DBG] Starting voice recognition service
+2022-05-21 00:50:24.173 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-21 00:50:24.173 +03:00 [DBG] Word checked mapped to Check
+2022-05-21 00:50:24.173 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:24.202 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:24.202 +03:00 [DBG] Playing GPS, As required with voice Microsoft Mark, rate 1
+2022-05-21 00:50:24.202 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:24.202 +03:00 [DBG] Starting voice recognition service
+2022-05-21 00:50:27.177 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-21 00:50:27.177 +03:00 [DBG] Word checked mapped to Check
+2022-05-21 00:50:27.178 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:27.209 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:27.209 +03:00 [DBG] Playing Cabin temp, mode, As required (Check NG, ITT, load) with voice Microsoft Mark, rate 1
+2022-05-21 00:50:27.209 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:27.209 +03:00 [DBG] Starting voice recognition service
+2022-05-21 00:50:32.817 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-21 00:50:32.817 +03:00 [DBG] Word checked mapped to Check
+2022-05-21 00:50:32.817 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:32.848 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:32.848 +03:00 [DBG] Playing Annunciators, Test, clear with voice Microsoft Mark, rate 1
+2022-05-21 00:50:32.848 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:32.848 +03:00 [DBG] Starting voice recognition service
+2022-05-21 00:50:53.532 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-21 00:50:53.532 +03:00 [DBG] Word checked mapped to Check
+2022-05-21 00:50:53.532 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:53.562 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:53.562 +03:00 [DBG] Playing Instruments, Check with voice Microsoft Mark, rate 1
+2022-05-21 00:50:53.562 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:53.562 +03:00 [DBG] Starting voice recognition service
+2022-05-21 00:50:57.588 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-21 00:50:57.589 +03:00 [DBG] Word checked mapped to Check
+2022-05-21 00:50:57.589 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:57.618 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:57.618 +03:00 [DBG] Playing Brakes, Check with voice Microsoft Mark, rate 1
+2022-05-21 00:50:57.618 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:57.618 +03:00 [DBG] Starting voice recognition service
+2022-05-21 00:50:59.842 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-21 00:50:59.842 +03:00 [DBG] Word checked mapped to Check
+2022-05-21 00:50:59.842 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:59.871 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:59.871 +03:00 [DBG] Playing Gyros, Check with voice Microsoft Mark, rate 1
+2022-05-21 00:50:59.871 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:50:59.871 +03:00 [DBG] Starting voice recognition service
+2022-05-21 00:51:02.283 +03:00 [DBG] Detected word checked, confidence 0,95404917
+2022-05-21 00:51:02.283 +03:00 [DBG] Word checked mapped to Check
+2022-05-21 00:51:02.283 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:51:02.313 +03:00 [DBG] Playing AFTER START checklist complete with voice Microsoft Mark, rate 1
+2022-05-21 00:51:02.313 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:51:02.313 +03:00 [DBG] Playing AFTER START checklist complete with voice Microsoft Mark, rate 1
+2022-05-21 00:51:02.313 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:51:02.314 +03:00 [DBG] Playing AFTER START checklist complete with voice Microsoft Mark, rate 1
+2022-05-21 00:51:04.636 +03:00 [DBG] Stopping tts service
+2022-05-21 00:51:04.643 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:51:04.916 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:51:04.916 +03:00 [DBG] Stopping tts service
+2022-05-21 00:51:08.548 +03:00 [INF] Closing the application
+2022-05-21 00:51:08.548 +03:00 [DBG] Stopping voice recognition service
+2022-05-21 00:51:08.548 +03:00 [DBG] Stopping tts service

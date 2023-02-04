@@ -42,6 +42,11 @@ Cleanup:
     [ ] (CLEAN) Make QRHVoiceView a view model
     
 V1:
+    [ ] (FTR) After the checklist is complete in voiced mode - switch to the next one and standby
+    [ ] (FTR) After reloading selected checklist should remain selected, completed checklists should remain completed
+    [ ] (IMP) Add readme
+    [ ] (IMP) Format checklists
+    [ ] (FTR) Pretty format checklist
     [x] (FTR) Startup screen
     [x] (FTR) Export to JSON
     [x] (FTR) Checklist editor in external text editor

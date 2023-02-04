@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Threading;
 using Chklstr.Core.Services.Voice;
 using Chklstr.Core.Utils;
@@ -132,6 +133,21 @@ public class QRHVoiceView
                     {
                         _checkedSound.Play();
                         ViewModel.SelectedChecklist!.CheckAndAdvance();
+                        if (!ViewModel.SelectedChecklist.HasActiveItems)
+                        {
+                            // Advance to next active
+                            var current = ViewModel.Checklists.IndexOf(ViewModel.SelectedChecklist);
+                            for (var i = current + 1; i < ViewModel.Checklists.Count; i++)
+                            {
+                                var checklist = ViewModel.Checklists[i];
+                                if (checklist.HasActiveItems)
+                                {
+                                    SayAsync($"{ViewModel.SelectedChecklist.Name} checklist complete")
+                                        .ContinueWith(_ => ViewModel.SelectedChecklist = checklist);
+                                    break;
+                                }
+                            }
+                        }
                     }
 
                     break;

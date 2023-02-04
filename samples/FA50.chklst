@@ -293,13 +293,13 @@ Enter all way point information to be used for the flight into the FMS.
 [ ] Battery Temperature Monitor	...... TEST
 [ ] Emergency Stabilizer Trim	...... CHECK
 [ ] Stabilizer Trim 			...... CHECKED/SET FOR T.O.
-[ ] TO GONFIG/ENG 2 FAIL Lights	...... TESTED
-[ ] Voice/Flight Recorder		...... TESTED
-[ ] Crossover/Selector Switches	...... AS REQUIRED
+[ ] TO GONFIG/ENG 2 FAIL Lights	...... TESTED	@<Real>
+[ ] Voice/Flight Recorder		...... TESTED	@<Real>
+[ ] Crossover/Selector Switches	...... AS REQUIRED @<Real>
 [ ] Standby Pump				...... ON/AUTO
-[ ] EFIS (If Installed)			...... ON
-[ ] Emergency Aileron Trim		...... CHECKED/LIGHT OUT
-[ ] Rudder Trim					...... CHECKED/SET FOR T.O.
+[ ] EFIS (If Installed)			...... ON		@<Real>
+[ ] Emergency Aileron Trim		...... CHECKED/LIGHT OUT	
+[ ] Rudder Trim					...... CHECKED/SET FOR T.O.	@<Real>
 [ ] Aileron Trim				...... CHECKED/SET FOR T.O.
 [ ] Audible Warnings (CAB/VM0)	...... TESTED
 [ ] No. 2 Stall					...... TESTED
@@ -317,13 +317,13 @@ Select the OFF position to reduce unnecessary cycling of the pump.
 To move the airplane, place the selector to ATT REF. This provides only pitch, roll and platform heading outputs.
 ```
 
-[ ] EFIS (If Installed)			...... OFF
+[ ] EFIS (If Installed)			...... OFF	@<Real>
 
 
 === Start
 
-[ ] Cabin Door Light			...... OUT
-[ ] Entrance Curtain			...... OPEN
+[ ] Cabin Door Light			...... OUT	@<Real>
+[ ] Entrance Curtain			...... OPEN		@<Real>
 [ ] Seat Belt/No Smoking		...... ON
 [ ] Exit Lights					...... ARMED
 
@@ -368,7 +368,7 @@ The crew must check for ITT rise ten seconds after the throttle is moved to IDLE
 If external power was used to start the engines, after all three engines have been started, place the DC power selector to NORMAL before directing disconnect of the external power unit. When switching to NORMAL, battery lights will go out and all three generator lights will remain on until the external power has been turned off.
 ```
 
-[ ] External Power Cord			...... DISCONNECTED
+[ ] External Power Cord			...... DISCONNECTED	@<External Power>
 [ ] Engine	Parameters			...... CHECKED
 ```
 a.	N,	ROTATING
@@ -386,7 +386,7 @@ Other instrument readings will vary greatly with altitude and temperature depend
 [ ] Batteries: Amps/Temps		...... CHECKED
 [ ] Generators: Volts/Amps		...... CHECKED
 [ ] Transfer Fuel Pumps			...... ALL ON/LIGHTS OUT
-[ ] EFIS						...... ON
+[ ] EFIS						...... ON	@<Real>
 [ ] Aircraft Lighting			...... AS REQUIRED
 [ ] Emergency Horizon			...... UNCAGED
 [ ] Emergency Batteries			...... ON
@@ -394,13 +394,13 @@ Other instrument readings will vary greatly with altitude and temperature depend
 [ ] Transponder					...... STANDBY
 [ ] Marker Beacons				...... TESTED
 [ ] GPWS						...... TESTED
-[ ] Radar						...... STANDBY
-[ ] Interphone					...... CHECKED
+[ ] Radar						...... STANDBY	@<Real>
+[ ] Interphone					...... CHECKED	@<Real>
 [ ] No. 1 Stall					...... TESTED
 [ ] Mach Trim					...... ON
 [ ] Compass Headings			...... BOTH CHECKED
-[ ] Circuit Breakers			...... IN
-[ ] Galley Power				...... SET
+[ ] Circuit Breakers			...... IN		@<Real>
+[ ] Galley Power				...... SET		@<Real>
 [ ] Windshield Heat'Side		...... NORMAL/ON
 ```
 **NOTE**
@@ -443,7 +443,7 @@ Antiskid test is complete after step d above. If brake pedals are held, the ligh
 
 [ ] Park Brake					...... OFF
 [ ] Taxi Light					...... ON
-[ ] Passenger Briefing			...... COMPLETE
+[ ] Passenger Briefing			...... COMPLETE	@<Real>
 [ ] No. 2 Brakes				...... CHECKED/AS REQUIRED
 [ ] Sliding Window				...... CLOSED
 [ ] Slats/Flaps					...... CYCLED/SET FOR T.O.
@@ -496,7 +496,7 @@ Place the anti collision light switch to ALL.
 
 Do not use the landing lights on the ground for more than 15 minutes as damage may result. A 45-minute cooling period is necessary if these lights are on for 15 minutes on the ground.
 ```
-[ ] Ignitors					...... AS	REQUIRED
+[ ] Ignitors					...... AS REQUIRED
 ```
 **NOTE**
 
@@ -543,7 +543,7 @@ It is advisable to use ignition for all takeoffs and land¬ings because it can i
 
 === Descent Check
 
-[ ] Entrance Curtain			...... OPEN
+[ ] Entrance Curtain			...... OPEN		@<Real>
 [ ] ATIS						...... ACQUIRED
 [ ] Cabin Altitude Controller	...... SET
 [ ] Anti-icing					...... AS REQUIRED
@@ -564,14 +564,14 @@ Never use airframe anti-ice above +10*' C TAT.
 === Approach
 [ ] Siats/Flaps	...... SET
 [ ] Seat Belt Sign	...... ON
-[ ] Anti-icing	AS	...... REQUIRED
+[ ] Anti-icing		...... AS REQUIRED
 ```
 **NOTE**
 
 Never use engine or airframe anti-ice above +10°C TAT. 
 ```
 [ ] Radios	...... SET FOR APPROACH
-[ ] Passenger Briefing	...... COMPLETED
+[ ] Passenger Briefing	...... COMPLETED	@<Real>
 
 
 === Landing
@@ -579,8 +579,8 @@ Never use engine or airframe anti-ice above +10°C TAT.
 [ ] Brake Selector	...... #1 ON
 [ ] Antiskid	...... TESTED
 [ ] Hydraulics (Pressure/Quantity)	...... CHECKED
-[ ] TesVStall (Aircraft without SB166)	...... STALL 1/STALL 2 TESTED
-[ ] TesVStall (Aircraft with SB166)	...... AUTO SLAT LIGHT OUT
+[ ] TesVStall (Aircraft without SB166)	...... STALL 1/STALL 2 TESTED	@<Real>
+[ ] TesVStall (Aircraft with SB166)	...... AUTO SLAT LIGHT OUT			@<Real>
 [ ] Flaps	...... SET
 [ ] No Smoking	Sign	...... ON
 [ ] Taxi Light	...... ON

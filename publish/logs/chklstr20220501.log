@@ -1,0 +1,1200 @@
+2022-05-01 00:43:48.176 +03:00 [VRB] Setup: Primary start
+2022-05-01 00:43:48.190 +03:00 [VRB] Setup: FirstChance start
+2022-05-01 00:43:48.191 +03:00 [VRB] Setup: MvvmCross settings start
+2022-05-01 00:43:48.191 +03:00 [VRB] Setup: Singleton Cache start
+2022-05-01 00:43:48.191 +03:00 [VRB] Setup: ViewDispatcher start
+2022-05-01 00:43:48.193 +03:00 [VRB] Setup: Bootstrap actions
+2022-05-01 00:43:48.197 +03:00 [VRB] Setup: StringToTypeParser start
+2022-05-01 00:43:48.198 +03:00 [VRB] Setup: FillableStringToTypeParser start
+2022-05-01 00:43:48.198 +03:00 [VRB] Setup: PluginManagerFramework start
+2022-05-01 00:43:48.208 +03:00 [VRB] Setup: Create App
+2022-05-01 00:43:48.208 +03:00 [VRB] Setup: NavigationService
+2022-05-01 00:43:48.213 +03:00 [VRB] Setup: Load navigation routes
+2022-05-01 00:43:48.214 +03:00 [VRB] Setup: App start
+2022-05-01 00:43:48.214 +03:00 [VRB] Setup: Application Initialize - On background thread
+2022-05-01 00:43:48.218 +03:00 [DBG] Initialize recognizer to match: check, checked, yes
+2022-05-01 00:43:48.307 +03:00 [DBG] Initialized tts service. Available voices are: Microsoft David Desktop, Microsoft Zira Desktop
+2022-05-01 00:43:48.307 +03:00 [DBG] Volume: 100, Rate: 1
+2022-05-01 00:43:48.310 +03:00 [VRB] Setup: ViewModelTypeFinder start
+2022-05-01 00:43:48.310 +03:00 [VRB] Setup: ViewsContainer start
+2022-05-01 00:43:48.310 +03:00 [VRB] Setup: Lookup Dictionary start
+2022-05-01 00:43:48.318 +03:00 [WRN] No view model association found for candidate view MainWindow
+2022-05-01 00:43:48.318 +03:00 [VRB] Setup: Views start
+2022-05-01 00:43:48.318 +03:00 [VRB] Setup: CommandCollectionBuilder start
+2022-05-01 00:43:48.319 +03:00 [VRB] Setup: NavigationSerializer start
+2022-05-01 00:43:48.319 +03:00 [VRB] Setup: InpcInterception start
+2022-05-01 00:43:48.319 +03:00 [VRB] Setup: InpcInterception start
+2022-05-01 00:43:48.319 +03:00 [VRB] Setup: LastChance start
+2022-05-01 00:43:48.335 +03:00 [VRB] Setup: Secondary end
+2022-05-01 00:43:48.336 +03:00 [VRB] AppStart: Application Startup - On UI thread
+2022-05-01 00:43:48.337 +03:00 [INF] Starting application
+2022-05-01 00:43:48.578 +03:00 [INF] No config file exist at location d:\Workspace\chklstr.net\publish\etc\user.workspace.json. Creating default settings
+2022-05-01 00:43:50.037 +03:00 [INF] No config file exist at location d:\Workspace\chklstr.net\publish\etc\user.workspace.json. Creating default settings
+2022-05-01 00:43:51.806 +03:00 [INF] Trying to load D:\Workspace\chklstr.net\samples\FA50.chklst
+2022-05-01 00:43:51.830 +03:00 [DBG] Parsing D:\Workspace\chklstr.net\samples\FA50.chklst
+2022-05-01 00:43:51.835 +03:00 [INF] Loading QRH from D:\Workspace\chklstr.net\samples\FA50.chklst
+2022-05-01 00:43:51.868 +03:00 [DBG] QRH Loaded successfully
+2022-05-01 00:43:51.871 +03:00 [INF] No config file exist at location d:\Workspace\chklstr.net\publish\etc\user.workspace.json. Creating default settings
+2022-05-01 00:43:51.872 +03:00 [DBG] Loading QRH ViewModel for Flysimware Falcon 50
+2022-05-01 00:43:51.872 +03:00 [INF] No config file exist at location d:\Workspace\chklstr.net\publish\etc\user.workspace.json. Creating default settings
+2022-05-01 00:43:51.887 +03:00 [DBG] Creating QRH View model for Flysimware Falcon 50
+2022-05-01 00:43:51.891 +03:00 [DBG] Adding checklist Before Engine Start (Power Off)
+2022-05-01 00:43:51.894 +03:00 [DBG] Adding checklist Prestart
+2022-05-01 00:43:51.895 +03:00 [DBG] Adding checklist Start
+2022-05-01 00:43:51.895 +03:00 [DBG] Adding checklist Taxi
+2022-05-01 00:43:51.895 +03:00 [DBG] Adding checklist Before Takeoff
+2022-05-01 00:43:51.895 +03:00 [DBG] Adding checklist After Takeoff
+2022-05-01 00:43:51.895 +03:00 [DBG] Adding checklist 10,000 Foot Check
+2022-05-01 00:43:51.895 +03:00 [DBG] Adding checklist 18,000 Foot Check
+2022-05-01 00:43:51.895 +03:00 [DBG] Adding checklist Cruise
+2022-05-01 00:43:51.896 +03:00 [DBG] Adding checklist Descent Check
+2022-05-01 00:43:51.896 +03:00 [DBG] Adding checklist Approach
+2022-05-01 00:43:51.896 +03:00 [DBG] Adding checklist Landing
+2022-05-01 00:43:52.663 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-01 00:43:52.668 +03:00 [DBG] Registering file watch for D:\Workspace\chklstr.net\samples\FA50.chklst
+2022-05-01 00:43:52.670 +03:00 [DBG] Created new voice view service
+2022-05-01 00:43:52.670 +03:00 [DBG] Binding QRH Flysimware Falcon 50 to voice controller view
+2022-05-01 00:43:52.670 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:43:52.670 +03:00 [DBG] Stopping tts service
+2022-05-01 00:43:52.671 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-01 00:43:54.178 +03:00 [DBG] Stopping tts service
+2022-05-01 00:43:54.178 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:43:54.178 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:43:54.293 +03:00 [DBG] Unregistering file watch D:\Workspace\chklstr.net\samples\FA50.chklst
+2022-05-01 00:43:54.293 +03:00 [DBG] Un-binging Flysimware Falcon 50 from voice view
+2022-05-01 00:43:54.293 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:43:54.293 +03:00 [DBG] Stopping tts service
+2022-05-01 00:43:54.294 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-01 00:44:01.609 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-01 00:44:01.609 +03:00 [DBG] Registering file watch for D:\Workspace\chklstr.net\samples\FA50.chklst
+2022-05-01 00:44:01.610 +03:00 [DBG] Created new voice view service
+2022-05-01 00:44:01.610 +03:00 [DBG] Binding QRH Flysimware Falcon 50 to voice controller view
+2022-05-01 00:44:01.610 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:01.610 +03:00 [DBG] Stopping tts service
+2022-05-01 00:44:01.610 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-01 00:44:02.993 +03:00 [DBG] Stopping tts service
+2022-05-01 00:44:02.993 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:02.993 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:03.060 +03:00 [DBG] Unregistering file watch D:\Workspace\chklstr.net\samples\FA50.chklst
+2022-05-01 00:44:03.060 +03:00 [DBG] Un-binging Flysimware Falcon 50 from voice view
+2022-05-01 00:44:03.060 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:03.060 +03:00 [DBG] Stopping tts service
+2022-05-01 00:44:03.060 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-01 00:44:07.542 +03:00 [DBG] Playing Prestart checklist started. with voice Microsoft Mark, rate 1
+2022-05-01 00:44:18.616 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-01 00:44:18.645 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-01 00:44:18.647 +03:00 [DBG] Registering file watch for D:\Workspace\chklstr.net\samples\FA50.chklst
+2022-05-01 00:44:18.647 +03:00 [DBG] Created new voice view service
+2022-05-01 00:44:18.647 +03:00 [DBG] Binding QRH Flysimware Falcon 50 to voice controller view
+2022-05-01 00:44:18.647 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:18.647 +03:00 [DBG] Stopping tts service
+2022-05-01 00:44:18.647 +03:00 [INF] Reading configuration file at d:\Workspace\chklstr.net\publish\etc\user.workspace.json
+2022-05-01 00:44:21.428 +03:00 [DBG] Playing Prestart checklist started. with voice Microsoft Mark, rate 1
+2022-05-01 00:44:21.428 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:21.429 +03:00 [DBG] Playing DC Power Selection, NORMAL with voice Microsoft Mark, rate 1
+2022-05-01 00:44:21.429 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:21.429 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:25.545 +03:00 [DBG] Detected word checked, confidence 0,9521305
+2022-05-01 00:44:25.548 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:44:25.548 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:25.605 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:25.605 +03:00 [DBG] Playing Batteries, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:44:25.615 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:25.615 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:26.980 +03:00 [DBG] Detected word checked, confidence 0,95727634
+2022-05-01 00:44:26.980 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:44:26.980 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:27.031 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:27.031 +03:00 [DBG] Playing Battery Lights, OFF with voice Microsoft Mark, rate 1
+2022-05-01 00:44:27.039 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:27.039 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:28.402 +03:00 [DBG] Detected word check, confidence 0,95759183
+2022-05-01 00:44:28.402 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:44:28.403 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:28.453 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:28.453 +03:00 [DBG] Playing Voltage, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:44:28.461 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:28.461 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:29.615 +03:00 [DBG] Detected word check, confidence 0,9471722
+2022-05-01 00:44:29.615 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:44:29.615 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:29.667 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:29.667 +03:00 [DBG] Playing Emergency Battery Voltage, CHECK with voice Microsoft Mark, rate 1
+2022-05-01 00:44:29.674 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:29.674 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:31.730 +03:00 [DBG] Detected word check, confidence 0,9394222
+2022-05-01 00:44:31.730 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:44:31.730 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:31.784 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:31.784 +03:00 [DBG] Playing Parking Brake Light, NOT FLASHING with voice Microsoft Mark, rate 1
+2022-05-01 00:44:31.802 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:31.803 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:33.042 +03:00 [DBG] Detected word check, confidence 0,9512186
+2022-05-01 00:44:33.042 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:44:33.042 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:33.094 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:33.094 +03:00 [DBG] Playing Park Brake, SET, LIGHT ON STEADY with voice Microsoft Mark, rate 1
+2022-05-01 00:44:33.102 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:33.102 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:34.719 +03:00 [DBG] Detected word checked, confidence 0,9550145
+2022-05-01 00:44:34.719 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:44:34.719 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:34.776 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:34.776 +03:00 [DBG] Playing Fuel Quantity, CHECKED, SET REAR with voice Microsoft Mark, rate 1
+2022-05-01 00:44:34.787 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:34.787 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:36.280 +03:00 [DBG] Detected word check, confidence 0,94898474
+2022-05-01 00:44:36.280 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:44:36.280 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:36.331 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:36.331 +03:00 [DBG] Playing Fuel Counters, ZEROED, SET with voice Microsoft Mark, rate 1
+2022-05-01 00:44:36.339 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:36.339 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:37.727 +03:00 [DBG] Detected word check, confidence 0,95067436
+2022-05-01 00:44:37.728 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:44:37.728 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:37.782 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:37.782 +03:00 [DBG] Playing Gross Weight Counter, SET with voice Microsoft Mark, rate 1
+2022-05-01 00:44:37.791 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:37.791 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:39.241 +03:00 [DBG] Detected word check, confidence 0,93159604
+2022-05-01 00:44:39.241 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:44:39.241 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:39.294 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:39.294 +03:00 [DBG] Playing Takeoff Computations, BUGS SET with voice Microsoft Mark, rate 1
+2022-05-01 00:44:39.302 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:39.302 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:42.504 +03:00 [DBG] Detected word check, confidence 0,9487689
+2022-05-01 00:44:42.504 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:44:42.504 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:42.561 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:42.561 +03:00 [DBG] Playing Generator Switches, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:44:42.561 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:42.561 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:45.074 +03:00 [DBG] Detected word checked, confidence 0,95466644
+2022-05-01 00:44:45.074 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:44:45.074 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:45.131 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:45.131 +03:00 [DBG] Playing Batteries, OFF with voice Microsoft Mark, rate 1
+2022-05-01 00:44:45.131 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:45.131 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:47.268 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 00:44:47.268 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:44:47.268 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:47.323 +03:00 [DBG] Playing APU Start section started with voice Microsoft Mark, rate 1
+2022-05-01 00:44:47.324 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:47.324 +03:00 [DBG] Playing Sliding Window, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 00:44:47.324 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:47.324 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:49.453 +03:00 [DBG] Detected word checked, confidence 0,9536733
+2022-05-01 00:44:49.453 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:44:49.453 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:49.507 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:49.507 +03:00 [DBG] Playing Batteries, CHECKED, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:44:49.518 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:49.519 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:51.032 +03:00 [DBG] Detected word check, confidence 0,999
+2022-05-01 00:44:51.032 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:44:51.032 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:51.086 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:51.086 +03:00 [DBG] Playing Bus Tie, TIED with voice Microsoft Mark, rate 1
+2022-05-01 00:44:51.094 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:51.094 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:52.475 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:44:52.475 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:44:52.475 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:52.527 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:52.527 +03:00 [DBG] Playing Bus C and D Switches, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:44:52.536 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:52.536 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:53.905 +03:00 [DBG] Detected word check, confidence 0,8916811
+2022-05-01 00:44:53.905 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:44:53.905 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:53.955 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:53.955 +03:00 [DBG] Playing No. 2 Boost Pump, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:44:53.963 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:53.963 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:55.296 +03:00 [DBG] Detected word checked, confidence 0,9444437
+2022-05-01 00:44:55.296 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:44:55.296 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:55.346 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:55.346 +03:00 [DBG] Playing No. 2 Engine and Airframe Anti-ice Switches, OFF with voice Microsoft Mark, rate 1
+2022-05-01 00:44:55.354 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:55.354 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:56.543 +03:00 [DBG] Detected word check, confidence 0,9478301
+2022-05-01 00:44:56.543 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:44:56.543 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:56.592 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:56.592 +03:00 [DBG] Playing Anticollision Lights, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 00:44:56.600 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:56.600 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:44:59.423 +03:00 [DBG] Detected word checked, confidence 0,9393449
+2022-05-01 00:44:59.423 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:44:59.423 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:59.478 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:59.478 +03:00 [DBG] Playing Fire Warning, TESTED with voice Microsoft Mark, rate 1
+2022-05-01 00:44:59.478 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:44:59.478 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:01.417 +03:00 [DBG] Detected word checked, confidence 0,9499587
+2022-05-01 00:45:01.417 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:01.417 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:01.473 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:01.473 +03:00 [DBG] Playing APU Master, ON, GREEN with voice Microsoft Mark, rate 1
+2022-05-01 00:45:01.482 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:01.482 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:03.118 +03:00 [DBG] Detected word check, confidence 0,94847333
+2022-05-01 00:45:03.118 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:45:03.118 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:03.172 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:03.172 +03:00 [DBG] Playing APU Generator Switch, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:45:03.183 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:03.183 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:04.487 +03:00 [DBG] Detected word check, confidence 0,8704085
+2022-05-01 00:45:04.488 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:45:04.488 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:04.538 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:04.538 +03:00 [DBG] Playing APU Start Switch, DEPRESS, START CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:45:04.546 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:04.546 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:06.671 +03:00 [DBG] Detected word checked, confidence 0,9508456
+2022-05-01 00:45:06.671 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:06.671 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:06.727 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:06.727 +03:00 [DBG] Playing Ensure Batteries No. 1 and No. 2, CHARGING with voice Microsoft Mark, rate 1
+2022-05-01 00:45:06.738 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:06.738 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:09.053 +03:00 [DBG] Detected word check, confidence 0,95204216
+2022-05-01 00:45:09.053 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:45:09.054 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:09.108 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:09.108 +03:00 [DBG] Playing APU Bleed, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 00:45:09.119 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:09.119 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:10.997 +03:00 [DBG] Detected word check, confidence 0,95584184
+2022-05-01 00:45:10.997 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:45:10.997 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:11.053 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:11.053 +03:00 [DBG] Playing Inverters, CHECKED, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:45:11.064 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:11.064 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:13.841 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:45:13.841 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:13.841 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:13.896 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:13.896 +03:00 [DBG] Playing Navigation, PROGRAMMED with voice Microsoft Mark, rate 1
+2022-05-01 00:45:13.896 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:13.896 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:15.839 +03:00 [DBG] Detected word check, confidence 0,9541186
+2022-05-01 00:45:15.839 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:45:15.840 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:15.896 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:15.896 +03:00 [DBG] Playing Master Failure Warning Panel, TESTED with voice Microsoft Mark, rate 1
+2022-05-01 00:45:15.906 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:15.906 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:18.229 +03:00 [DBG] Detected word checked, confidence 0,95508426
+2022-05-01 00:45:18.229 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:18.229 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:18.283 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:18.283 +03:00 [DBG] Playing Landing Gear Panel, TESTED with voice Microsoft Mark, rate 1
+2022-05-01 00:45:18.294 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:18.294 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:19.799 +03:00 [DBG] Detected word check, confidence 0,94686246
+2022-05-01 00:45:19.799 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:45:19.799 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:19.850 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:19.850 +03:00 [DBG] Playing Battery Temperature Monitor, TEST with voice Microsoft Mark, rate 1
+2022-05-01 00:45:19.858 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:19.858 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:21.177 +03:00 [DBG] Detected word check, confidence 0,87515926
+2022-05-01 00:45:21.177 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:45:21.178 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:21.229 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:21.229 +03:00 [DBG] Playing Emergency Stabilizer Trim, CHECK with voice Microsoft Mark, rate 1
+2022-05-01 00:45:21.238 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:21.238 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:23.215 +03:00 [DBG] Detected word check, confidence 0,9431164
+2022-05-01 00:45:23.215 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:45:23.215 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:23.269 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:23.269 +03:00 [DBG] Playing Stabilizer Trim, CHECKED, SET FOR T.O. with voice Microsoft Mark, rate 1
+2022-05-01 00:45:23.280 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:23.280 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:26.933 +03:00 [DBG] Detected word checked, confidence 0,95438546
+2022-05-01 00:45:26.933 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:26.933 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:26.987 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:26.987 +03:00 [DBG] Playing Standby Pump, ON, AUTO with voice Microsoft Mark, rate 1
+2022-05-01 00:45:26.987 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:26.987 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:28.940 +03:00 [DBG] Detected word checked, confidence 0,9507366
+2022-05-01 00:45:28.940 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:28.940 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:28.995 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:28.995 +03:00 [DBG] Playing Emergency Aileron Trim, CHECKED, LIGHT OUT with voice Microsoft Mark, rate 1
+2022-05-01 00:45:29.005 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:29.005 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:32.898 +03:00 [DBG] Detected word checked, confidence 0,95430917
+2022-05-01 00:45:32.898 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:32.898 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:32.953 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:32.953 +03:00 [DBG] Playing Aileron Trim, CHECKED, SET FOR T.O. with voice Microsoft Mark, rate 1
+2022-05-01 00:45:32.953 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:32.953 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:36.275 +03:00 [DBG] Detected word checked, confidence 0,9551724
+2022-05-01 00:45:36.275 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:36.275 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:36.329 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:36.329 +03:00 [DBG] Playing Audible Warnings (CAB, VM0), TESTED with voice Microsoft Mark, rate 1
+2022-05-01 00:45:36.330 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:36.330 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:38.205 +03:00 [DBG] Detected word checked, confidence 0,9549163
+2022-05-01 00:45:38.205 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:38.205 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:38.259 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:38.259 +03:00 [DBG] Playing No. 2 Stall, TESTED with voice Microsoft Mark, rate 1
+2022-05-01 00:45:38.270 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:38.270 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:39.644 +03:00 [DBG] Detected word check, confidence 0,9053662
+2022-05-01 00:45:39.644 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:45:39.644 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:39.695 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:39.695 +03:00 [DBG] Playing Airbrake, CYCLED, IN LIGHT OUT with voice Microsoft Mark, rate 1
+2022-05-01 00:45:39.703 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:39.703 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:41.144 +03:00 [DBG] Detected word checked, confidence 0,9451846
+2022-05-01 00:45:41.144 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:41.144 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:41.193 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:41.193 +03:00 [DBG] Playing Autopilot Disengagement, CHECKED, DISENGAGED with voice Microsoft Mark, rate 1
+2022-05-01 00:45:41.201 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:41.202 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:43.272 +03:00 [DBG] Detected word checked, confidence 0,95244503
+2022-05-01 00:45:43.272 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:43.272 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:43.328 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:43.328 +03:00 [DBG] Playing Standby Pump, OFF with voice Microsoft Mark, rate 1
+2022-05-01 00:45:43.340 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:43.340 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:45:46.102 +03:00 [DBG] Detected word checked, confidence 0,9550515
+2022-05-01 00:45:46.102 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:45:46.102 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:46.156 +03:00 [DBG] Playing Prestart checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:45:46.156 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:46.157 +03:00 [DBG] Playing Prestart checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:45:46.157 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:46.157 +03:00 [DBG] Playing Prestart checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:45:48.412 +03:00 [DBG] Stopping tts service
+2022-05-01 00:45:48.424 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:48.788 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:48.788 +03:00 [DBG] Stopping tts service
+2022-05-01 00:45:59.882 +03:00 [DBG] Playing Start checklist started. with voice Microsoft Mark, rate 1
+2022-05-01 00:45:59.882 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:59.882 +03:00 [DBG] Playing Seat Belt, No Smoking, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:45:59.882 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:45:59.882 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:46:05.909 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:46:05.909 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:46:05.909 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:05.965 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:05.965 +03:00 [DBG] Playing Exit Lights, ARMED with voice Microsoft Mark, rate 1
+2022-05-01 00:46:05.965 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:05.965 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:46:08.475 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:46:08.475 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:46:08.475 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:08.532 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:08.532 +03:00 [DBG] Playing Anti-Collision Lights, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 00:46:08.532 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:08.532 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:46:11.837 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:46:11.837 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:46:11.837 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:11.892 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:11.892 +03:00 [DBG] Playing Fire Warning, TESTED with voice Microsoft Mark, rate 1
+2022-05-01 00:46:11.892 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:11.892 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:46:20.511 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:46:20.511 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:46:20.511 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:20.565 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:20.565 +03:00 [DBG] Playing Boost Pumps, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:46:20.566 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:20.566 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:46:25.160 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:46:25.160 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:46:25.160 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:25.216 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:25.216 +03:00 [DBG] Playing DC Power Selector, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 00:46:25.216 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:25.216 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:46:29.172 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:46:29.172 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:46:29.172 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:29.230 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:29.230 +03:00 [DBG] Playing No. 2 Engine, START, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:46:29.230 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:29.230 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:46:54.758 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:46:54.758 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:46:54.758 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:54.813 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:54.813 +03:00 [DBG] Playing No. 3 Engine, START, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:46:54.813 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:46:54.813 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:47:21.605 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:47:21.606 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:47:21.606 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:47:21.660 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:47:21.660 +03:00 [DBG] Playing No. 1 Engine, START, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:47:21.660 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:47:21.660 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:48:01.075 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 00:48:01.075 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:48:01.075 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:01.138 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:01.138 +03:00 [DBG] Playing DC Power Selector, NORMAL with voice Microsoft Mark, rate 1
+2022-05-01 00:48:01.139 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:01.139 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:48:08.402 +03:00 [DBG] Detected word checked, confidence 0,9574592
+2022-05-01 00:48:08.402 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:48:08.402 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:08.455 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:08.455 +03:00 [DBG] Playing Engine Parameters, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:48:08.456 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:08.456 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:48:17.644 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:48:17.644 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:48:17.645 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:17.702 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:17.702 +03:00 [DBG] Playing Bus Tie, NORMAL (LIGHT OUT) with voice Microsoft Mark, rate 1
+2022-05-01 00:48:17.702 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:17.702 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:48:23.646 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 00:48:23.646 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:48:23.646 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:23.702 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:23.702 +03:00 [DBG] Playing Batteries: Amps, Temps, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:48:23.702 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:23.702 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:48:31.238 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:48:31.238 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:48:31.238 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:31.294 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:31.294 +03:00 [DBG] Playing Generators: Volts, Amps, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:48:31.295 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:31.295 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:48:46.482 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:48:46.482 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:48:46.482 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:46.537 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:46.537 +03:00 [DBG] Playing Transfer Fuel Pumps, ALL ON, LIGHTS OUT with voice Microsoft Mark, rate 1
+2022-05-01 00:48:46.537 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:46.537 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:48:52.181 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:48:52.181 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:48:52.181 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:52.242 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:52.242 +03:00 [DBG] Playing Aircraft Lighting, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 00:48:52.242 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:52.242 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:48:57.943 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:48:57.943 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:48:57.943 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:58.001 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:58.001 +03:00 [DBG] Playing Emergency Horizon, UNCAGED with voice Microsoft Mark, rate 1
+2022-05-01 00:48:58.001 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:48:58.001 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:02.405 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:49:02.405 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:49:02.405 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:02.459 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:02.459 +03:00 [DBG] Playing Emergency Batteries, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:49:02.459 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:02.459 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:05.526 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:49:05.526 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:49:05.526 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:05.583 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:05.583 +03:00 [DBG] Playing Radios, ON, SET with voice Microsoft Mark, rate 1
+2022-05-01 00:49:05.583 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:05.583 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:09.397 +03:00 [DBG] Detected word check, confidence 0,99899995
+2022-05-01 00:49:09.397 +03:00 [DBG] Word check mapped to Check
+2022-05-01 00:49:09.397 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:09.454 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:09.454 +03:00 [DBG] Playing Transponder, STANDBY with voice Microsoft Mark, rate 1
+2022-05-01 00:49:09.454 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:09.454 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:15.668 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:49:15.668 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:49:15.668 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:15.722 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:15.722 +03:00 [DBG] Playing Marker Beacons, TESTED with voice Microsoft Mark, rate 1
+2022-05-01 00:49:15.723 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:15.723 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:22.638 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:49:22.638 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:49:22.638 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:22.695 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:22.695 +03:00 [DBG] Playing GPWS, TESTED with voice Microsoft Mark, rate 1
+2022-05-01 00:49:22.695 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:22.695 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:25.640 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:49:25.640 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:49:25.640 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:25.695 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:25.695 +03:00 [DBG] Playing No. 1 Stall, TESTED with voice Microsoft Mark, rate 1
+2022-05-01 00:49:25.696 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:25.696 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:31.016 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:49:31.016 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:49:31.016 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:31.070 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:31.070 +03:00 [DBG] Playing Mach Trim, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:49:31.070 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:31.070 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:33.450 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:49:33.450 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:49:33.450 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:33.506 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:33.506 +03:00 [DBG] Playing Compass Headings, BOTH CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:49:33.506 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:33.506 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:38.999 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:49:38.999 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:49:38.999 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:39.053 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:39.053 +03:00 [DBG] Playing Windshield Heat'Side, NORMAL, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:49:39.053 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:39.053 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:48.995 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:49:48.995 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:49:48.996 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:49.050 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:49.050 +03:00 [DBG] Playing APU Shutdown, PER MANUFACTURER with voice Microsoft Mark, rate 1
+2022-05-01 00:49:49.050 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:49.050 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:54.400 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:49:54.400 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:49:54.400 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:54.458 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:54.458 +03:00 [DBG] Playing Standby Pump, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:49:54.458 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:54.458 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:49:59.871 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 00:49:59.871 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:49:59.871 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:59.929 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:59.929 +03:00 [DBG] Playing Engine Computers Manual Mode, CHECKED, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:49:59.929 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:49:59.929 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:50:10.331 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 00:50:10.331 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:50:10.331 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:10.389 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:10.389 +03:00 [DBG] Playing Anti-ice, CYCLED, SET FOR T.O. with voice Microsoft Mark, rate 1
+2022-05-01 00:50:10.389 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:10.389 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:50:18.443 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 00:50:18.443 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:50:18.443 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:18.500 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:18.500 +03:00 [DBG] Playing Airframe Anti-Ice, NORMAL, STANDBY, OFF with voice Microsoft Mark, rate 1
+2022-05-01 00:50:18.500 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:18.500 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:50:23.145 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:50:23.145 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:50:23.146 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:23.201 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:23.201 +03:00 [DBG] Playing Anti-Skid, TESTED with voice Microsoft Mark, rate 1
+2022-05-01 00:50:23.201 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:23.201 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:50:26.406 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:50:26.406 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:50:26.407 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:26.461 +03:00 [DBG] Playing Start checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:50:26.462 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:26.462 +03:00 [DBG] Playing Start checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:50:26.462 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:26.462 +03:00 [DBG] Playing Start checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:50:28.511 +03:00 [DBG] Stopping tts service
+2022-05-01 00:50:28.517 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:28.788 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:50:28.788 +03:00 [DBG] Stopping tts service
+2022-05-01 00:53:07.745 +03:00 [DBG] Playing Taxi checklist started. with voice Microsoft Mark, rate 1
+2022-05-01 00:53:07.746 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:07.746 +03:00 [DBG] Playing Park Brake, OFF with voice Microsoft Mark, rate 1
+2022-05-01 00:53:07.746 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:07.746 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:53:13.663 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:53:13.663 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:53:13.663 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:13.718 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:13.718 +03:00 [DBG] Playing Taxi Light, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:53:13.718 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:13.718 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:53:17.526 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:53:17.526 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:53:17.526 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:17.582 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:17.582 +03:00 [DBG] Playing No. 2 Brakes, CHECKED, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 00:53:17.582 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:17.582 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:53:22.615 +03:00 [DBG] Detected word checked, confidence 0,95580983
+2022-05-01 00:53:22.615 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:53:22.615 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:22.671 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:22.671 +03:00 [DBG] Playing Sliding Window, CLOSED with voice Microsoft Mark, rate 1
+2022-05-01 00:53:22.671 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:22.671 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:53:25.330 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:53:25.330 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:53:25.330 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:25.388 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:25.389 +03:00 [DBG] Playing Slats, Flaps, CYCLED, SET FOR T.O. with voice Microsoft Mark, rate 1
+2022-05-01 00:53:25.389 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:25.389 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:53:52.889 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 00:53:52.889 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:53:52.889 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:52.948 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:52.948 +03:00 [DBG] Playing Flight Controls, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:53:52.948 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:52.948 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:53:56.323 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:53:56.323 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:53:56.323 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:56.382 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:56.382 +03:00 [DBG] Playing Thrust Reverser, CHECKED, STOWED with voice Microsoft Mark, rate 1
+2022-05-01 00:53:56.382 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:53:56.382 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:54:02.590 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:54:02.590 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:54:02.590 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:02.645 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:02.645 +03:00 [DBG] Playing Hydraulic: Pressure, Quantity, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:54:02.645 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:02.645 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:54:06.327 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 00:54:06.327 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:54:06.327 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:06.383 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:06.383 +03:00 [DBG] Playing Altimeters, SET, CROSS-CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 00:54:06.383 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:06.383 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:54:14.073 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:54:14.073 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:54:14.073 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:14.130 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:14.131 +03:00 [DBG] Playing Radio Altimeters, SET with voice Microsoft Mark, rate 1
+2022-05-01 00:54:14.131 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:14.131 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:54:31.394 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:54:31.394 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:54:31.394 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:31.448 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:31.448 +03:00 [DBG] Playing Flight Directors, CHECKED, SET with voice Microsoft Mark, rate 1
+2022-05-01 00:54:31.449 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:31.449 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:54:45.887 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:54:45.887 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:54:45.887 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:45.943 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:45.943 +03:00 [DBG] Playing Autopilot, OFF (LIGHT OUT) with voice Microsoft Mark, rate 1
+2022-05-01 00:54:45.943 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:45.943 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:54:50.053 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:54:50.053 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:54:50.053 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:50.108 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:50.108 +03:00 [DBG] Playing Yaw Damper (it required), ON with voice Microsoft Mark, rate 1
+2022-05-01 00:54:50.108 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:50.108 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:54:53.676 +03:00 [DBG] Detected word checked, confidence 0,955736
+2022-05-01 00:54:53.676 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:54:53.676 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:53.731 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:53.731 +03:00 [DBG] Playing Flight Instruments, TESTED, SET FOR T.O. with voice Microsoft Mark, rate 1
+2022-05-01 00:54:53.731 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:54:53.731 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:55:01.105 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:55:01.105 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:55:01.105 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:55:01.159 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:55:01.159 +03:00 [DBG] Playing APU Master (With Zero RPM), PUSHED with voice Microsoft Mark, rate 1
+2022-05-01 00:55:01.159 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:55:01.159 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:55:13.169 +03:00 [DBG] Detected word checked, confidence 0,95639884
+2022-05-01 00:55:13.169 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:55:13.170 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:55:13.227 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:55:13.227 +03:00 [DBG] Playing T.O. Briefing, COMPLETE with voice Microsoft Mark, rate 1
+2022-05-01 00:55:13.228 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:55:13.228 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:55:16.505 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:55:16.505 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:55:16.505 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:55:16.558 +03:00 [DBG] Playing Taxi checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:55:16.558 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:55:16.558 +03:00 [DBG] Playing Taxi checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:55:16.558 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:55:16.559 +03:00 [DBG] Playing Taxi checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:55:18.807 +03:00 [DBG] Stopping tts service
+2022-05-01 00:55:18.814 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:55:19.059 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:55:19.059 +03:00 [DBG] Stopping tts service
+2022-05-01 00:57:02.518 +03:00 [DBG] Playing Before Takeoff checklist started. with voice Microsoft Mark, rate 1
+2022-05-01 00:57:02.518 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:02.518 +03:00 [DBG] Playing Brake Selector, #1 ON, LIGHTSOUT with voice Microsoft Mark, rate 1
+2022-05-01 00:57:02.519 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:02.519 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:57:10.639 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:57:10.639 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:57:10.639 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:10.696 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:10.696 +03:00 [DBG] Playing Pitot Heat, ON, LIGHTS OUT with voice Microsoft Mark, rate 1
+2022-05-01 00:57:10.696 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:10.696 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:57:13.964 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:57:13.964 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:57:13.964 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:14.018 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:14.018 +03:00 [DBG] Playing Warning Panel Lights, OUT with voice Microsoft Mark, rate 1
+2022-05-01 00:57:14.018 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:14.018 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:57:16.653 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 00:57:16.653 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:57:16.653 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:16.708 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:16.708 +03:00 [DBG] Playing Anticollision Lights, ALL with voice Microsoft Mark, rate 1
+2022-05-01 00:57:16.708 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:16.708 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:57:19.721 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:57:19.721 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:57:19.721 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:19.777 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:19.777 +03:00 [DBG] Playing Landing Lights, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:57:19.778 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:19.778 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:57:25.607 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 00:57:25.607 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:57:25.607 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:25.663 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:25.663 +03:00 [DBG] Playing Ignitors, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 00:57:25.663 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:25.663 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:57:49.459 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 00:57:49.459 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:57:49.459 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:49.518 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:49.518 +03:00 [DBG] Playing Radar, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 00:57:49.518 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:49.518 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:57:52.020 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:57:52.020 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:57:52.021 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:52.078 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:52.078 +03:00 [DBG] Playing Transponder, ON with voice Microsoft Mark, rate 1
+2022-05-01 00:57:52.078 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:57:52.078 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:58:05.834 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:58:05.834 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:58:05.834 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:58:05.889 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:58:05.889 +03:00 [DBG] Playing FATS (Flaps, Airbrakes, Trims, Speeds), SET FOR TAKEOFF with voice Microsoft Mark, rate 1
+2022-05-01 00:58:05.889 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:58:05.889 +03:00 [DBG] Starting voice recognition service
+2022-05-01 00:58:12.132 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 00:58:12.132 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 00:58:12.133 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:58:12.187 +03:00 [DBG] Playing Before Takeoff checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:58:12.187 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:58:12.187 +03:00 [DBG] Playing Before Takeoff checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:58:12.187 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:58:12.188 +03:00 [DBG] Playing Before Takeoff checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 00:58:14.645 +03:00 [DBG] Stopping tts service
+2022-05-01 00:58:14.655 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:58:14.875 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:58:14.875 +03:00 [DBG] Stopping tts service
+2022-05-01 00:59:57.202 +03:00 [DBG] Playing After Takeoff checklist started. with voice Microsoft Mark, rate 1
+2022-05-01 00:59:57.202 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:59:57.202 +03:00 [DBG] Playing Landing Gear, UP (LIGHTS OUT) with voice Microsoft Mark, rate 1
+2022-05-01 00:59:57.202 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 00:59:57.202 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:01.947 +03:00 [DBG] Detected word check, confidence 0,9493948
+2022-05-01 01:00:01.947 +03:00 [DBG] Word check mapped to Check
+2022-05-01 01:00:01.947 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:02.004 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:02.004 +03:00 [DBG] Playing Anti-icing, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:00:02.016 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:02.016 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:04.779 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:00:04.779 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:00:04.779 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:04.912 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:04.912 +03:00 [DBG] Playing Yaw Damper, ON with voice Microsoft Mark, rate 1
+2022-05-01 01:00:04.912 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:04.912 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:08.592 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 01:00:08.592 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:00:08.592 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:08.649 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:08.649 +03:00 [DBG] Playing Slats, Flaps, CLEAN with voice Microsoft Mark, rate 1
+2022-05-01 01:00:08.649 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:08.649 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:11.873 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:00:11.873 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:00:11.873 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:11.931 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:11.931 +03:00 [DBG] Playing Hydraulics, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 01:00:11.931 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:11.931 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:14.812 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 01:00:14.812 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:00:14.812 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:14.865 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:14.865 +03:00 [DBG] Playing Standby Pump, AUTO with voice Microsoft Mark, rate 1
+2022-05-01 01:00:14.865 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:14.865 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:18.826 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:00:18.826 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:00:18.826 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:18.884 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:18.884 +03:00 [DBG] Playing Ignitors, GROUND START with voice Microsoft Mark, rate 1
+2022-05-01 01:00:18.885 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:18.885 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:22.261 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 01:00:22.261 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:00:22.262 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:22.327 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:22.327 +03:00 [DBG] Playing Taxi Light, OFF with voice Microsoft Mark, rate 1
+2022-05-01 01:00:22.327 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:22.327 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:25.899 +03:00 [DBG] Detected word checked, confidence 0,9566521
+2022-05-01 01:00:25.900 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:00:25.900 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:25.952 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:25.952 +03:00 [DBG] Playing No Smoking, Seat Belt Sign, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:00:25.952 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:25.952 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:29.643 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 01:00:29.643 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:00:29.644 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:29.698 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:29.698 +03:00 [DBG] Playing Pressurization, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 01:00:29.698 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:29.698 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:40.539 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 01:00:40.539 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:00:40.539 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:40.594 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:40.594 +03:00 [DBG] Playing Temperature, CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 01:00:40.594 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:40.594 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:50.743 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:00:50.743 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:00:50.743 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:50.797 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:50.797 +03:00 [DBG] Playing Climb Thrust, SET with voice Microsoft Mark, rate 1
+2022-05-01 01:00:50.797 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:50.797 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:00:54.913 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:00:54.913 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:00:54.913 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:54.985 +03:00 [DBG] Playing After Takeoff checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:00:54.985 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:54.986 +03:00 [DBG] Playing After Takeoff checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:00:54.986 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:54.986 +03:00 [DBG] Playing After Takeoff checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:00:57.466 +03:00 [DBG] Stopping tts service
+2022-05-01 01:00:57.474 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:57.682 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:00:57.682 +03:00 [DBG] Stopping tts service
+2022-05-01 01:04:16.125 +03:00 [DBG] Playing 10,000 Foot Check checklist started. with voice Microsoft Mark, rate 1
+2022-05-01 01:04:16.125 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:16.125 +03:00 [DBG] Playing Landing Lights, OFF with voice Microsoft Mark, rate 1
+2022-05-01 01:04:16.125 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:16.125 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:04:22.947 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:04:22.947 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:04:22.947 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:23.002 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:23.002 +03:00 [DBG] Playing Seat Belt Sign, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:04:23.002 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:23.002 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:04:25.889 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:04:25.889 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:04:25.889 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:25.941 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:25.941 +03:00 [DBG] Playing Entrance Curtain, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:04:25.941 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:25.941 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:04:28.562 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:04:28.562 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:04:28.562 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:28.627 +03:00 [DBG] Playing 10,000 Foot Check checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:04:28.627 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:28.627 +03:00 [DBG] Playing 10,000 Foot Check checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:04:28.627 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:28.628 +03:00 [DBG] Playing 10,000 Foot Check checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:04:31.475 +03:00 [DBG] Stopping tts service
+2022-05-01 01:04:31.485 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:31.687 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:04:31.687 +03:00 [DBG] Stopping tts service
+2022-05-01 01:07:52.322 +03:00 [DBG] Playing 18,000 Foot Check checklist started. with voice Microsoft Mark, rate 1
+2022-05-01 01:07:52.322 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:07:52.322 +03:00 [DBG] Playing Altimeters, 29.92 with voice Microsoft Mark, rate 1
+2022-05-01 01:07:52.322 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:07:52.322 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:07:58.543 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:07:58.543 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:07:58.543 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:07:58.600 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:07:58.600 +03:00 [DBG] Playing Oxygen, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:07:58.600 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:07:58.600 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:08:01.466 +03:00 [DBG] Detected word checked, confidence 0,95529974
+2022-05-01 01:08:01.466 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:08:01.466 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:08:01.530 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:08:01.530 +03:00 [DBG] Playing Station Check, COMPLETE with voice Microsoft Mark, rate 1
+2022-05-01 01:08:01.530 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:08:01.530 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:08:04.243 +03:00 [DBG] Detected word checked, confidence 0,9554111
+2022-05-01 01:08:04.243 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:08:04.243 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:08:04.298 +03:00 [DBG] Playing 18,000 Foot Check checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:08:04.298 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:08:04.298 +03:00 [DBG] Playing 18,000 Foot Check checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:08:04.298 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:08:04.299 +03:00 [DBG] Playing 18,000 Foot Check checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:08:07.171 +03:00 [DBG] Stopping tts service
+2022-05-01 01:08:07.175 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:08:07.391 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:08:07.391 +03:00 [DBG] Stopping tts service
+2022-05-01 01:17:58.500 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:17:58.500 +03:00 [DBG] Stopping tts service
+2022-05-01 01:18:00.061 +03:00 [DBG] Playing Descent Check checklist started. with voice Microsoft Mark, rate 1
+2022-05-01 01:18:00.061 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:00.061 +03:00 [DBG] Playing ATIS, ACQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:18:00.061 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:00.061 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:18:05.537 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 01:18:05.537 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:18:05.537 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:05.596 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:05.596 +03:00 [DBG] Playing Cabin Altitude Controller, SET with voice Microsoft Mark, rate 1
+2022-05-01 01:18:05.596 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:05.596 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:18:10.861 +03:00 [DBG] Detected word checked, confidence 0,95526326
+2022-05-01 01:18:10.861 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:18:10.861 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:10.917 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:10.918 +03:00 [DBG] Playing Anti-icing, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:18:10.918 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:10.918 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:18:18.644 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:18:18.644 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:18:18.644 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:18.702 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:18.702 +03:00 [DBG] Playing Fuel XFR Intercom and X-Feed, CLOSED with voice Microsoft Mark, rate 1
+2022-05-01 01:18:18.702 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:18.702 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:18:23.352 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:18:23.352 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:18:23.352 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:23.423 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:23.423 +03:00 [DBG] Playing Altimeters, SET, X-CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 01:18:23.423 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:23.423 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:18:28.066 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:18:28.066 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:18:28.066 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:28.126 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:28.126 +03:00 [DBG] Playing Radio Altimeter, SET with voice Microsoft Mark, rate 1
+2022-05-01 01:18:28.126 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:28.126 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:18:31.071 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:18:31.072 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:18:31.072 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:31.139 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:31.139 +03:00 [DBG] Playing Landing Computations, LD, LFL, V ref with voice Microsoft Mark, rate 1
+2022-05-01 01:18:31.139 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:31.139 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:18:36.812 +03:00 [DBG] Detected word checked, confidence 0,95352113
+2022-05-01 01:18:36.812 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:18:36.812 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:36.866 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:36.866 +03:00 [DBG] Playing Approach Speed, BUGS SET with voice Microsoft Mark, rate 1
+2022-05-01 01:18:36.866 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:36.866 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:18:39.821 +03:00 [DBG] Detected word checked, confidence 0,9520034
+2022-05-01 01:18:39.821 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:18:39.821 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:39.885 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:39.885 +03:00 [DBG] Playing Approach Briefing, COMPLETE with voice Microsoft Mark, rate 1
+2022-05-01 01:18:39.885 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:39.885 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:18:45.365 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:18:45.365 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:18:45.365 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:45.420 +03:00 [DBG] Playing Below 10,000 FT section started with voice Microsoft Mark, rate 1
+2022-05-01 01:18:45.420 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:45.420 +03:00 [DBG] Playing Landing Lights, ON, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:18:45.420 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:45.420 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:18:53.951 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:54.007 +03:00 [DBG] Stopping tts service
+2022-05-01 01:18:54.008 +03:00 [DBG] Stopping tts service
+2022-05-01 01:18:54.008 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:54.512 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:18:54.512 +03:00 [DBG] Stopping tts service
+2022-05-01 01:26:30.978 +03:00 [DBG] Playing Below 10,000 FT section started with voice Microsoft Mark, rate 1
+2022-05-01 01:26:30.979 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:26:30.979 +03:00 [DBG] Playing Landing Lights, ON, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:26:30.979 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:26:30.979 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:26:37.054 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 01:26:37.054 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:26:37.054 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:26:37.107 +03:00 [DBG] Playing Descent Check checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:26:37.107 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:26:37.107 +03:00 [DBG] Playing Descent Check checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:26:37.107 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:26:37.107 +03:00 [DBG] Playing Descent Check checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:26:39.585 +03:00 [DBG] Stopping tts service
+2022-05-01 01:26:39.595 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:26:39.816 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:26:39.816 +03:00 [DBG] Stopping tts service
+2022-05-01 01:39:55.164 +03:00 [DBG] Playing Approach checklist started. with voice Microsoft Mark, rate 1
+2022-05-01 01:39:55.164 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:39:55.164 +03:00 [DBG] Playing Siats, Flaps, SET with voice Microsoft Mark, rate 1
+2022-05-01 01:39:55.164 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:39:55.164 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:00.618 +03:00 [DBG] Detected word checked, confidence 0,95365494
+2022-05-01 01:40:00.618 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:00.619 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:00.674 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:00.674 +03:00 [DBG] Playing Seat Belt Sign, ON with voice Microsoft Mark, rate 1
+2022-05-01 01:40:00.674 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:00.674 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:03.189 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:40:03.189 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:03.189 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:03.244 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:03.244 +03:00 [DBG] Playing Anti-icing, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:40:03.244 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:03.244 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:06.249 +03:00 [DBG] Detected word checked, confidence 0,9528304
+2022-05-01 01:40:06.249 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:06.249 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:06.317 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:06.317 +03:00 [DBG] Playing Radios, SET FOR APPROACH with voice Microsoft Mark, rate 1
+2022-05-01 01:40:06.317 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:06.317 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:09.146 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:40:09.146 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:09.146 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:09.201 +03:00 [DBG] Playing Approach checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:40:09.201 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:09.201 +03:00 [DBG] Playing Approach checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:40:09.201 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:09.201 +03:00 [DBG] Playing Approach checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:40:11.454 +03:00 [DBG] Stopping tts service
+2022-05-01 01:40:11.464 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:11.690 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:11.690 +03:00 [DBG] Stopping tts service
+2022-05-01 01:40:12.919 +03:00 [DBG] Playing Landing checklist started. with voice Microsoft Mark, rate 1
+2022-05-01 01:40:12.919 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:12.919 +03:00 [DBG] Playing Landing Gear, DOWN, THREE GREEN with voice Microsoft Mark, rate 1
+2022-05-01 01:40:12.919 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:12.919 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:17.274 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:40:17.274 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:17.274 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:17.327 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:17.327 +03:00 [DBG] Playing Brake Selector, #1 ON with voice Microsoft Mark, rate 1
+2022-05-01 01:40:17.339 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:17.339 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:20.297 +03:00 [DBG] Detected word checked, confidence 0,99899995
+2022-05-01 01:40:20.297 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:20.297 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:20.352 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:20.352 +03:00 [DBG] Playing Antiskid, TESTED with voice Microsoft Mark, rate 1
+2022-05-01 01:40:20.352 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:20.352 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:22.899 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:40:22.899 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:22.899 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:22.955 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:22.955 +03:00 [DBG] Playing Hydraulics (Pressure, Quantity), CHECKED with voice Microsoft Mark, rate 1
+2022-05-01 01:40:22.956 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:22.956 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:26.805 +03:00 [DBG] Detected word checked, confidence 0,9990001
+2022-05-01 01:40:26.805 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:26.805 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:26.864 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:26.864 +03:00 [DBG] Playing Flaps, SET with voice Microsoft Mark, rate 1
+2022-05-01 01:40:26.864 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:26.864 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:29.338 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:40:29.338 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:29.338 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:29.395 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:29.395 +03:00 [DBG] Playing No Smoking Sign, ON with voice Microsoft Mark, rate 1
+2022-05-01 01:40:29.395 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:29.395 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:32.160 +03:00 [DBG] Detected word checked, confidence 0,9560944
+2022-05-01 01:40:32.160 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:32.160 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:32.215 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:32.215 +03:00 [DBG] Playing Taxi Light, ON with voice Microsoft Mark, rate 1
+2022-05-01 01:40:32.216 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:32.216 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:36.986 +03:00 [DBG] Detected word checked, confidence 0,95292443
+2022-05-01 01:40:36.986 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:36.986 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:37.043 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:37.043 +03:00 [DBG] Playing Windshield Wipers, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:40:37.043 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:37.043 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:40.513 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:40:40.513 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:40.513 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:40.568 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:40.568 +03:00 [DBG] Playing Airbrakes, IN, LIGHT OUT with voice Microsoft Mark, rate 1
+2022-05-01 01:40:40.568 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:40.568 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:43.620 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:40:43.620 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:43.621 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:43.678 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:43.678 +03:00 [DBG] Playing Yaw Damper (As Required), OFF, ON with voice Microsoft Mark, rate 1
+2022-05-01 01:40:43.678 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:43.678 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:46.490 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:40:46.490 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:46.490 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:46.545 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:46.545 +03:00 [DBG] Playing Autopilot, OFF (LIGHT OUT) with voice Microsoft Mark, rate 1
+2022-05-01 01:40:46.556 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:46.556 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:51.360 +03:00 [DBG] Detected word checked, confidence 0,999
+2022-05-01 01:40:51.360 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:51.360 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:51.414 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:51.414 +03:00 [DBG] Playing Igniters, AS REQUIRED with voice Microsoft Mark, rate 1
+2022-05-01 01:40:51.414 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:51.414 +03:00 [DBG] Starting voice recognition service
+2022-05-01 01:40:54.494 +03:00 [DBG] Detected word checked, confidence 0,9550722
+2022-05-01 01:40:54.494 +03:00 [DBG] Word checked mapped to Check
+2022-05-01 01:40:54.494 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:54.555 +03:00 [DBG] Playing Landing checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:40:54.555 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:54.555 +03:00 [DBG] Playing Landing checklist complete with voice Microsoft Mark, rate 1
+2022-05-01 01:40:54.555 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:40:56.817 +03:00 [DBG] Stopping tts service
+2022-05-01 01:40:56.824 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:43:20.735 +03:00 [INF] Closing the application
+2022-05-01 01:43:20.735 +03:00 [DBG] Stopping voice recognition service
+2022-05-01 01:43:20.735 +03:00 [DBG] Stopping tts service

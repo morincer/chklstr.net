@@ -1,0 +1,5 @@
+﻿@using RazorLight
+@inherits TemplatePage<Chklstr.Infra.Export.HTML.ContextItem>
+
+<hr/>
+@{ await IncludeAsync("description", Model);  }

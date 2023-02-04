@@ -1,0 +1,34 @@
+@using RazorLight
+@inherits TemplatePage<Chklstr.Infra.Export.HTML.HtmlExportModel>
+
+<div class="layout">
+
+    <label for="text_width">Viewport width</label>
+    <input type="number" id="text_width" value="@(Model.Layout.ViewPortWidth)"
+           style="width: 50px; margin-left: 10px; margin-right: 5px">px
+
+    <input type="checkbox" id="check_multicol" style="margin-left: 10px"
+           @if (Model.Layout.ShowDescription)
+           {
+               @("checked")
+           }/>
+    <label for="check_multicol">Columns</label>
+    <input id="text_columns_count" value="@Model.Layout.ColumnsCount" type="number" style="width: 50px; margin-left: 10px; margin-right: 10px">
+
+    <label for="text_font_size">Font Size</label>
+    <input type="number" id="text_font_size" value="@(Model.Layout.FontSize)" style="width: 50px; margin-left: 10px; margin-right: 5px">
+
+    <input type="checkbox" id="check_descriptions"
+           @if (Model.Layout.ShowDescription)
+           {
+               @("checked")
+           }>
+    <label for="check_descriptions">Show descriptions</label>
+
+    <span class="ctx">
+        @foreach(var context in Model.ContextClasses) {
+            <input type="checkbox" class="context_check" id="check_@(context.Value)" value="@(context.Value)" @if (Model.SelectedContexts.Contains(context.Key)){@("checked")}/>
+            <label for="check_@(context.Value)">@(context.Key)</label>
+        }
+    </span>
+</div>
